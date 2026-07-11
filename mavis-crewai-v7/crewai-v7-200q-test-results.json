@@ -1,0 +1,1398 @@
+{
+  "test_at": "2026-07-11T21:00:19.133789",
+  "test_count": 202,
+  "valid_count": 194,
+  "routing_accuracy": 0.8762886597938144,
+  "avg_elapsed_s": 14.22,
+  "queries": [
+    {
+      "query": "CLAUDE.md 五层记忆 怎么 auto-inject",
+      "error": "timed out"
+    },
+    {
+      "query": "CLAUDE.md 跟 AGENTS.md 区别 是什么",
+      "elapsed_s": 36.23,
+      "mechanism": "CLAUDE.md"
+    },
+    {
+      "query": "CLAUDE.md 项目级 怎么覆盖",
+      "elapsed_s": 15.03,
+      "mechanism": "CLAUDE.md"
+    },
+    {
+      "query": "CLAUDE.md 企业级 跟用户级 区别",
+      "elapsed_s": 11.9,
+      "mechanism": "CLAUDE.md"
+    },
+    {
+      "query": "CLAUDE.md 模板 应该放哪些内容",
+      "elapsed_s": 14.49,
+      "mechanism": "CLAUDE.md"
+    },
+    {
+      "query": "CLAUDE.md auto-inject 失败 怎么排查",
+      "elapsed_s": 16.41,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 跟 project instruction 区别",
+      "elapsed_s": 14.78,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 多大文件合适",
+      "elapsed_s": 12.22,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 引用 其他文件 怎么写",
+      "elapsed_s": 20.92,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 多语言 怎么支持",
+      "elapsed_s": 7.1,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 版本控制 怎么做",
+      "elapsed_s": 14.15,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 跟 README 区别",
+      "elapsed_s": 8.28,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md miniMax Code 怎么 load",
+      "elapsed_s": 12.75,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md sub-agent 怎么 inherit",
+      "elapsed_s": 8.42,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md hook 怎么 trigger",
+      "elapsed_s": 11.77,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 跟 mavis init 关系",
+      "elapsed_s": 14.93,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 五层 哪五层",
+      "elapsed_s": 10.76,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 实战 例子 是什么",
+      "elapsed_s": 17.72,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 团队 怎么协作",
+      "elapsed_s": 27.98,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md gitignore 怎么加",
+      "elapsed_s": 11.56,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md upgrade 怎么升级",
+      "elapsed_s": 35.77,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 测试 怎么写",
+      "elapsed_s": 30.99,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 跟 .mavisignore 区别",
+      "elapsed_s": 20.85,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md 跟 CLAUDE.local.md 区别",
+      "elapsed_s": 28.51,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "CLAUDE.md miniMax Code 自动 load 怎么 work",
+      "elapsed_s": 24.53,
+      "mechanism": "CLAUDE.md",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis 子智能体 5 模式 怎么用",
+      "elapsed_s": 36.63,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis 子智能体 subagent 跟 team plan 关系",
+      "elapsed_s": 27.66,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent frontmatter 怎么写",
+      "elapsed_s": 35.64,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis verifier 机制 怎么用",
+      "elapsed_s": 13.4,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis reflection 反思 怎么实现",
+      "elapsed_s": 14.37,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis spawn agent 什么时候用",
+      "elapsed_s": 14.33,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 跟 main agent 区别",
+      "elapsed_s": 10.2,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 通信 怎么做",
+      "elapsed_s": 10.89,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent context 怎么共享",
+      "elapsed_s": 10.06,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 错误处理",
+      "elapsed_s": 13.98,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent timeout 怎么设",
+      "elapsed_s": 24.41,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 文件 怎么传",
+      "elapsed_s": 24.48,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 嵌套 几层",
+      "elapsed_s": 34.38,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 跟 task 区别",
+      "elapsed_s": 19.83,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 实战 例子",
+      "elapsed_s": 19.25,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 跟 Skill 区别",
+      "elapsed_s": 14.45,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent prompt 怎么写",
+      "elapsed_s": 17.41,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 工具 怎么用",
+      "elapsed_s": 11.79,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 怎么 调试",
+      "elapsed_s": 14.73,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 性能 怎么样",
+      "elapsed_s": 8.97,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent memory 怎么用",
+      "elapsed_s": 21.86,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 跟 MCP 区别",
+      "elapsed_s": 27.45,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 怎么 部署",
+      "elapsed_s": 13.59,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent 实战 教程",
+      "elapsed_s": 27.1,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis sub-agent best practice 是什么",
+      "elapsed_s": 20.33,
+      "mechanism": "子智能体",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills AWEL 三层架构 是什么",
+      "elapsed_s": 14.36,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 怎么创建 新技能",
+      "elapsed_s": 18.64,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis skill-creator 怎么用",
+      "elapsed_s": 30.82,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis skill-refiner 跟 skill-creator 区别",
+      "elapsed_s": 10.13,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 跟 Subagent 区别",
+      "elapsed_s": 10.98,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 装载顺序 是什么",
+      "elapsed_s": 14.84,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 怎么 trigger",
+      "elapsed_s": 12.97,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 实战 例子",
+      "elapsed_s": 6.47,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 跟 Hook 区别",
+      "elapsed_s": 13.14,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 跟 MCP 区别",
+      "elapsed_s": 11.51,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 升级 怎么做",
+      "elapsed_s": 16.1,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 测试 怎么写",
+      "elapsed_s": 17.01,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 性能 怎么样",
+      "elapsed_s": 16.85,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 跟 function calling 区别",
+      "error": "timed out",
+      "expected_mechanism": "Skills"
+    },
+    {
+      "query": "mavis Skills 内存 怎么 用",
+      "error": "timed out",
+      "expected_mechanism": "Skills"
+    },
+    {
+      "query": "mavis Skills 跟 Agent SDK 区别",
+      "elapsed_s": 48.22,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 团队 怎么 共享",
+      "error": "timed out",
+      "expected_mechanism": "Skills"
+    },
+    {
+      "query": "mavis Skills 跟 Plugin 区别",
+      "error": "timed out",
+      "expected_mechanism": "Skills"
+    },
+    {
+      "query": "mavis Skills 跟 Tool 区别",
+      "error": "timed out",
+      "expected_mechanism": "Skills"
+    },
+    {
+      "query": "mavis Skills 实战 教程",
+      "error": "timed out",
+      "expected_mechanism": "Skills"
+    },
+    {
+      "query": "mavis Skills 跨项目 怎么 用",
+      "error": "timed out",
+      "expected_mechanism": "Skills"
+    },
+    {
+      "query": "mavis Skills frontmatter 怎么写",
+      "elapsed_s": 33.13,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 怎么 调试",
+      "elapsed_s": 22.49,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 跟 context 关系",
+      "elapsed_s": 10.92,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills 最佳实践 是什么",
+      "elapsed_s": 5.43,
+      "mechanism": "Skills",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Hooks block-dangerous 怎么拦截",
+      "elapsed_s": 15.95,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 17/17 PASS 怎么验证",
+      "elapsed_s": 18.03,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis PreToolUse 跟 PostToolUse 区别",
+      "elapsed_s": 13.16,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks protect-files 怎么保护",
+      "elapsed_s": 14.9,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks audit-log 怎么审计",
+      "elapsed_s": 16.76,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks Python 原生 跟 Shell 区别",
+      "elapsed_s": 19.52,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 怎么 install",
+      "elapsed_s": 14.22,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 实战 例子",
+      "elapsed_s": 15.62,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 跟 Skills 区别",
+      "elapsed_s": 9.12,
+      "mechanism": "Skills",
+      "expected_mechanism": "Hooks",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis hooks 跟 Subagent 区别",
+      "elapsed_s": 11.3,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 错误处理 怎么做",
+      "elapsed_s": 14.06,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 测试 怎么写",
+      "elapsed_s": 11.19,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 跟 MCP 区别",
+      "elapsed_s": 13.73,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 怎么 调试",
+      "elapsed_s": 11.79,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 性能 影响",
+      "elapsed_s": 7.56,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 跟 settings.json 关系",
+      "elapsed_s": 15.01,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 多个 怎么 chain",
+      "elapsed_s": 12.5,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 跟 Plugin 区别",
+      "elapsed_s": 14.9,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 实战 教程",
+      "elapsed_s": 8.65,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 跨项目 怎么 共享",
+      "elapsed_s": 12.71,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 跟 Agent SDK 区别",
+      "elapsed_s": 14.18,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 怎么 禁用",
+      "elapsed_s": 6.89,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks timeout 怎么设",
+      "elapsed_s": 12.94,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 怎么 trigger 多个",
+      "elapsed_s": 12.13,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 跟 RAG 关系",
+      "elapsed_s": 7.58,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis hooks 最佳实践 是什么",
+      "elapsed_s": 9.82,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 6 server 怎么注册",
+      "elapsed_s": 11.34,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP stdio 跟 HTTP 区别",
+      "elapsed_s": 10.88,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP tool 怎么定义",
+      "elapsed_s": 11.84,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP client 怎么连接 server",
+      "elapsed_s": 17.52,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP .mcp.json 怎么配置",
+      "elapsed_s": 19.99,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跟 mavis 工具 区别",
+      "elapsed_s": 12.72,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 怎么 install",
+      "elapsed_s": 11.27,
+      "mechanism": "Plugins",
+      "expected_mechanism": "MCP",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis MCP 实战 例子",
+      "elapsed_s": 14.72,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跟 Skills 区别",
+      "elapsed_s": 11.77,
+      "mechanism": "Skills",
+      "expected_mechanism": "MCP",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis MCP 跟 Hooks 区别",
+      "elapsed_s": 12.35,
+      "mechanism": "Hooks",
+      "expected_mechanism": "MCP",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis MCP 性能 怎么样",
+      "elapsed_s": 6.48,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跟 Subagent 区别",
+      "elapsed_s": 8.3,
+      "mechanism": "子智能体",
+      "expected_mechanism": "MCP",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis MCP 怎么 调试",
+      "elapsed_s": 7.74,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跨项目 怎么 共享",
+      "elapsed_s": 9.66,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跟 Agent SDK 区别",
+      "elapsed_s": 13.82,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "MCP",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis MCP 跟 Plugin 区别",
+      "elapsed_s": 12.69,
+      "mechanism": "Plugins",
+      "expected_mechanism": "MCP",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis MCP 怎么 部署",
+      "elapsed_s": 9.28,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 实战 教程",
+      "elapsed_s": 15.42,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP timeout 怎么设",
+      "elapsed_s": 14.47,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 怎么 测试",
+      "elapsed_s": 7.21,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跟 context 关系",
+      "elapsed_s": 9.09,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 怎么 安全 跑",
+      "elapsed_s": 10.66,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跟 RAG 关系",
+      "elapsed_s": 10.45,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 跟 function calling 区别",
+      "elapsed_s": 14.64,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 最佳实践 是什么",
+      "elapsed_s": 10.03,
+      "mechanism": "MCP",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless --max-turns CI/CD 怎么跑",
+      "elapsed_s": 17.1,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless output-format 怎么选",
+      "elapsed_s": 8.27,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis GitHub Actions mavis 怎么配置",
+      "elapsed_s": 22.72,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis team plan run 跟 Headless 区别",
+      "elapsed_s": 15.59,
+      "mechanism": "子智能体",
+      "expected_mechanism": "Headless",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis max-budget-usd 怎么限制成本",
+      "elapsed_s": 12.51,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis --allowedTools 白名单 怎么用",
+      "elapsed_s": 14.0,
+      "mechanism": "子智能体",
+      "expected_mechanism": "Headless",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis Headless 怎么 调试",
+      "elapsed_s": 17.51,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 跟 Skills 区别",
+      "elapsed_s": 9.96,
+      "mechanism": "Skills",
+      "expected_mechanism": "Headless",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis Headless 实战 例子",
+      "elapsed_s": 21.34,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless timeout 怎么设",
+      "elapsed_s": 10.84,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 跟 Hooks 区别",
+      "elapsed_s": 12.57,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Headless",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis Headless 跟 MCP 区别",
+      "elapsed_s": 11.57,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 跟 Subagent 区别",
+      "elapsed_s": 10.27,
+      "mechanism": "子智能体",
+      "expected_mechanism": "Headless",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis Headless 跨项目 怎么 共享",
+      "elapsed_s": 17.25,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 跟 Agent SDK 区别",
+      "elapsed_s": 11.17,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Headless",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis Headless 跟 Plugin 区别",
+      "elapsed_s": 11.07,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 怎么 部署",
+      "elapsed_s": 12.07,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 实战 教程",
+      "elapsed_s": 16.21,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 怎么 测试",
+      "elapsed_s": 11.13,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 跟 context 关系",
+      "elapsed_s": 12.93,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless exit code 怎么",
+      "elapsed_s": 12.42,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 跟 RAG 关系",
+      "elapsed_s": 12.09,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 跟 function calling 区别",
+      "elapsed_s": 13.23,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless 最佳实践 是什么",
+      "elapsed_s": 7.43,
+      "mechanism": "Headless",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK @tool 装饰器 怎么定义",
+      "elapsed_s": 9.16,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK canUseTool 怎么动态回调",
+      "elapsed_s": 10.51,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK JSON Schema verifier 怎么用",
+      "elapsed_s": 10.6,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis session resume 怎么续接",
+      "elapsed_s": 10.15,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis fork_session 什么时候用",
+      "elapsed_s": 9.56,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK query 函数 怎么用",
+      "elapsed_s": 12.41,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK ClaudeAgentOptions 怎么配",
+      "elapsed_s": 11.66,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 Skills 区别",
+      "elapsed_s": 12.56,
+      "mechanism": "Skills",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis Agent SDK 实战 例子",
+      "elapsed_s": 14.93,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 Hooks 区别",
+      "elapsed_s": 10.32,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis Agent SDK 跟 MCP 区别",
+      "elapsed_s": 14.4,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 Subagent 区别",
+      "elapsed_s": 12.04,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 Plugin 区别",
+      "elapsed_s": 12.4,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跨项目 怎么 共享",
+      "elapsed_s": 12.4,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 怎么 install",
+      "elapsed_s": 10.57,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 Headless 区别",
+      "elapsed_s": 9.05,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 实战 教程",
+      "elapsed_s": 14.69,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 怎么 部署",
+      "elapsed_s": 13.61,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 怎么 测试",
+      "elapsed_s": 11.59,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 context 关系",
+      "elapsed_s": 11.83,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 RAG 关系",
+      "elapsed_s": 12.54,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 最佳实践 是什么",
+      "elapsed_s": 5.38,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK canUseTool 实战",
+      "elapsed_s": 12.43,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 function calling 区别",
+      "elapsed_s": 12.69,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK error handling 怎么",
+      "elapsed_s": 9.1,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK 跟 thread 关系",
+      "elapsed_s": 12.71,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Plugins plugin.json install CLI",
+      "elapsed_s": 13.82,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin.json manifest 字段 是什么",
+      "elapsed_s": 10.09,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin install 怎么跑",
+      "elapsed_s": 10.62,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 skill 区别",
+      "elapsed_s": 12.22,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin Claude Code 怎么兼容",
+      "elapsed_s": 13.69,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin.json version 怎么管理",
+      "elapsed_s": 6.97,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 怎么 开发",
+      "elapsed_s": 14.4,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 实战 例子",
+      "elapsed_s": 8.91,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 Skills 区别",
+      "elapsed_s": 7.62,
+      "mechanism": "Skills",
+      "expected_mechanism": "Plugins",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis plugin 跟 Hooks 区别",
+      "elapsed_s": 13.11,
+      "mechanism": "Hooks",
+      "expected_mechanism": "Plugins",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis plugin 跟 MCP 区别",
+      "elapsed_s": 7.54,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 Subagent 区别",
+      "elapsed_s": 11.06,
+      "mechanism": "子智能体",
+      "expected_mechanism": "Plugins",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis plugin 跨项目 怎么 共享",
+      "elapsed_s": 12.07,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 Agent SDK 区别",
+      "elapsed_s": 13.51,
+      "mechanism": "Agent SDK",
+      "expected_mechanism": "Plugins",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis plugin 跟 Headless 区别",
+      "elapsed_s": 13.54,
+      "mechanism": "Headless",
+      "expected_mechanism": "Plugins",
+      "routing_correct": false
+    },
+    {
+      "query": "mavis plugin 怎么 测试",
+      "elapsed_s": 15.31,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 怎么 部署",
+      "elapsed_s": 8.32,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 实战 教程",
+      "elapsed_s": 12.8,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 context 关系",
+      "elapsed_s": 5.73,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 RAG 关系",
+      "elapsed_s": 8.26,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 怎么 调试",
+      "elapsed_s": 10.88,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 function calling 区别",
+      "elapsed_s": 9.56,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 最佳实践 是什么",
+      "elapsed_s": 11.82,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 thread 关系",
+      "elapsed_s": 8.64,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin error handling 怎么",
+      "elapsed_s": 9.57,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis plugin 跟 task 关系",
+      "elapsed_s": 9.78,
+      "mechanism": "Plugins",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    }
+  ]
+}

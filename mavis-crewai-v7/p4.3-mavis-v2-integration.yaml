@@ -1,0 +1,137 @@
+version: 1
+plan:
+  name: P4.3 mavis_v2 主入口集成 (4 子任务)
+  max_concurrency: 1
+  max_consecutive_failures: 2
+  max_cycles: 3
+  auto_accept: true
+  auto_reject_retries: 1
+  verifier_config:
+    default_verifiers:
+      - verifier
+    audit_sample_rate: 0
+    strict_mode: false
+tasks:
+  - id: t1-status
+    title: "T1 跑 mavis_v2 status 验证 15 P 队列 + hooks"
+    prompt: |
+      你是 mavis framework 集成测试员。
+
+      任务: 跑 mavis_v2 主入口嘅 status 命令, 验证 15 P 队列全部 + 28 黑名单 + 17/17 PASS 状态显示正确。
+
+      执行步骤:
+      1. cd ~/workspace/mavis-crewai-v7/
+      2. source ~/workspace/mavis-llamaindex/bin/activate
+      3. python3 crewai_v7.py status 2>&1 | tee /tmp/p4.3-t1-status.log
+      4. 把输出贴到 deliverable
+
+      验收: 输出必须包含
+      - 15 P 队列项目 (P1.1.a 到 P4.0)
+      - 28 黑名单模式
+      - block-dangerous 17/17 PASS
+      - 永久 invariant 库 (23+ invariant)
+
+      写到: ~/.mavis/plans/PLAN_ID/outputs/t1-status/deliverable.md
+    verify_prompt: |
+      检查 /tmp/p4.3-t1-status.log 必须包含全部 15 P 队列 + 28 黑名单 + 17/17 PASS + 23+ invariant。
+    assigned_to: coder
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 300000
+  - id: t2-query
+    title: "T2 跑 mavis_v2 query 验证 8 机制路由"
+    prompt: |
+      你是 mavis framework 集成测试员。
+
+      任务: 跑 mavis_v2 主入口嘅 query 命令, 验证 8 机制 query 路由 work。
+
+      执行步骤:
+      1. cd ~/workspace/mavis-crewai-v7/
+      2. source ~/workspace/mavis-llamaindex/bin/activate
+      3. 测试 8 个机制各 1 个 query:
+         - CLAUDE.md: "CLAUDE.md 五层记忆 怎么 auto-inject"
+         - 子智能体: "mavis 子智能体 5 模式 怎么用"
+         - Skills: "mavis Skills AWEL 三层架构 是什么"
+         - Hooks: "mavis Hooks block-dangerous 怎么拦截"
+         - MCP: "mavis MCP 6 server 怎么注册"
+         - Headless: "mavis Headless --max-turns CI/CD 怎么跑"
+         - Agent SDK: "mavis Agent SDK @tool 装饰器 怎么定义"
+         - Plugins: "mavis Plugins plugin.json install CLI"
+      4. 把 8 个 query 嘅路由结果 + 答案头 200 字符 写到 deliverable
+
+      验收: 8 个 query 全部 100% 路由正确 (期望 == 实际)
+
+      写到: ~/.mavis/plans/PLAN_ID/outputs/t2-query/deliverable.md
+    verify_prompt: |
+      检查 deliverable 8 个 query 全部 100% 路由正确 (期望 == 实际)。
+    assigned_to: coder
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 600000
+  - id: t3-modify
+    title: "T3 跑 mavis_v2 modify 验证 P3.5 失败回滚"
+    prompt: |
+      你是 mavis framework 集成测试员。
+
+      任务: 跑 mavis_v2 主入口嘅 modify 命令, 验证 P3.5 修复 (动态阈值 + 失败回滚) 真 work。
+
+      执行步骤:
+      1. 准备测试文件: 复制 ~/workspace/mavis-crewai-v6/crewai_v6.py 到 /tmp/p4.3-t3-test.py
+      2. cd ~/workspace/mavis-crewai-v7/
+      3. source ~/workspace/mavis-llamaindex/bin/activate
+      4. 跑: python3 crewai_v6.py "给 /tmp/p4.3-t3-test.py 加 docstring" /tmp/p4.3-t3-test.py
+         (因为 crewai_v7.py main 入口没 modify 命令, 用 v6 改文件)
+      5. 验证: 跑完后 linter 必须 passed, 文件长度 >= 70% 原文件
+      6. 失败回滚验证: 故意搞坏 /tmp/p4.3-t3-test.py 测 Patcher 失败回滚
+
+      验收:
+      - 改文件后 linter passed
+      - 文件长度 >= 70% 原文件
+      - 故意搞坏后 Patcher 修复 OR 失败回滚到原内容
+
+      写到: ~/.mavis/plans/PLAN_ID/outputs/t3-modify/deliverable.md
+    verify_prompt: |
+      检查 deliverable 改文件 linter passed + 长度 >= 70% + Patcher 失败回滚 work。
+    assigned_to: coder
+    role: produce
+    verified_by: verifier
+    depends_on: []
+    gates: []
+    max_retries: 1
+    timeout_ms: 600000
+  - id: t4-integration
+    title: "T4 集成 verify 3 大功能 (status query modify)"
+    prompt: |
+      你是 mavis framework 集成测试员。
+
+      任务: 综合 verify mavis_v2 主入口嘅 3 大功能 (status / query / modify) 全部 work。
+
+      执行步骤:
+      1. 读 T1 (status) + T2 (query) + T3 (modify) 嘅 deliverable
+      2. 写综合 verify 报告:
+         - status 全部 15 P 队列可见 PASS/FAIL
+         - query 8 机制 100% 路由正确 PASS/FAIL
+         - modify P3.5 失败回滚 work PASS/FAIL
+      3. 最终结论: P4.3 mavis_v2 主入口集成 work / not work
+
+      验收: 3 项全 PASS = 集成成功
+
+      写到: ~/.mavis/plans/PLAN_ID/outputs/t4-integration/deliverable.md
+    verify_prompt: |
+      检查综合 verify 报告, 3 项全 PASS 才算 P4.3 集成成功。
+    assigned_to: coder
+    role: produce
+    verified_by: verifier
+    depends_on:
+      - t1-status
+      - t2-query
+      - t3-modify
+    gates: []
+    max_retries: 0
+    timeout_ms: 300000

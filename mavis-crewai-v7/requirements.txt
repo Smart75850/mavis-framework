@@ -1,0 +1,4 @@
+# mavis framework v7 dependencies
+httpx>=0.24
+pyyaml>=6.0
+# LlamaIndex 0.10+ (需要 full venv setup, 唔包入 CI 验证)

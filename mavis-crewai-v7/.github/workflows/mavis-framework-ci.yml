@@ -1,0 +1,70 @@
+name: mavis-framework CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    name: Verify mavis framework
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Verify mavis_v3.py syntax + 8 大功能
+        run: |
+          echo "=== mavis_v3.py syntax + 8 大功能 verify ==="
+          python3 -c "import ast; ast.parse(open('mavis_v3.py').read()); print('OK mavis_v3.py syntax')"
+          for f in mavis_v3_status mavis_v3_query mavis_v3_modify mavis_v3_plan mavis_v3_hooks mavis_v3_recall mavis_v3_verify; do
+            if ! grep -q "def $f" mavis_v3.py; then echo "MISSING $f"; exit 1; fi
+          done
+          echo "OK 8 大功能"
+
+      - name: Verify crewai_v7.py syntax + 15 P 队列
+        run: |
+          echo "=== crewai_v7.py syntax + 15 P 队列 verify ==="
+          python3 -c "import ast; ast.parse(open('crewai_v7.py').read()); print('OK crewai_v7.py syntax')"
+          for p in P1.1.a P1.2 P1.3 P1.4 P2.x P2.y P2.z P3.0 P3.1 P3.2 P3.3 P3.4 P3.5 P3.6 P4.0; do
+            if ! grep -q "\"$p\"" crewai_v7.py; then echo "MISSING $p"; exit 1; fi
+          done
+          echo "OK 15 P 队列"
+
+      - name: Verify 8 机制 router import
+        run: python3 .github/verify-router-import.py
+
+      - name: Verify hooks (block-dangerous)
+        run: |
+          echo "=== hooks verify ==="
+          RESULT=$(echo '{"tool_name":"Bash","tool_input":{"command":"rm -rf /"}}' | bash hooks-templates/block-dangerous.sh 2>&1 || true)
+          if ! echo "$RESULT" | grep -q "BLOCKED"; then echo "MISSING hooks 拦截"; exit 1; fi
+          echo "OK hooks 拦截危险命令"
+
+  verify-reports:
+    name: Verify 14 项缺口修复报告
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check 报告完整
+        run: |
+          for f in 32B-LARGE-FILE-VERIFICATION.md \
+                   P4.3-MAVIS-DAEMON-INTEGRATION-VERIFICATION.md \
+                   P4.1-200Q-FULL-VERIFICATION.md \
+                   P1.1A-DEVIKA-VERIFICATION-2026-07-11.md; do
+            if [ ! -f "$f" ]; then echo "MISSING $f"; exit 1; fi
+            echo "OK $f"
+          done

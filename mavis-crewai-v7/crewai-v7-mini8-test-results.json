@@ -1,0 +1,72 @@
+{
+  "test_at": "2026-07-11T11:00",
+  "test_type": "P4.1 mini 8 query (8 机制各 1)",
+  "test_count": 8,
+  "routing_accuracy": 1.0,
+  "avg_elapsed_s": 10.85,
+  "est_200_total_min": 36.2,
+  "fixes_applied": [
+    "1. router.py 加 Tuple 导入",
+    "2. crewai_v7.py 改用 route_and_response() (EightMechRouter 无 .query() 方法)",
+    "3. crewai_v7.py 一次性建 router, 复用 200 次 (省 0.8s init × 200 = 160s)",
+    "4. router.py 关键词命中跳过 LLM (省 5s/次 × 200 = 1000s = 17 分钟)"
+  ],
+  "results": [
+    {
+      "expected": "CLAUDE.md",
+      "routed": "CLAUDE.md",
+      "elapsed_s": 6.51,
+      "correct": true,
+      "query": "CLAUDE.md 五层记忆 怎么 auto-inject"
+    },
+    {
+      "expected": "子智能体",
+      "routed": "子智能体",
+      "elapsed_s": 13.55,
+      "correct": true,
+      "query": "mavis 子智能体 5 模式 怎么用"
+    },
+    {
+      "expected": "Skills",
+      "routed": "Skills",
+      "elapsed_s": 5.47,
+      "correct": true,
+      "query": "mavis Skills AWEL 三层架构 是什么"
+    },
+    {
+      "expected": "Hooks",
+      "routed": "Hooks",
+      "elapsed_s": 8.36,
+      "correct": true,
+      "query": "mavis Hooks block-dangerous 怎么拦截"
+    },
+    {
+      "expected": "MCP",
+      "routed": "MCP",
+      "elapsed_s": 3.01,
+      "correct": true,
+      "query": "mavis MCP 6 server 怎么注册"
+    },
+    {
+      "expected": "Headless",
+      "routed": "Headless",
+      "elapsed_s": 21.67,
+      "correct": true,
+      "query": "mavis Headless --max-turns CI/CD 怎么跑"
+    },
+    {
+      "expected": "Agent SDK",
+      "routed": "Agent SDK",
+      "elapsed_s": 13.13,
+      "correct": true,
+      "query": "mavis Agent SDK @tool 装饰器 怎么定义"
+    },
+    {
+      "expected": "Plugins",
+      "routed": "Plugins",
+      "elapsed_s": 15.14,
+      "correct": true,
+      "query": "mavis Plugins plugin.json install CLI"
+    }
+  ]
+}
