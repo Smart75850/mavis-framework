@@ -1,0 +1,145 @@
+{
+  "test_at": "2026-07-11T23:21:18.430962",
+  "test_name": "真实测试 2: M3 真 mavis recall 查询",
+  "provider": "MiniMax-M3 (永久 invariant #51) + LlamaIndex (永久 invariant #36) + 本地 nomic-embed",
+  "test_count": 5,
+  "passed_count": 3,
+  "total_elapsed_s": 26.86,
+  "results": [
+    {
+      "query": "永久 invariant #30 系乜? 边个 P 队列?",
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.6584,
+          "text": "3 50/50 (100%)** — 因为真实项目改写暴露 P3.3 没暴露的边缘 case。  ### 暴露的 2 大 bug (永久 invariant #45)  #### Bug 1: 70%"
+        },
+        {
+          "file": "MEMORY.md",
+          "score": 0.6182,
+          "text": "# 🚨 MEMORY.md - Mavis 必读 (永久 invariant #31, 2026-07-10 06:22)  > **任何 Mavis session 启动必读嘅 Handoff 入口"
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.6131,
+          "text": "最准) - **03_coder**: 14B 生成代码/方案 (~22s, 最慢) - **05_runner**: mock 运行 (P2.x 简化, 0s) - **07_patcher**: "
+        }
+      ],
+      "top_score": 0.6584,
+      "answer": "根据 context 文件路径 `/Users/apple/.mavis/agents/mavis/memory/topics/agent-dev-book-2026-07-10.md`, 永久 invariant #30 应该喺呢个文件入面, 但 context 入面冇完整列出 #30 嘅内容 (只见到 #31 同 #35-#37 等编号嘅提及)。\n\n从 context 可见嘅信息嚟推断:\n\n- **永久 invariant #31**: MEMORY.md (mavis 必读)\n- **永久 invariant #35-#37**: CrewAI 4 组件 / LlamaIndex 4 步",
+      "elapsed_s": 4.67,
+      "valid_score": true,
+      "keyword_matches": 1,
+      "keyword_total": 3,
+      "passed": true
+    },
+    {
+      "query": "mavis 8 机制协奏有边 8 个?",
+      "sources": [
+        {
+          "file": "MEMORY.md",
+          "score": 0.7275,
+          "text": "md` - **知识星图** 204 节点 (+49 今晚) - **mavis 8 机制协奏** 92.5% (今晚 +2.25%)  ## 永久 invariant 摘要  | # | 内容 | "
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.718,
+          "text": "🟡 未来 mavis team plan 应该自动 read `MAVIS_DEFAULT_*` env var (现 plan.yaml 直接 hardcode) 4. 🟡 mavis CLI 应该"
+        },
+        {
+          "file": "mavis-2-roadmap.md",
+          "score": 0.7162,
+          "text": "- [ ] 有冇新嘅 8 机制外嘅需求? (e.g. .mavisignore 已经覆盖, 但係其他呢?)  ---  ## 七、3 大风险 + 缓解  | 风险 | 影响 | 缓解 | |---|-"
+        }
+      ],
+      "top_score": 0.7275,
+      "answer": "我冇办法答到你呢个问题。\n\n根据提供嘅 context 资料,只系提到「mavis 8 机制协奏 92.5% (今晚 +2.25%)」呢个状态数字,但**冇列出具体嘅 8 个机制系乜**。\n\n要答到你嘅问题,需要嘅信息喺 context 入面**缺失**。可能嘅来源:\n\n| 可能位置 | 备注 |\n|---|---|\n| `~/.mavis/agents/mavis/memory/MEMORY.md` 完整版 | context 只俾咗片段(开头部分) |\n| `mavis-orchestration.md` | context 显示文件存在,但只见到 Chapter 8 mapping 表嘅",
+      "elapsed_s": 4.68,
+      "valid_score": true,
+      "keyword_matches": 0,
+      "keyword_total": 8,
+      "passed": false
+    },
+    {
+      "query": "block-dangerous 拦截 28 种黑名单具体系边 28 种?",
+      "sources": [
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.6191,
+          "text": "**命名规范**: `mcp__{服务器名}__{工具名}`  #### 概念 5: Hooks 编程模式 (Python 原生, 唔系 Shell)  ```python async def blo"
+        },
+        {
+          "file": "security-guards.md",
+          "score": 0.6179,
+          "text": "---  ## 2. 3 个 shell 模板详解  ### 2.1 block-dangerous.sh (10 类危险命令拦截)  **拦截清单** (§5.6.1 + 大佬高频踩坑场景):  |"
+        },
+        {
+          "file": "security-guards.md",
+          "score": 0.6161,
+          "text": "# 应该输出 exit=2 ```  ### 5.2 批量测试 (test-block-dangerous.sh)  完整 12 用例自动化测试, 输出 PASS / FAIL 汇总.  ---  #"
+        }
+      ],
+      "top_score": 0.6191,
+      "answer": "根据你提供的 context 信息，我只能确认以下内容：\n\n**Context 中明确提到的危险命令类型**（在 `security-guards.md` 的表格里）共 **10 类**：\n\n1. 强制删除 + 根路径（`rm -rf /`, `rm -r /*`）\n2. Git 强制推送（`git push --force`, `git push -f`）\n3. Git 危险重置（`git reset --hard`, `git clean -fd .`）\n4. 数据库毁灭（`DROP DATABASE`, `DROP TABLE`, `TRUNCATE`）\n5. Fork 炸弹（`:(){",
+      "elapsed_s": 7.35,
+      "valid_score": true,
+      "keyword_matches": 0,
+      "keyword_total": 4,
+      "passed": false
+    },
+    {
+      "query": "CrewAI 4 组件系乜?",
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.6199,
+          "text": "2 完整复用 P1.1.a B4 + Linter + 长度检查 - #42 P1.2 CrewAI 4 组件: P3.2 保留 (P3.1 4 角色 + 真调 recall/verifier) - "
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.6115,
+          "text": "符合预期  ### 与永久 invariant #21/#32/#35/#36/#37/#40/#41 的关系  - #21 LangGraph StateGraph: P3.1 CrewAI 串行 "
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.5923,
+          "text": "1 核心, 不允许停留在 3 角色 - Manager 委派 (allow_delegation=True) 是 P3.1 hierarchical 关键 - 50 query 库是 P3.1 sca"
+        }
+      ],
+      "top_score": 0.6199,
+      "answer": "Based on the context information about CrewAI 4 components (crewai 4 组件)：\n\n**P3.2 包含嘅 4 角色 + 真调功能：**\n\n| 角色 | 功能 |\n|---|---|\n| **Planner** | 规划任务流程 |\n| **Researcher** | 真调 **recall** (P1.1.a 功能) |\n| **Coder** | 真写文件 (B4 完整文件模式) |\n| **Reviewer/Verifier** | 真调 **verifier** subprocess |\n\n**核心特征：**\n\n1. *",
+      "elapsed_s": 5.86,
+      "valid_score": true,
+      "keyword_matches": 1,
+      "keyword_total": 4,
+      "passed": true
+    },
+    {
+      "query": "P3.5 修复嘅 2 大 bug 系乜?",
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.7275,
+          "text": "3 50/50 (100%)** — 因为真实项目改写暴露 P3.3 没暴露的边缘 case。  ### 暴露的 2 大 bug (永久 invariant #45)  #### Bug 1: 70%"
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.7074,
+          "text": "10x scale up 验证 - 5 种改动类型 (每种 10 个) 全部 Linter passed - 平均 34.41s/次, 总 28.7 分钟 (不可压缩) - Patcher 0/50 "
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.6758,
+          "text": "不允许停留在 P3.2 5 任务。  ### P3.2 → P3.3 增强  | 维度 | P3.2 | P3.3 | |---|---|---| | 改文件任务 | 5 | **50 (10x sc"
+        }
+      ],
+      "top_score": 0.7275,
+      "answer": "根据 context 信息，P3.4 暴露嘅 2 大 bug 如下（P3.5 嘅修复方向）：\n\n### Bug 1: 70% 长度检查对\"加一行\"小改动太严格\n\n**问题**: P3.2 嘅长度检查代码：\n```python\nif len(full_code) < original_length * 0.7:\n    retry  # ❌ 拒绝\n```\n\n\"加一行\"任务只需约 200 字符，但原 README 有 3484 字符，70% 阈值 = 2438 字符，200 < 2438 就被错误拒绝。\n\n**修复方向**: 区分\"重写文件\"同\"小改动\"两种场景：\n- **重写文件**: 保留 7",
+      "elapsed_s": 4.31,
+      "valid_score": true,
+      "keyword_matches": 2,
+      "keyword_total": 3,
+      "passed": true
+    }
+  ]
+}

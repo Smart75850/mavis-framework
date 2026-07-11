@@ -1,0 +1,43 @@
+{
+  "test_at": "2026-07-11T23:18:42.792037",
+  "test_name": "真实测试 1: M3 改 mavis-framework 真实项目文件",
+  "provider": "MiniMax-M3 (永久 invariant #51)",
+  "test_count": 3,
+  "passed_count": 0,
+  "total_elapsed_s": 16.7,
+  "results": [
+    {
+      "file": "mavis-recall-v2/recall.py",
+      "original_size": 9150,
+      "new_size": 1976,
+      "ratio": 0.216,
+      "threshold": 0.7,
+      "length_check": "FAILED",
+      "passed": false,
+      "elapsed_s": 6.28,
+      "error": "length ratio 21.60% < 70%"
+    },
+    {
+      "file": "mavis-8mech-router-v2/router.py",
+      "original_size": 7356,
+      "new_size": 2372,
+      "ratio": 0.3225,
+      "threshold": 0.7,
+      "length_check": "FAILED",
+      "passed": false,
+      "elapsed_s": 6.26,
+      "error": "length ratio 32.25% < 70%"
+    },
+    {
+      "file": "mavis-crewai-v7/mavis_m3_provider.py",
+      "original_size": 7471,
+      "new_size": 1229,
+      "ratio": 0.1645,
+      "threshold": 0.7,
+      "length_check": "FAILED",
+      "passed": false,
+      "elapsed_s": 4.15,
+      "error": "length ratio 16.45% < 70%"
+    }
+  ]
+}

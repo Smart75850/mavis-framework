@@ -1,0 +1,79 @@
+{
+  "test_at": "2026-07-11T23:26:14.820313",
+  "test_name": "真实测试 3: 8 机制路由真实 query (非预设)",
+  "test_count": 10,
+  "passed_count": 10,
+  "accuracy": 100.0,
+  "results": [
+    {
+      "query": "我想喺 settings.json 装一个 PreToolUse 拦截器, 应该点写?",
+      "expected": "Hooks",
+      "actual": "Hooks",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "公司入面有 6 个 MCP server 注册咗, 我想加多一个点做?",
+      "expected": "MCP",
+      "actual": "MCP",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "claude --max-turns 5 部署 CI 流水线, 点配置 GitHub Actions?",
+      "expected": "Headless",
+      "actual": "Headless",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "我想做一个 @tool 函数, 用 Python 写一个 mavis 嘅 agent SDK",
+      "expected": "Agent SDK",
+      "actual": "Agent SDK",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "我项目入面个 AGENTS.md 冇生效, 点触发 auto-inject?",
+      "expected": "CLAUDE.md",
+      "actual": "CLAUDE.md",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "我想用 subagent 派几个 worker 去做 task, 点配置?",
+      "expected": "子智能体",
+      "actual": "子智能体",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "我开发咗一个 mavis 嘅 skill, 叫 weather-query, 怎么发布?",
+      "expected": "Skills",
+      "actual": "Skills",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "我有个 mavis plugin, 喺 plugin.json 加咗 manifest, 点 install?",
+      "expected": "Plugins",
+      "actual": "Plugins",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "block-dangerous.sh 拦截 17/17 PASS, 点写?",
+      "expected": "Hooks",
+      "actual": "Hooks",
+      "method": "关键词",
+      "passed": true
+    },
+    {
+      "query": "headless mode 部署到 GitHub Actions, max-budget-usd 设定几多?",
+      "expected": "Headless",
+      "actual": "Headless",
+      "method": "关键词",
+      "passed": true
+    }
+  ]
+}
