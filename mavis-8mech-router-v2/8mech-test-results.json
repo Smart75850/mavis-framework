@@ -1,0 +1,263 @@
+{
+  "test_at": "2026-07-11T04:32:25.101517",
+  "test_count": 8,
+  "routing_accuracy": 1.0,
+  "queries": [
+    {
+      "query": "CLAUDE.md 五层记忆 怎么 auto-inject",
+      "routed_mechanism": "CLAUDE.md",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "CLAUDE.md",
+          2.6
+        ]
+      ],
+      "answer": "CLAUDE.md 的五层记忆框架通过初始化脚本和 watchdog cron 自动注入到项目中。具体来说，当一个新项目开始时，`cp master → <project>/AGENTS.md (init script 自动做)` 这一行命令会自动执行，将主配置文件复制到项目的 AGENTS.md 文件中，从而实现自动注入。这样，在创建新的项目或初始化现有项目时，不需要手动干预就能应用 CLAUDE 的记忆框架和功能。",
+      "elapsed_s": 7.13,
+      "sources": [
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.662,
+          "text_preview": "**本地级**: CLAUDE.local.md / LOCAL_MEMORY.md (gitignored, manual)  ### Harness Demo (大佬项目: ~/workspace"
+        },
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.6566,
+          "text_preview": "Read when: 大佬扫书 chapter / 开始新项目设计架构 / 设计 Agent 系统 / 设计 Skill / 设计 mavis team plan 时\" ---  # 黄佳《让 Cla"
+        },
+        {
+          "file": "security-guards.md",
+          "score": 0.6553,
+          "text_preview": "sh /path/to/project/.claude/hooks/ chmod +x /path/to/project/.claude/hooks/protect-files.sh ```  ###"
+        }
+      ],
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis 子智能体 5 模式 怎么用",
+      "routed_mechanism": "子智能体",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "子智能体",
+          0.8
+        ]
+      ],
+      "answer": "在使用 mavis 子智能体时，首先需要理解 \"5 模式\" 可能指的是 mavis 系统中特定的五种操作或配置模式。具体如何应用这五个模式，请参考 `mavis plugin install` 和 `mavis debug` 命令的相关文档，这些命令是为了解决跨项目插件安装和调试问题设计的。\n\n对于更详细的步骤：\n1. **安装插件**：使用 `mavis plugin install` 命令来安装需要的插件。\n2. **调试模式**：利用 `mavis debug` 来检查和调整子智能体的行为。\n\n此外，确保遵循 mavis 的工作流原则，并且参照相关章节（如 Chapter 7）中提到的具体实现细节。如果遇到特定问题或有进一步的需求，请查阅独立的 roadmap 文档 (`~/.mavis/agents/mavis/memory/mavis-2-roadmap.md`) 获取更多信息和指导。",
+      "elapsed_s": 9.54,
+      "sources": [
+        {
+          "file": "MEMORY.md",
+          "score": 0.698,
+          "text_preview": "md` - **知识星图** 204 节点 (+49 今晚) - **mavis 8 机制协奏** 92.5% (今晚 +2.25%)  ## 永久 invariant 摘要  | # | 内容 | "
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.688,
+          "text_preview": "CI/CD, cron]  Chapter 7 (无为而治: Headless 模式 + CI/CD) 嘅 12 节 invariants, 我哋 mavis framework 嘅等价实现:  | "
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.6853,
+          "text_preview": "mavisignore` | ⭐⭐⭐⭐⭐ | 大佬想 ignore 某些 topic / 路径 | | **Phase 2** | Q3 2026 (2-4 周) | #7 `mavis plugin"
+        }
+      ],
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills AWEL 三层架构 是什么",
+      "routed_mechanism": "Skills",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "Skills",
+          3.8
+        ]
+      ],
+      "answer": "mavis 的 Skills AWEL 三层架构是指在原有的技能体系基础上，增加了一个多层次的设计来增强其功能和灵活性。这里的 AWEL 架构具体指的是：\n\n- A (Acquire)：获取或学习新的能力。\n- W (Work)：工作模式，在此模式下利用已获得的能力执行任务。\n- E (Evaluate)：评估当前能力和任务完成情况，调整策略或进一步提升能力。\n- L (Learn)：通过反馈机制来改进和增强现有技能。\n\n这个三层架构的引入使得 mavis 的 Skills 模块更加成熟和完善。根据上下文信息，在 16 章启发之后，Skills 的得分从 100% 增加到了 100%，这表明新加入的 AWEL 架构成功地增强了现有的技能体系，使其具备了更强大的功能和更高的灵活性。",
+      "elapsed_s": 9.56,
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.698,
+          "text_preview": "选取未完成任务 2. 执行当前任务 3. 保存执行结果 (向量数据库) 4. 创建新任务 5. 重排任务优先级 6. 保存任务列表 ```  ### 与 mavis team plan 集成  - S"
+        },
+        {
+          "file": "MEMORY.md",
+          "score": 0.6964,
+          "text_preview": "md` - **知识星图** 204 节点 (+49 今晚) - **mavis 8 机制协奏** 92.5% (今晚 +2.25%)  ## 永久 invariant 摘要  | # | 内容 | "
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.6925,
+          "text_preview": "实现 mavis memory 嘅\"以文搜图\"功能 (ComfyUI 出图 recall)。  ---  ## mavis 8 机制协奏得分更新  | 机制 | 16 章启发前 | 16 章启发后 |"
+        }
+      ],
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Hooks block-dangerous 怎么拦截",
+      "routed_mechanism": "Hooks",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "Hooks",
+          4.8
+        ]
+      ],
+      "answer": "mavis Hooks 中的 `block-dangerous` 拦截是通过名为 `block-dangerous.sh` 的 shell 脚本实现的。该脚本用于拦截系统中十类危险命令，确保这些潜在有害的操作不会被执行，从而增强系统的安全性。要使用这个功能，请参考 `security-guards.md` 文件中的示例和说明进行配置和集成。",
+      "elapsed_s": 5.35,
+      "sources": [
+        {
+          "file": "security-guards.md",
+          "score": 0.7378,
+          "text_preview": "# 应该输出 exit=2 ```  ### 5.2 批量测试 (test-block-dangerous.sh)  完整 12 用例自动化测试, 输出 PASS / FAIL 汇总.  ---  #"
+        },
+        {
+          "file": "subagent-frontmatter-hooks.md",
+          "score": 0.7091,
+          "text_preview": "**复制 3 个现成 hook 脚本** 到新项目 (跟 security-guards.md §4 同) 2. **写 sub-agent Frontmatter** 引用 hook 字段 (参考 "
+        },
+        {
+          "file": "security-guards.md",
+          "score": 0.6971,
+          "text_preview": "--- description: \"Mavis 安全防护 Hooks 模板合集 (第 5 章 §5.6 安全防护体系 Mavis 化). 含 block-dangerous.sh (10 类危险命令拦"
+        }
+      ],
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 6 server 怎么注册",
+      "routed_mechanism": "MCP",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "MCP",
+          2.2
+        ]
+      ],
+      "answer": "要为 Mavis 的 MCP 系统注册一个新服务器，可以参考上下文中的 `stdio 通信` 部分和 `.mcp.json` 完整示例。具体步骤如下：\n\n1. 在项目根目录下创建或编辑 `.mcp.json` 文件。\n2. 使用类似以下的 JSON 格式配置新的 MCP server：\n   ```json\n   {\n     \"mcpServers\": {\n       \"your-server-name\": {\n         \"command\": \"npx\",\n         \"args\": [\"-y\", \"@modelcontextprotocol/server-yourserver\", \".\"]\n       }\n     }\n   }\n   ```\n3. 运行 `claude mcp list` 命令查看配置是否正确应用。\n4. 使用 `claude mcp test <your-server-name>` 测试新注册的 server 是否可以正常通信。\n\n请根据实际情况替换 `\"your-server-name\"` 和相应命令与参数。",
+      "elapsed_s": 10.67,
+      "sources": [
+        {
+          "file": "mcp-reference.md",
+          "score": 0.6704,
+          "text_preview": "`claude mcp list` — 列出所有配置 + 当前状态 2. `claude mcp test <server>` — 测试特定 server 连通性 3. `claude --mcp-d"
+        },
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.6694,
+          "text_preview": "**stdio 通信** (本地 MCP 服务器作为子进程) 5. **build 后用 .mcp.json 注册** (npx 启动 → 编译产物)  ### 调试三板斧 (§6.11.1) - `"
+        },
+        {
+          "file": "mcp-reference.md",
+          "score": 0.666,
+          "text_preview": "claude.json` 顶级 `mcpServers` | 用户级全局 | 跨项目个人工具 | ❌ 不提交（含个人 Token）| | `~/.claude.json` `projects.<项目路"
+        }
+      ],
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless --max-turns CI/CD 怎么跑",
+      "routed_mechanism": "Headless",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "Headless",
+          4.4
+        ]
+      ],
+      "answer": "为了在CI/CD中使用mavis的Headless模式并设置`--max-turns`参数，你可以通过环境变量或直接在命令行中指定相应的选项。具体地，在你的CI/CD流水线配置文件（如GitHub Actions、GitLab CI等）里添加以下内容：\n\n1. **环境变量**：在项目根目录的`.github/workflows/claude-review.yml`或其他配置文件中，设置相关的环境变量来控制最大循环次数：\n   ```yaml\n   env:\n     MAVIS_DEFAULT_MAX_CYCLES: 5 # 设置全局默认的最大循环次数为5\n   ```\n\n2. **命令行参数**：当你运行mavis的CLI工具时直接指定`--max-cycles`（与Claude Code中的`--max-turns`等效）：\n   ```bash\n   mavis team plan run --max-cycles=10 # 指定最大循环次数为10次\n   ```\n\n结合上述方法，你可以在CI/CD流程中灵活地控制mavis Headless模式的任务执行行为。",
+      "elapsed_s": 12.17,
+      "sources": [
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.7153,
+          "text_preview": "CI/CD, cron]  Chapter 7 (无为而治: Headless 模式 + CI/CD) 嘅 12 节 invariants, 我哋 mavis framework 嘅等价实现:  | "
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.6558,
+          "text_preview": "zshrc 2026-07-09)  ```bash # Team plan 默认 export MAVIS_DEFAULT_MAX_CONCURRENCY=4     # 类似 cancel-in-"
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.6526,
+          "text_preview": "🟡 未来 mavis team plan 应该自动 read `MAVIS_DEFAULT_*` env var (现 plan.yaml 直接 hardcode) 4. 🟡 mavis CLI 应该"
+        }
+      ],
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK @tool 装饰器 怎么定义",
+      "routed_mechanism": "Agent SDK",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "Agent SDK",
+          2.8
+        ]
+      ],
+      "answer": "在定义 `mavis` Agent SDK 的 `@tool` 装饰器时，需要遵循以下准则：\n\n1. **使用 async 函数**: 所有的工具函数必须是异步的。\n2. **严格的 JSON Schema 类型**: 确保输入和输出字段类型严格符合指定的格式。\n\n示例代码如下：\n\n```python\nfrom mavis import Agent, tool\n\nclass MyAgent(Agent):\n    @tool(output_format={\"type\": \"object\", \"properties\": {\"result\": {\"type\": \"string\"}}})\n    async def my_custom_tool(self, input: str) -> dict:\n        # 异步操作，处理输入并返回结果\n        result = await process(input)\n        return {\"result\": result}\n```\n\n这里 `@tool` 装饰器用于定义工具函数，并指定输出的 JSON Schema 格式。",
+      "elapsed_s": 10.51,
+      "sources": [
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.7571,
+          "text_preview": "Python 原生 Hooks 系未来 mavis 2.0 嘅增强方向 (灵活性 + 跨生态).  ### Agent SDK vs Headless CLI 选型对照 (Chapter 7+8 共识"
+        },
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.7463,
+          "text_preview": "**@tool 装饰器必须用 async 函数**: 唔好 sync 4. **JSON Schema 字段类型要严格**: `Literal[\"a\", \"b\"]` 唔系 `str`  ### Age"
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.7405,
+          "text_preview": "1.2 Devika 9 大专用 Agent  ### 9 大 Agent 角色  | # | Agent | 一句话职责 | mavis 现有对应 | |---|-------|----------"
+        }
+      ],
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Plugins plugin.json install CLI",
+      "routed_mechanism": "Plugins",
+      "routing_method": "关键词",
+      "kw_top_matches": [
+        [
+          "Plugins",
+          6.2
+        ]
+      ],
+      "answer": "To handle the installation of a mavis Plugin using its `plugin.json`, you would first ensure that the `plugin.json` manifest file is correctly formatted according to the guidelines. This includes specifying details like name, version, description, and other necessary attributes.\n\nAfter preparing the `plugin.json` file, you can use the CLI command provided by the system to install the plugin. Based on the given context, this would involve running a command similar to:\n\n```\nmavis plugin install <name>@<source>\n```\n\nReplace `<name>` with the name of your Plugin and `<source>` with either `community`, `github`, or `本地` depending on where you are sourcing it from.\n\nThis process automates the installation, making it easier compared to manually copying directories around for different projects.",
+      "elapsed_s": 9.86,
+      "sources": [
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.7647,
+          "text_preview": "无 install CLI) | | 5 大组件打包 | commands + agents + skills + hooks + .mcp.json | mavis sub-agent + skil"
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.7445,
+          "text_preview": "**加 Plugin 自动更新机制**: 类似 `mavis plugin update` + SemVer 验证  #### 大佬可选嘅 Plugin 化收益  | 维度 | 前 (散落配置) | "
+        },
+        {
+          "file": "mavis-2-roadmap.md",
+          "score": 0.7337,
+          "text_preview": "g. 私人 credentials)  ---  ### Phase 2: CLI 工具完善 (2026 Q3, 2-4 周)  **目标**: mavis CLI 完整化, 类似 Claude Co"
+        }
+      ],
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    }
+  ]
+}

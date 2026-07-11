@@ -1,0 +1,597 @@
+{
+  "test_at": "2026-07-11T05:12:55.829697",
+  "test_count": 8,
+  "routing_accuracy": 1.0,
+  "avg_elapsed_s": 20.57,
+  "avg_node_count": 3.6,
+  "queries": [
+    {
+      "query": "CLAUDE.md 五层记忆 怎么 auto-inject",
+      "routed_mechanism": "CLAUDE.md",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "node_count": 3,
+      "step_history": [
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "02_researcher",
+            "04_action",
+            "08_reporter"
+          ],
+          "decision_raw": "02_researcher,04_action,08_reporter",
+          "step": "route"
+        },
+        "02_researcher": {
+          "research": "CLAUDE.md 的五层记忆自动注入功能是通过初始化脚本和 watchdog cron 来实现的。具体来说，当项目级 AGENTS.md 文件被创建时，会有一个初始化脚本自动复制 master 版本的内容到项目的 AGENTS.md 中，从而确保每个新项目都能继承相应的记忆配置。此外，系统还会设置定期检查（watchdog cron），以持续监控并保持这些记忆文件的最新状态和完整性。",
+          "sources": [
+            "mavis-orchestration.md",
+            "book-learning-workflow.md",
+            "security-guards.md"
+          ],
+          "step": "research"
+        },
+        "04_action": {
+          "action": "decision",
+          "action_raw": "decision\n\n解析：用户询问的是关于 CLAUDE.md 文件中五层记忆的自动注入(auto-inject)机制。虽然前面已经执行了两个步骤(\"02_researcher\"和\"04_action\")，但具体怎样实施这种机制可能还需要进一步决定才能给出详细的指引或解决方案。“02_researcher”暗示了一些调查或者信息搜集工作，“04_action”可能是某种操作或者是采取行动的意图。基",
+          "step": "action"
+        },
+        "08_reporter": {
+          "final": "CLAUDE.md 文件中五层记忆的自动注入(auto-inject)机制是通过项目初始化脚本和定期检查（watchdog cron）来实现的。具体步骤如下：\n\n1. 创建一个新的项目时，系统会自动生成 AGENTS.md 文件，并将其与 master 版本同步。\n2. 初始化脚本负责根据 CLAUDE.md 的配置自动注入相应的五层记忆设置到新项目的 AGENTS.md 中。\n3. 定期安排的 watchdog cron 任务持续监控和更新各个项目的 AGENTS.md 文件，确保所有项目中的五层记忆文件保持最新。\n\n该机制保证了每个项目都能继承完整的五层记忆配置，并且系统能够主动维护这种一致性。",
+          "step": "report"
+        }
+      },
+      "final_answer": "CLAUDE.md 文件中五层记忆的自动注入(auto-inject)机制是通过项目初始化脚本和定期检查（watchdog cron）来实现的。具体步骤如下：\n\n1. 创建一个新的项目时，系统会自动生成 AGENTS.md 文件，并将其与 master 版本同步。\n2. 初始化脚本负责根据 CLAUDE.md 的配置自动注入相应的五层记忆设置到新项目的 AGENTS.md 中。\n3. 定期安排的 watchdog cron 任务持续监控和更新各个项目的 AGENTS.md 文件，确保所有项目中的五层记忆文件保持最新。\n\n该机制保证了每个项目都能继承完整的五层记忆配置，并且系统能够主动维护这种一致性。",
+      "elapsed_s": 12.59,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 3,
+      "completed_at": "2026-07-11T05:10:14.049227",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis 子智能体 5 模式 怎么用",
+      "routed_mechanism": "子智能体",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "node_count": 5,
+      "step_history": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "02_researcher",
+            "04_action",
+            "05_runner",
+            "08_reporter"
+          ],
+          "decision_raw": "01_planner,02_researcher,04_action,05_runner",
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "- 确认需求：了解用户需要解决的具体问题或完成的任务。\n- 启动模式：选择并启动 mavis 的子智能体5模式，该模式针对特定任务优化。\n- 指导操作：提供相关指令和步骤指南，帮助用户有效使用选定的子智能体模式。",
+          "step": "plan",
+          "turn": 1
+        },
+        "02_researcher": {
+          "research": "在使用 `mavis` 子智能体时，模式配置主要通过环境变量和 `plan.yaml` 文件来定义。具体到您提到的“5模式”，虽然直接描述未明确指出，但从现有的上下文来看，可以推测这涉及到不同阶段或场景下的配置调整。比如设置默认的最大循环次数 (`MAVIS_DEFAULT_MAX_CYCLES`) 和最大失败次数 (`MAVIS_DEFAULT_MAX_FAILURES`), 这些值通常在环境变量中定义以确保灵活性和安全运行。\n\n具体操作步骤如下：\n\n1. **环境变量**：通过设置 `MAVIS_DEFAULT_MAX_CYCLES` 和 `MAVIS_DEFAULT_MAX_FAILURES` 等环境变量，来控制子智能体的行为。例如，在启动命令行时可以这样设置：\n   ```bash\n   MAVIS_DEFAULT_MAX_CYCLES=5 MAVIS_DEFAULT_MAX_FAILURES=2 mavis team plan run\n   ```\n\n2. **计划文件** (`plan.yaml`)：在特定场景或项目中，您还可以通过编写配置文件来更细粒度地控制智能体的行为。",
+          "sources": [
+            "MEMORY.md",
+            "mavis-orchestration.md",
+            "mavis-orchestration.md"
+          ],
+          "step": "research"
+        },
+        "04_action": {
+          "action": "decision",
+          "action_raw": "decision\n\n解释：用户询问如何使用 Mavis 的\"5模式\"，这涉及到特定配置或操作指南。现有的执行步骤可能不完全覆盖这一查询细节，因此需要决策进一步与用户交互以明确需求，并提供具体指导或者帮助文档链接。",
+          "step": "action"
+        },
+        "05_runner": {
+          "command": "whoami",
+          "exit_code": 0,
+          "stdout": "apple\n",
+          "stderr": "",
+          "step": "run"
+        },
+        "08_reporter": {
+          "final": "使用 Mavis 的子智能体5模式，你需要先了解具体需求并选择相应的任务优化模式。以下是操作步骤：\n\n1. **确认需求**：确定你想要解决的问题或完成的任务。\n2. **启动模式**：启动 Mavis 子智能体的5模式，这通常通过环境变量或者配置文件如 `plan.yaml` 来调整特定设置和参数。\n3. **获取指导**：根据需要查阅帮助文档或者查询具体的配置指南来了解如何具体使用5模式。\n\n如果你有更明确的需求或遇到问题，可以通过与 Mavis 的交流进一步获取支持。在启动模式前，请确保你已经设置了正确的环境变量和所需的最大循环次数 (`MAVIS_DEFAULT_MAX_CYCLES`) 和最大失败次数 (`MAVIS_DEFAULT_MAX_FAILURE`) 参数。",
+          "step": "report"
+        }
+      },
+      "final_answer": "使用 Mavis 的子智能体5模式，你需要先了解具体需求并选择相应的任务优化模式。以下是操作步骤：\n\n1. **确认需求**：确定你想要解决的问题或完成的任务。\n2. **启动模式**：启动 Mavis 子智能体的5模式，这通常通过环境变量或者配置文件如 `plan.yaml` 来调整特定设置和参数。\n3. **获取指导**：根据需要查阅帮助文档或者查询具体的配置指南来了解如何具体使用5模式。\n\n如果你有更明确的需求或遇到问题，可以通过与 Mavis 的交流进一步获取支持。在启动模式前，请确保你已经设置了正确的环境变量和所需的最大循环次数 (`MAVIS_DEFAULT_MAX_CYCLES`) 和最大失败次数 (`MAVIS_DEFAULT_MAX_FAILURE`) 参数。",
+      "elapsed_s": 23.02,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 5,
+      "completed_at": "2026-07-11T05:10:38.581120",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills AWEL 三层架构 是什么",
+      "routed_mechanism": "Skills",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "node_count": 3,
+      "step_history": [
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "02_researcher",
+            "03_coder",
+            "08_reporter"
+          ],
+          "decision_raw": "02_researcher,03_coder,08_reporter",
+          "step": "route"
+        },
+        "02_researcher": {
+          "research": "mavis 的 Skills AWEL 三层架构是对其技能模块的增强和扩展。AWEL 架构具体包括：\n\n- **A**ctivation 触发层：定义了哪些条件或触发器能够激活特定的 Skill。\n- **W**orking 工作层：包含了执行任务的具体逻辑，当一个 Skill 被触发时，在这一层中实现具体的业务操作和数据处理。\n- **E**ffect 影响层：描述了 Skill 执行后产生的影响或结果，这可以帮助追踪技能执行的效果以及进行后续的操作。\n\n通过这种分层设计，mavis 的 Skills 模块能够更灵活地管理和调用各种功能和服务。",
+          "sources": [
+            "agent-dev-book-2026-07-10.md",
+            "MEMORY.md",
+            "agent-dev-book-2026-07-10.md"
+          ],
+          "step": "research"
+        },
+        "03_coder": {
+          "code": "用户的查询似乎包含一些混淆的要素，其中“mavis skills”和“AWE L三层架构”可能不是明确的概念或者可能存在拼写错误。假设您是询问有关“AWEL-三层架构”的框架如何被应用在名为Mavis的应用程序中，请参考下面的解释。\n\n**三层架构（Three-tier architecture）**：\n1. 表现层（Presentation Layer）: 用户界面，负责用户交互。\n2. 业务逻辑层（Business Logic Layer或Application Tier）: 处理应用程序的核心逻辑。\n3. 数据访问层（Data Access Layer）：数据管理。用于读取和写入持久化存储。\n\n**Mavis应用程序三层架构实现示例**\n\n1. **表现层 (例如：HTML+JavaScript)**\n在表现层，假设Mavis使用Web页面来显示用户交互界面的前端技术（如React、Angular或Vue.js）。这个层次会向业务逻辑层请求数据并展示给用户。\n\n2. **业务逻辑层（Node.js应用）**:\n一个运行于服务器端的应用程序可能会用到node.js和express或",
+          "step": "code"
+        },
+        "08_reporter": {
+          "final": "用户查询中提到的“mavis Skills AWEL”三层架构似乎存在一些混淆或可能有拼写错误。“AWEL”可能是指应用于Mavis系统的某种技能管理方法，具体包括：\n\n- **A**ctivation（触发层）：定义了技能被激活的条件。\n- **W**orking（工作层）：执行实际任务和业务逻辑的部分。\n- **E**ffect（影响层）：描述技能应用后的结果或改变。\n\n三层架构通常指软件工程中的一个设计模式，它包含：\n\n1. 表现层（Presentation Layer）\n2. 业务逻辑层（Business Logic/Working layer）\n3. 数据访问层（Data Access Layer）\n\n由于“AWEL”并不是广泛认可的术语或标准编程概念，“Skills AWEL”似乎与特定于Mavis系统的技能管理模式有关。该架构被设计用来组织和管理Mavis系统中的各种功能和任务，确保软件组件间的独立性和可维护性。如果查询涉及具体实现细节，建议进一步明确背景信息以便提供更精确的答案。",
+          "step": "report"
+        }
+      },
+      "final_answer": "用户查询中提到的“mavis Skills AWEL”三层架构似乎存在一些混淆或可能有拼写错误。“AWEL”可能是指应用于Mavis系统的某种技能管理方法，具体包括：\n\n- **A**ctivation（触发层）：定义了技能被激活的条件。\n- **W**orking（工作层）：执行实际任务和业务逻辑的部分。\n- **E**ffect（影响层）：描述技能应用后的结果或改变。\n\n三层架构通常指软件工程中的一个设计模式，它包含：\n\n1. 表现层（Presentation Layer）\n2. 业务逻辑层（Business Logic/Working layer）\n3. 数据访问层（Data Access Layer）\n\n由于“AWEL”并不是广泛认可的术语或标准编程概念，“Skills AWEL”似乎与特定于Mavis系统的技能管理模式有关。该架构被设计用来组织和管理Mavis系统中的各种功能和任务，确保软件组件间的独立性和可维护性。如果查询涉及具体实现细节，建议进一步明确背景信息以便提供更精确的答案。",
+      "elapsed_s": 26.39,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 3,
+      "completed_at": "2026-07-11T05:11:06.406892",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Hooks block-dangerous 怎么拦截",
+      "routed_mechanism": "Hooks",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "node_count": 4,
+      "step_history": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "02_researcher",
+            "04_action",
+            "08_reporter"
+          ],
+          "decision_raw": "01_planner,02_researcher,04_action",
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "- 确认需要拦截的危险行为类型，例如文件操作、网络请求或特定函数调用。\n- 在项目中引入mavis Hook系统，并定义一个block-dangerous Hook点来监控这些危险行为。\n- 编写hook回调逻辑以检查是否有符合已定义为“危险”的情况进行匹配，并在匹配时终止执行或采取替代措施。",
+          "step": "plan",
+          "turn": 1
+        },
+        "02_researcher": {
+          "research": "mavis 的 `block-dangerous` 拦截功能是通过 `block-dangerous.sh` 脚本实现的，该脚本用来检测和阻止执行可能对系统构成威胁的危险命令。具体来说，在使用 Mavis Hooks 设计时，可以通过在项目的 `settings.json` 文件中配置相应的拦截规则来激活这些安全措施。\n\n例如，为了启用危险命令拦截功能，请确保你的项目已经复制了 `block-dangerous.sh` 脚本，并且更新了 sub-agent 的 frontmatter 来引用该 hook。然后运行 `test-block-dangerous.sh` 验证整个流程是否按照预期工作（即检查是否有 17/17 测试案例通过）。这样，Mavis 就会在执行任何潜在危险的操作时使用这些规则来保护系统安全。\n\n详细步骤可以参考 `/Users/apple/.mavis/agents/mavis/memory/security-guards.md` 文件中的说明。",
+          "sources": [
+            "security-guards.md",
+            "subagent-frontmatter-hooks.md",
+            "security-guards.md"
+          ],
+          "step": "research"
+        },
+        "04_action": {
+          "action": "run",
+          "action_raw": "run\n\n这个指令看起来像是要查询如何使用 mavis 的 `block-dangerous` hook 来拦截某种情况或行为。由于用户并未提供具体需要拦截的内容细节，我们的下一步是运行一个示例或者演示来说明如何配置和利用 `block-dangerous` hook 功能。这将帮助用户提供具体信息以便进一步操作。\n\n执行这个 run 行动意味着我们将尝试提供关于如何设置 mavis 以拦截潜在危",
+          "step": "action"
+        },
+        "08_reporter": {
+          "final": "为了使用mavis的`block-dangerous` Hook拦截危险行为，你需要：\n\n1. 确定需要监控和阻止的具体危险行为类型（如文件操作、网络请求或特定函数调用）。\n2. 在项目中引入mavis Hook系统，并在适当位置定义一个`block-dangerous` Hook点来检测你指定的那些操作。\n3. 编写hook回调函数，检查该钩子捕获的操作是否符合预先定义为\"危险行为\"的标准。如果匹配，则通过返回特定值或调用其他功能禁止执行此行为或采取预防措施。\n\n另外，在项目的 `settings.json` 文件中配置对应的拦截规则可以激活这个保护机制。请提供详细的需求以便进一步指导和说明如何具体实施这一过程。",
+          "step": "report"
+        }
+      },
+      "final_answer": "为了使用mavis的`block-dangerous` Hook拦截危险行为，你需要：\n\n1. 确定需要监控和阻止的具体危险行为类型（如文件操作、网络请求或特定函数调用）。\n2. 在项目中引入mavis Hook系统，并在适当位置定义一个`block-dangerous` Hook点来检测你指定的那些操作。\n3. 编写hook回调函数，检查该钩子捕获的操作是否符合预先定义为\"危险行为\"的标准。如果匹配，则通过返回特定值或调用其他功能禁止执行此行为或采取预防措施。\n\n另外，在项目的 `settings.json` 文件中配置对应的拦截规则可以激活这个保护机制。请提供详细的需求以便进一步指导和说明如何具体实施这一过程。",
+      "elapsed_s": 21.06,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 4,
+      "completed_at": "2026-07-11T05:11:28.859517",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 6 server 怎么注册",
+      "routed_mechanism": "MCP",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "04_action",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "04_action",
+        "08_reporter"
+      ],
+      "node_count": 3,
+      "step_history": [
+        "01_planner",
+        "04_action",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "04_action",
+            "08_reporter"
+          ],
+          "decision_raw": "01_planner,04_action,08_reporter",
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "- 确认MCP的版本是否支持server端应用。\n- 下载并安装适用于MCP 6的server注册工具或脚本。\n- 根据提示输入必要的信息，完成MCP server的注册过程。",
+          "step": "plan",
+          "turn": 1
+        },
+        "04_action": {
+          "action": "decision",
+          "action_raw": "decision\n\n需要决策的是关于MCP 6服务器注册的具体步骤或方法，这可能依赖于用户的当前设置和环境。因此，决策者（可能是用户）需要提供更多信息来确定下一步的执行指令。建议提问以获得更多上下文信息或者确认用户想要进行的操作类型。",
+          "step": "action"
+        },
+        "08_reporter": {
+          "final": "为了注册MCP 6服务器，请按照以下步骤操作：\n\n1. 首先确认您使用的MCP版本是否支持server端应用。\n2. 下载并安装适用于MCP 6的server注册工具或脚本。\n3. 根据提示输入必要的信息，完成MCP server的注册过程。\n\n如果您在执行过程中遇到具体问题或者不确定如何开始，请提供更多详细信息以便我们给出更具体的指导。这可能包括您的操作系统、MCP版本以及您期望实现的具体目标等上下文信息。",
+          "step": "report"
+        }
+      },
+      "final_answer": "为了注册MCP 6服务器，请按照以下步骤操作：\n\n1. 首先确认您使用的MCP版本是否支持server端应用。\n2. 下载并安装适用于MCP 6的server注册工具或脚本。\n3. 根据提示输入必要的信息，完成MCP server的注册过程。\n\n如果您在执行过程中遇到具体问题或者不确定如何开始，请提供更多详细信息以便我们给出更具体的指导。这可能包括您的操作系统、MCP版本以及您期望实现的具体目标等上下文信息。",
+      "elapsed_s": 8.81,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 3,
+      "completed_at": "2026-07-11T05:11:39.015768",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless --max-turns CI/CD 怎么跑",
+      "routed_mechanism": "Headless",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "08_reporter"
+      ],
+      "node_count": 4,
+      "step_history": [
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "02_researcher",
+            "03_coder",
+            "04_action",
+            "08_reporter"
+          ],
+          "decision_raw": "02_researcher,03_coder,04_action",
+          "step": "route"
+        },
+        "02_researcher": {
+          "research": "为了在 CI/CD 管道中使用 mavis 的 Headless 模式并设置 `--max-turns` 参数，你可以通过以下步骤实现：\n\n1. 设置环境变量 `MAVIS_DEFAULT_MAX_CYCLES` 来定义默认的最大循环次数。\n2. 在需要执行的 CI/CD 步骤或脚本中调用 `mavis team plan run` 或者创建一个 cron 任务使用 `mavis cron create`。\n\n例如，在你的 CI/CD 配置文件（如 GitHub Actions 工作流）里，你可以添加以下内容：\n\n```yaml\njobs:\n  example-job:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Set max turns environment variable\n        run: echo \"export MAVIS_DEFAULT_MAX_CYCLES=3\" >> $GITHUB_ENV\n\n      - name: Run mavis team plan with CI/CD\n        e",
+          "sources": [
+            "mavis-orchestration.md",
+            "mavis-orchestration.md",
+            "mavis-orchestration.md"
+          ],
+          "step": "research"
+        },
+        "03_coder": {
+          "code": "为了在CI/CD环境中使用MavensCraft的Headless模式并设置最大轮数限制，您可以编写一个简单的脚本来执行这一步骤。下面是一个Python示例脚本，它调用了一个假设存在的MavensCraft API（如果有API的话），或直接运行命令行版本的`mavis headless --max-turns ...`来实现这个功能。\n\n首先，请确保您已安装了必要的库和环境设置：\n1. Python：如需使用Python脚本\n2. `mavis`工具：在CLI上执行\n\n下面是基于这些条件的一个示例：\n\n```python\nimport subprocess\nfrom dotenv import load_dotenv, find_dotenv # 用于加载.env文件中的环境变量\n\n# 加载自定义的环境变量，例如MAVIS_DIR或API密钥等。\nload_dotenv(find_dotenv())\n\ndef run_mavis_headless(max_turns):\n    command = [\n        'mavis',\n        f'--max-turns={m",
+          "step": "code"
+        },
+        "04_action": {
+          "action": "feature",
+          "action_raw": "决策需要更具体的信息，但根据用户的查询意图看起来像是想了解如何在CI/CD环境中使用Headless模式运行mavis。因为用户询问的是一个特定的操作方法，这更像是提供指导性信息而不是立即执行的任务。\n\n动作: feature\n\n理由: 用户可能是在寻找特定的关于mavis Headless --max-turns CI/CD配置或使用的详细指导和特性功能说明，因此应该是查询某个特性的细节或者文档",
+          "step": "action"
+        },
+        "08_reporter": {
+          "final": "为了在CI/CD管道中使用MavensCraft的Headless模式并设置`--max-turns`参数，你可以通过以下步骤实现：\n\n1. 设置环境变量 `MAVIS_DEFAULT_MAX_CYCLES` 来定义默认的最大循环次数。\n2. 在需要执行的 CI/CD 步骤或脚本中调用 `mavis team plan run --max-turns <number>` 或者直接使用命令行运行 `mavis headless --max-turns <number>` 命令。\n\n如果你倾向于自动化，请编写一个简单的脚本来封装上述步骤，例如使用Python执行需要的命令。在编写自动化脚本之前，请确保已经安装了必要的库和环境。",
+          "step": "report"
+        }
+      },
+      "final_answer": "为了在CI/CD管道中使用MavensCraft的Headless模式并设置`--max-turns`参数，你可以通过以下步骤实现：\n\n1. 设置环境变量 `MAVIS_DEFAULT_MAX_CYCLES` 来定义默认的最大循环次数。\n2. 在需要执行的 CI/CD 步骤或脚本中调用 `mavis team plan run --max-turns <number>` 或者直接使用命令行运行 `mavis headless --max-turns <number>` 命令。\n\n如果你倾向于自动化，请编写一个简单的脚本来封装上述步骤，例如使用Python执行需要的命令。在编写自动化脚本之前，请确保已经安装了必要的库和环境。",
+      "elapsed_s": 38.75,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 4,
+      "completed_at": "2026-07-11T05:12:19.165873",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK @tool 装饰器 怎么定义",
+      "routed_mechanism": "Agent SDK",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "03_coder",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "03_coder",
+        "08_reporter"
+      ],
+      "node_count": 3,
+      "step_history": [
+        "01_planner",
+        "03_coder",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "03_coder",
+            "08_reporter"
+          ],
+          "decision_raw": "01_planner,03_coder,08_reporter",
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "- 安装并导入mavibot-agent-sdk；\n- 在需要使用工具功能的函数前加@tool装饰器，指明该函数为工具方法；\n- 根据文档或示例配置参数和返回值类型以确保正确集成。",
+          "step": "plan",
+          "turn": 1
+        },
+        "03_coder": {
+          "code": "为了使用 Mavis 的 Agent SDK 中的 `@tool` 装饰器，你需要首先安装必要的 Python 包，并且在你的代码中引入相关的模块。假设你已经有一个 Python 程序设置了环境依赖和 Mavis Agent SDK 的导入路径。以下是一个简化的定义示例：\n\n```python\nfrom maviagent import agent, tool\n\n# 假设这是你的 agent 类模板，所有的工具函数都在这个类里注册。\nclass MyAgent(agent.Agent):\n    @tool('search')\n    def search_tool(self, query: str) -> dict:\n        # 这是搜索相关的工具逻辑实现\n        result = {'query': query, 'result': 'some result data'}\n        return result\n\n# 在主程序中的某个地方，你可以创建一个类实例并启动 agent。\nif __name__ == '__main__':\n    my_agent =",
+          "step": "code"
+        },
+        "08_reporter": {
+          "final": "使用 Mavis Agent SDK 中的 `@tool` 装饰器，你需要按照以下步骤操作：\n\n1. 安装并导入mavibot-agent-sdk。\n2. 在需要成为工具方法的函数前添加`@tool`装饰器，并根据文档或示例配置参数和返回值类型。\n\n代码示例如下：\n\n```python\nfrom maviagent import agent, tool\n\n@tool\ndef your_function_name(param1, param2):\n    # 函数逻辑\n    return result\n```\n\n确保你的工具函数按照指定的格式定义以保证正确集成。更多细节请参考官方文档或示例代码。",
+          "step": "report"
+        }
+      },
+      "final_answer": "使用 Mavis Agent SDK 中的 `@tool` 装饰器，你需要按照以下步骤操作：\n\n1. 安装并导入mavibot-agent-sdk。\n2. 在需要成为工具方法的函数前添加`@tool`装饰器，并根据文档或示例配置参数和返回值类型。\n\n代码示例如下：\n\n```python\nfrom maviagent import agent, tool\n\n@tool\ndef your_function_name(param1, param2):\n    # 函数逻辑\n    return result\n```\n\n确保你的工具函数按照指定的格式定义以保证正确集成。更多细节请参考官方文档或示例代码。",
+      "elapsed_s": 19.56,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 3,
+      "completed_at": "2026-07-11T05:12:40.127725",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Plugins plugin.json install CLI",
+      "routed_mechanism": "Plugins",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "node_count": 4,
+      "step_history": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "02_researcher",
+            "04_action",
+            "08_reporter"
+          ],
+          "decision_raw": "01_planner,02_researcher,04_action",
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "- 检查是否已安装Node.js和npm（必要条件）\n- 使用命令`npx mavis plugins:init`生成或编辑plugin.json文件配置插件信息\n- 运行`npx mavis run start --plugins=your_plugin_name`启动并使用指定的插件",
+          "step": "plan",
+          "turn": 1
+        },
+        "02_researcher": {
+          "research": "The installation of mavis plugins via the `plugin.json` manifest is partially supported. Currently, you can manage plugins through commands like `mavis plugin list`, but remote installations (from sources like community or GitHub) are not yet implemented. To install a plugin locally, users typically need to manually copy and paste the relevant directories into their local mavis setup at `~/.mavis/`. Future enhancements aim to include an automatic update mechanism for plugins using commands simil",
+          "sources": [
+            "mavis-orchestration.md",
+            "mavis-orchestration.md",
+            "mavis-2-roadmap.md"
+          ],
+          "step": "research"
+        },
+        "04_action": {
+          "action": "run",
+          "action_raw": "run\n\n该命令涉及安装插件，这是一个执行操作的动作。用户想要通过CLI使用plugin.json文件来安装插件，这意味着需要运行一个具体的任务或命令行指示来完成这个请求。因此，下一步应该是执行“run”动作以按照用户的要求安装指定的插件。",
+          "step": "action"
+        },
+        "08_reporter": {
+          "final": "要通过`plugin.json`文件安装mavis插件，请先确保已安装Node.js和npm，然后运行以下命令来生成或编辑配置文件：\n\n```\nnpx mavis plugins:init\n```\n\n接着使用下面的命令启动并添加指定插件：\n\n```\nnpx mavis run start --plugins=your_plugin_name\n```\n\n请注意，当前`plugin.json`用于管理插件但不直接支持远程安装功能。请参考官方文档以获取更多详细信息和可能的替代方案。\n\n以上步骤指导你如何利用命令行工具安装mavis插件，并配置好相应的环境设置及文件操作，请根据实际需要作出相应调整。",
+          "step": "report"
+        }
+      },
+      "final_answer": "要通过`plugin.json`文件安装mavis插件，请先确保已安装Node.js和npm，然后运行以下命令来生成或编辑配置文件：\n\n```\nnpx mavis plugins:init\n```\n\n接着使用下面的命令启动并添加指定插件：\n\n```\nnpx mavis run start --plugins=your_plugin_name\n```\n\n请注意，当前`plugin.json`用于管理插件但不直接支持远程安装功能。请参考官方文档以获取更多详细信息和可能的替代方案。\n\n以上步骤指导你如何利用命令行工具安装mavis插件，并配置好相应的环境设置及文件操作，请根据实际需要作出相应调整。",
+      "elapsed_s": 14.37,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 4,
+      "completed_at": "2026-07-11T05:12:55.824492",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    }
+  ]
+}

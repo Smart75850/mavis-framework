@@ -1,0 +1,28 @@
+import json
+
+def load_config_1(path):
+    with open(path) as f:
+        return json.load(f)
+
+def save_config_1(path, config):
+    with open(path, "w") as f:
+        json.dump(config, f)
+
+def new_function():
+    """示例新功能"""
+    print("这是一个新的功能函数。")
+
+# 示例代码增加
+config_path = "/path/to/config.json"
+loaded_config = load_config_1(config_path)
+print(f"加载的配置: {loaded_config}")
+
+modified_config = loaded_config  # 假设这里对配置进行了修改
+modified_config["new_key"] = "new_value"
+
+save_config_1("/path/to/new_config.json", modified_config)
+
+# 新增代码块：将原有的打印语句替换为更详细的日志输出。
+import logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.info("已经保存新的配置文件：%s -> %s", "/path/to/config.json", "/path/to/new_config.json")

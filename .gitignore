@@ -7,6 +7,12 @@ __pycache__/
 .venv/
 venv/
 env/
+lib/
+bin/
+include/
+share/
+pyvenv.cfg
+CACHEDIR.TAG
 
 # ML models (per git-ops.md §3)
 *.safetensors

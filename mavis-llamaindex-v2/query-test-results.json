@@ -1,0 +1,98 @@
+{
+  "test_at": "2026-07-11T04:26:37.763013",
+  "test_count": 4,
+  "queries": [
+    {
+      "query": "mavis 协奏 8 机制 具体怎么算",
+      "answer": "mavis 协奏 8 机制的得分是通过评估每个机制的完成度来计算的。具体来说，每个机制被赋予一个百分比评分（从0%到100%），其中包含了在新章节启发下的改进情况。例如：\n\n- CLAUDE.md: 原本得分为100%，增加了4个组件和4个框架后仍然保持了100%\n- 子智能体: 同样从100%提升到了100%，引入了verifier/reflexion\n- Skills 机制: 继续维持在100%，增加了AWEL的三层架构支持\n\n类似的，每个子项都会根据其完成度给出一个百分比评分。所有机制分数加总后除以8（机制总数），即得出了mavis 8机制协奏的综合得分。例如从90.25%提升到了92.5%，表明整体改进和优化后的效果良好。",
+      "elapsed_s": 12.8,
+      "top_k": 3,
+      "sources": [
+        {
+          "file": "MEMORY.md",
+          "score": 0.7244,
+          "text_preview": "md` - **知识星图** 204 节点 (+49 今晚) - **mavis 8 机制协奏** 92.5% (今晚 +2.25%)  ## 永久 invariant 摘要  | # | 内容 | 来源 | |---|---|---| | #9-#17 | Agent 基础 + LLM 服务 + "
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.7183,
+          "text_preview": "实现 mavis memory 嘅\"以文搜图\"功能 (ComfyUI 出图 recall)。  ---  ## mavis 8 机制协奏得分更新  | 机制 | 16 章启发前 | 16 章启发后 | |---|---|---| | CLAUDE.md | 100% | 100% (+ 4 大组件 "
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.707,
+          "text_preview": "🟡 未来 mavis team plan 应该自动 read `MAVIS_DEFAULT_*` env var (现 plan.yaml 直接 hardcode) 4. 🟡 mavis CLI 应该直接 support `--max-budget-usd` + `--max-turns` 同名 f"
+        }
+      ]
+    },
+    {
+      "query": "mavis 多智能体协同 8 个机制 怎么编排",
+      "answer": "mavis 的多智能体协同通过八个核心机制进行编排，这些机制包括 CLAUDE.md、子智能体、Skills、Hooks、MCP（Multi-Agent Control Protocol）、Headless 模式、Agent SDK 和 Plugins。每个机制都有其特定的功能和改进路径：\n\n1. **CLAUDE.md**：确保了组件的集成，并在启发后增加了四大组件与框架的支持。\n2. **子智能体**：支持验证器和反思功能，提高协作效率。\n3. **Skills**：采用了AWEL三层架构来增强技能执行能力。\n4. **Hooks**：引入自我批评钩子以促进持续改进。\n5. **MCP**：在LLM服务信息上进行了拓展。\n6. **Headless 模式**：增加了LoRA微调命令支持，简化了自动化操作。\n7. **Agent SDK**：通过LangGraph状态机提升了功能覆盖率。\n8. **Plugins**：整合了LoRA和向量数据库插件以增强灵活性。\n\n这些机制共同作用于mavis的多智能体系统中，确保高效且灵活的合作。",
+      "elapsed_s": 7.68,
+      "top_k": 3,
+      "sources": [
+        {
+          "file": "MEMORY.md",
+          "score": 0.7388,
+          "text_preview": "md` - **知识星图** 204 节点 (+49 今晚) - **mavis 8 机制协奏** 92.5% (今晚 +2.25%)  ## 永久 invariant 摘要  | # | 内容 | 来源 | |---|---|---| | #9-#17 | Agent 基础 + LLM 服务 + "
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.7256,
+          "text_preview": "实现 mavis memory 嘅\"以文搜图\"功能 (ComfyUI 出图 recall)。  ---  ## mavis 8 机制协奏得分更新  | 机制 | 16 章启发前 | 16 章启发后 | |---|---|---| | CLAUDE.md | 100% | 100% (+ 4 大组件 "
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.7223,
+          "text_preview": "🟡 未来 mavis team plan 应该自动 read `MAVIS_DEFAULT_*` env var (现 plan.yaml 直接 hardcode) 4. 🟡 mavis CLI 应该直接 support `--max-budget-usd` + `--max-turns` 同名 f"
+        }
+      ]
+    },
+    {
+      "query": "LlamaIndex 4 步索引 是什么",
+      "answer": "LlamaIndex 的 4 步索引是指在处理和检索文档数据时遵循的四个关键步骤，这四个步骤分别是装载 (Loader)、切分 (Splitter)、向量化 (Embedder) 和存储。这些步骤确保了从原始文件中提取有效信息，并将其转换成可高效搜索的形式。\n\n- **装载**：读取所有相关文件并解析元数据。\n- **切分**：将文本内容切成适当大小的块，以便进一步处理。\n- **向量化**：使用模型对每个分割出来的片段生成对应的向量表示。\n- **存储**：这些经过处理的数据被储存在便于检索的地方。",
+      "elapsed_s": 7.7,
+      "top_k": 3,
+      "sources": [
+        {
+          "file": "recall-strategy.md",
+          "score": 0.6336,
+          "text_preview": "# mavis Memory Recall 策略 v2 (2026-07-10)  来源: 借鉴 LlamaIndex 章 13 #23 invariant + DB-GPT AWEL 章 6 #15 + QAnything 两阶段检索章 6 #16  ---  ## 借鉴 LlamaIndex 4"
+        },
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.6265,
+          "text_preview": "Agent 协作 + reflection | mavis verifier 机制 | | **LlamaIndex** | RAG + VectorStoreIndex | mavis memory RAG 底层 | | **CrewAI** | Agent + Task + Crew + Pro"
+        },
+        {
+          "file": "mavis-orchestration.md",
+          "score": 0.6175,
+          "text_preview": "🟡 未来: 部署 GLM-4 + Ollama 避开 Anthropic API (Q3 2026) 7. 🟡 未来: 集成 LangGraph 入 mavis team plan (Q4 2026)"
+        }
+      ]
+    },
+    {
+      "query": "14B 32B 模型怎么选 长期记忆",
+      "answer": "选择长期记忆模型时，要考虑多个因素，比如数据的存储效率、检索速度以及模型的维护成本等。在您提到的\"14B\"和\"32B\"可能是指两个不同规模的参数量（Parameter Size）的模型版本。“B”代表十亿（billion），所以这两个数字表示的是模型中参数的数量级，其中“32B”比“14B”的更大。一般来说：\n\n- **更大的模型** (如 \"32B\") 可能会有更强的理解能力和更广泛的泛化能力，但同时需要更多的计算资源和存储空间来支持。\n- **较小的模型** (\"14B\") 则可能在性能上更为高效且易于部署，尤其是在资源有限的情况下。\n\n选择时应根据实际应用场景的需求和约束条件进行权衡。长期记忆系统倾向于选择能够有效管理和检索大量数据，并保证高可靠性的方案。请结合具体的应用场景、硬件限制及预期的数据量大小来决定最适合的模型规模。",
+      "elapsed_s": 9.92,
+      "top_k": 3,
+      "sources": [
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.5331,
+          "text_preview": "**stdio 通信** (本地 MCP 服务器作为子进程) 5. **build 后用 .mcp.json 注册** (npx 启动 → 编译产物)  ### 调试三板斧 (§6.11.1) - `claude mcp list` — 列出所有配置 + 状态 - `claude mcp test "
+        },
+        {
+          "file": "mcp-reference.md",
+          "score": 0.5323,
+          "text_preview": "大佬可立即在任何 Claude Code / MiniMax Code 项目 recall 本 topic file 使用."
+        },
+        {
+          "file": "MEMORY.md",
+          "score": 0.5275,
+          "text_preview": "md` - **知识星图** 204 节点 (+49 今晚) - **mavis 8 机制协奏** 92.5% (今晚 +2.25%)  ## 永久 invariant 摘要  | # | 内容 | 来源 | |---|---|---| | #9-#17 | Agent 基础 + LLM 服务 + "
+        }
+      ]
+    }
+  ]
+}

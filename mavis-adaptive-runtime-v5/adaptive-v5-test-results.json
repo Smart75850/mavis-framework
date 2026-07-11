@@ -1,0 +1,648 @@
+{
+  "test_at": "2026-07-11T05:19:26.425920",
+  "test_count": 8,
+  "routing_accuracy": 1.0,
+  "avg_elapsed_s": 20.52,
+  "avg_node_count": 4.0,
+  "p1_1a_real_calls": {
+    "researcher": 6,
+    "coder": 5,
+    "runner": 4,
+    "patcher": 0
+  },
+  "queries": [
+    {
+      "query": "CLAUDE.md 五层记忆 怎么 auto-inject",
+      "routed_mechanism": "CLAUDE.md",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "node_count": 5,
+      "step_history": [
+        "01_planner",
+        "02_researcher",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "02_researcher",
+            "04_action",
+            "05_runner",
+            "08_reporter"
+          ],
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "为了根据 CLAUDE.md 的五层记忆结构进行自动注入（Auto-inject），以下是详细的三步子计划：\n\n1. **收集和准备数据**：\n   - 查阅和完善 CLAUDE.md 中定义的五层内存架构，理解各层级的数据及其结构。\n   - 整理需要注入的记忆单元或信息片段，并确保它们满足每一层的要求。\n   - 准备与各层记忆相关的环境配置参数及自动化工具。\n\n2. **实现自动导入机制**：\n   - 开发或选择适当的脚本语言（如 Python）和依赖库，用于自动化处理 CLAUDE.md 的五层内存插入流程。\n   - 根据准备好的数据编写代码逻辑来生成所需的记忆单元，并将其正确地分配给CLAUDE.md中定义的每一个记忆层次上。这可能包括使用特定格式化的API调用来模拟用户行为从而影响模型的状态。\n\n3. **测试和优化**：\n   - 设计一系列全面覆盖不同情况下的测试案例，以确保自动填充方案在各种条件下都能正常工作。\n   - 运行这些测试，并审查输出结果以确认数据是否已正确放置到了CLAUDE.md的五层记忆结构中。\n   - 根据发现的问题或改进的机会调整和完善实现",
+          "step": "plan",
+          "turn": 1
+        },
+        "02_researcher": {
+          "research": [
+            {
+              "path": "/Users/apple/.mavis/agents/mavis/memory/book-learning-workflow.md",
+              "content": "pm > pnpm)"
+            }
+          ],
+          "raw_output": "\\n=== mavis recall v2 (AgentFrame) ===\n查询: CLAUDE.md 五层记忆 怎么 auto-inject\n模式: hybrid (semantic + keyword + time_decay)\ntop_k: 3, max_age_days: 30\n\n[1/4 装载] 读取 58 个文档\n[2/4 切分] 生成 11795 个 chunk (chunk_size=1024, overlap=20)\n[3/4 向量化] 11795 个 embedding (384-d, 模拟)\n[4/4 存储] 索引已保存: /Users/apple/.mavis/.mavis-cache/chroma/mavis-memory-index.json\n\\n[Stage 1: 多路召回]\n  语义检索: Top 100\n  关键词检索: Top 50 (智能分词, 29 kw)\n  时间衰减: Top 30 (max_age_days=30)\n\\n[Stage 2: 合并去重]\n[Stage 3: Cross-Encoder rerank]\n\\n=== Recall 结果 (Top 3) ===\n\\n[1] Score: 15.0000\n    Path: /Users/apple/.mavis/agents/mavis/memory/mavis-orchestration.md\n    Chunk: 41/651\n    Content: ss)\n\n### 五层记忆体系 (MiniMax Code 真正 work 嘅架构)\n1. **企业级**: /etc/claude-code/CLAUDE.md (组织强制)\n2. **用户级**: ~/.mavis/memory/user.md (Min...\n\\n[2] Score: 15.0000\n    P",
+          "source": "mavis-recall-v2 (P1.1.a 真功能)",
+          "step": "research"
+        },
+        "04_action": {
+          "action": "feature",
+          "step": "action"
+        },
+        "05_runner": {
+          "command": "whoami",
+          "exit_code": 0,
+          "stdout": "apple\n",
+          "stderr": "",
+          "step": "run",
+          "sandbox": "P1.1.a 真 subprocess (白名单)"
+        },
+        "08_reporter": {
+          "final": "根据 CLAUDE.md 的五层记忆结构进行自动注入（Auto-inject）的步骤如下：\n\n1. 收集和准备数据：查阅和完善 CLAUDE.md 中定义的五层内存架构，理解各层级的数据及其结构；整理需要注入的记忆单元或信息片段，并确保它们满足每一层的要求。\n\n2. 准备与五层记忆相关的环境配置参数及自动化工具。\n\n请根据上述计划执行具体操作。如有其他细节需求，请进一步询问。",
+          "step": "report"
+        }
+      },
+      "final_answer": "根据 CLAUDE.md 的五层记忆结构进行自动注入（Auto-inject）的步骤如下：\n\n1. 收集和准备数据：查阅和完善 CLAUDE.md 中定义的五层内存架构，理解各层级的数据及其结构；整理需要注入的记忆单元或信息片段，并确保它们满足每一层的要求。\n\n2. 准备与五层记忆相关的环境配置参数及自动化工具。\n\n请根据上述计划执行具体操作。如有其他细节需求，请进一步询问。",
+      "elapsed_s": 20.73,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 5,
+      "completed_at": "2026-07-11T05:16:52.649939",
+      "expected_mechanism": "CLAUDE.md",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis 子智能体 5 模式 怎么用",
+      "routed_mechanism": "子智能体",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "04_action",
+        "05_runner",
+        "08_reporter",
+        "09_decision"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "04_action",
+        "05_runner",
+        "08_reporter",
+        "09_decision"
+      ],
+      "node_count": 5,
+      "step_history": [
+        "01_planner",
+        "04_action",
+        "05_runner",
+        "08_reporter",
+        "09_decision"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "04_action",
+            "05_runner",
+            "08_reporter",
+            "09_decision"
+          ],
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "1. 确认目标：与用户进行对话，了解他们希望实现的具体目标或功能，以便为用户制定个性化的任务。\n2. 设定参数和规则：根据用户的特定需求调整子智能体的功能与行为。例如设置偏好、交互频率等细节。\n3. 指导使用方法：教授用户如何监控并调整子智能体的表现以达到最佳效果，包括如何查看数据统计及反馈信息来优化配置。",
+          "step": "plan",
+          "turn": 1
+        },
+        "04_action": {
+          "action": "decision",
+          "step": "action"
+        },
+        "05_runner": {
+          "command": "whoami",
+          "exit_code": 0,
+          "stdout": "apple\n",
+          "stderr": "",
+          "step": "run",
+          "sandbox": "P1.1.a 真 subprocess (白名单)"
+        },
+        "08_reporter": {
+          "final": "使用Mavis子智能体5模式的步骤如下：\n\n1. **确认目标**：与您对话，了解具体需求和希望实现的功能。\n2. **设定参数**：根据您的特定需求调整子智能体的行为规则及偏好设置。\n3. **指导使用方法**：教导如何监控及优化配置，包括查看统计数据反馈等，以达到最佳效果。\n\n请详细说明您的目标或功能需求以便开始定制化服务。",
+          "step": "report"
+        },
+        "09_decision": {
+          "decision": "continue",
+          "step": "decision"
+        }
+      },
+      "final_answer": "使用Mavis子智能体5模式的步骤如下：\n\n1. **确认目标**：与您对话，了解具体需求和希望实现的功能。\n2. **设定参数**：根据您的特定需求调整子智能体的行为规则及偏好设置。\n3. **指导使用方法**：教导如何监控及优化配置，包括查看统计数据反馈等，以达到最佳效果。\n\n请详细说明您的目标或功能需求以便开始定制化服务。",
+      "elapsed_s": 16.28,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 5,
+      "completed_at": "2026-07-11T05:17:10.535382",
+      "expected_mechanism": "子智能体",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Skills AWEL 三层架构 是什么",
+      "routed_mechanism": "Skills",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "02_researcher",
+        "05_runner",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "02_researcher",
+        "05_runner",
+        "08_reporter"
+      ],
+      "node_count": 3,
+      "step_history": [
+        "02_researcher",
+        "05_runner",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "02_researcher",
+            "05_runner",
+            "08_reporter"
+          ],
+          "step": "route"
+        },
+        "02_researcher": {
+          "research": [
+            {
+              "path": "/Users/apple/.mavis/agents/mavis/memory/book-learning-workflow.md",
+              "content": "开始新项目设计架构 / 设计 Agent 系统 / 设计 Skill / 设计 mavis team plan..."
+            }
+          ],
+          "raw_output": "\\n=== mavis recall v2 (AgentFrame) ===\n查询: mavis Skills AWEL 三层架构 是什么\n模式: hybrid (semantic + keyword + time_decay)\ntop_k: 3, max_age_days: 30\n\n[1/4 装载] 读取 58 个文档\n[2/4 切分] 生成 11795 个 chunk (chunk_size=1024, overlap=20)\n[3/4 向量化] 11795 个 embedding (384-d, 模拟)\n[4/4 存储] 索引已保存: /Users/apple/.mavis/.mavis-cache/chroma/mavis-memory-index.json\n\\n[Stage 1: 多路召回]\n  语义检索: Top 100\n  关键词检索: Top 50 (智能分词, 25 kw)\n  时间衰减: Top 30 (max_age_days=30)\n\\n[Stage 2: 合并去重]\n[Stage 3: Cross-Encoder rerank]\n\\n=== Recall 结果 (Top 3) ===\n\\n[1] Score: 15.0000\n    Path: /Users/apple/.mavis/agents/mavis/memory/topics/agent-dev-book-2026-07-10.md\n    Chunk: 38/682\n    Content: tFrame (算子链式计算封装)。mavis 应该参考 AWEL 设计 Skill 体系: sub-skill (算子) + skill 调用语法 (DSL) + skill 组合 (Agen...\n\\n[2] Score: 15.0000\n    Path: /Users/apple/.mav",
+          "source": "mavis-recall-v2 (P1.1.a 真功能)",
+          "step": "research"
+        },
+        "05_runner": {
+          "command": "whoami",
+          "exit_code": 0,
+          "stdout": "apple\n",
+          "stderr": "",
+          "step": "run",
+          "sandbox": "P1.1.a 真 subprocess (白名单)"
+        },
+        "08_reporter": {
+          "final": "用户的问题可能不够明确，但是根据问题内容和节点响应可以推测用户想了解关于AWEL三层架构与Skills相关的信息。在mavis系统中，“Skills”表示技能或者能力模块，它们是针对特定任务设计的独立功能单元，能够被组合或调用来执行具体操作。\n\n在三层架构下：\n- 第一层（基础设施层）：处理基础数据存储、网络通信等底层技术。\n- 第二层（服务层）：提供各种服务接口给上层应用使用，如AI能力封装等。\n- 第三层（应用层）：主要是针对不同场景提供的具体业务解决方案。\n\n对于Skill在AWEL框架中的运作细节以及与三层架构如何结合的具体机制，请提供更多详细信息或问题背景以便进一步解答。",
+          "step": "report"
+        }
+      },
+      "final_answer": "用户的问题可能不够明确，但是根据问题内容和节点响应可以推测用户想了解关于AWEL三层架构与Skills相关的信息。在mavis系统中，“Skills”表示技能或者能力模块，它们是针对特定任务设计的独立功能单元，能够被组合或调用来执行具体操作。\n\n在三层架构下：\n- 第一层（基础设施层）：处理基础数据存储、网络通信等底层技术。\n- 第二层（服务层）：提供各种服务接口给上层应用使用，如AI能力封装等。\n- 第三层（应用层）：主要是针对不同场景提供的具体业务解决方案。\n\n对于Skill在AWEL框架中的运作细节以及与三层架构如何结合的具体机制，请提供更多详细信息或问题背景以便进一步解答。",
+      "elapsed_s": 8.32,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 3,
+      "completed_at": "2026-07-11T05:17:20.248699",
+      "expected_mechanism": "Skills",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Hooks block-dangerous 怎么拦截",
+      "routed_mechanism": "Hooks",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "03_coder",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "03_coder",
+        "08_reporter"
+      ],
+      "node_count": 3,
+      "step_history": [
+        "01_planner",
+        "03_coder",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "03_coder",
+            "08_reporter"
+          ],
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "1. **分析代码和上下文**：首先，需要仔细检查当前项目中涉及到的`block-dangerous`函数或逻辑块在哪里被触发，并理解它的行为及应用场景。\n2. **实现拦截机制**：根据`hooks`机制的特点，在调用`block-dangerous`的关键位置之前预置一个自定义hook。该hook可以返回一个决策标志给执行流程，判断是否继续执行原计划中的危险操作。\n3. **测试与验证**：完成代码改动后，进行全面的功能性和安全性测试以确保hook正确实现了拦截功能，并且没有引入新的风险或打破原有的程序逻辑。",
+          "step": "plan",
+          "turn": 1
+        },
+        "03_coder": {
+          "code": "根据用户的需求和方案规划，我提出以下Python代码实现方案：\n\n```python\ndef custom_hook(context):\n    # 在此处添加判断条件以决定是否允许调用block-dangerous函数，比如检查特定的上下文环境。\n    if context['user_permission'] == 'admin':  # 示例逻辑：仅管理员可以执行危险操作。\n        return True\n    else:\n        print(\"阻止了用户尝试执行危险的操作\")\n        return False\n\ndef block_permit(function_to_intercept, hook_function):\n    \"\"\"\n    定义一个拦截器装饰器，其作为被调用函数的包装层。在这个包装体内，\n    先运行hook_function()以决定是否允许真正执行function_to_intercept()\n    参数:\n     - function_to_intercept: 被拦截并且可能危险的操作\n     - hook_fu",
+          "written_file": null,
+          "apply_status": "P3.0-query-mode (不真写文件)",
+          "step": "code"
+        },
+        "08_reporter": {
+          "final": "为了使用Hooks机制拦截`block-dangerous`，可以按照以下步骤操作：\n\n1. **分析代码和上下文**：确定`block-dangerous`函数或逻辑块的位置及其应用场景。\n\n2. **实现拦截机制**：\n   - 在调用危险功能之前插入自定义hook。\n   - 自定义hook检查特定条件（如用户权限），决定该危险操作能否继续执行。\n\n示例Python代码：\n\n```python\ndef custom_hook(context):\n    # 替换以下条件判断为实际的安全验证逻辑，比如：\n    if context['user_permission'] == 'admin':\n        return True  # 允许通过hook并调用block-dangerous函数。\n    else:\n        return False  # 中断并阻止危险操作。\n\n# 在需要的位置应用此自定义hook，并根据其返回值决定是否继续执行原计划中的危险操作。\n```\n\n确保在插入的hook中嵌入适当的条件逻辑，以保障系统的安全性。",
+          "step": "report"
+        }
+      },
+      "final_answer": "为了使用Hooks机制拦截`block-dangerous`，可以按照以下步骤操作：\n\n1. **分析代码和上下文**：确定`block-dangerous`函数或逻辑块的位置及其应用场景。\n\n2. **实现拦截机制**：\n   - 在调用危险功能之前插入自定义hook。\n   - 自定义hook检查特定条件（如用户权限），决定该危险操作能否继续执行。\n\n示例Python代码：\n\n```python\ndef custom_hook(context):\n    # 替换以下条件判断为实际的安全验证逻辑，比如：\n    if context['user_permission'] == 'admin':\n        return True  # 允许通过hook并调用block-dangerous函数。\n    else:\n        return False  # 中断并阻止危险操作。\n\n# 在需要的位置应用此自定义hook，并根据其返回值决定是否继续执行原计划中的危险操作。\n```\n\n确保在插入的hook中嵌入适当的条件逻辑，以保障系统的安全性。",
+      "elapsed_s": 29.69,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 3,
+      "completed_at": "2026-07-11T05:17:51.333933",
+      "expected_mechanism": "Hooks",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis MCP 6 server 怎么注册",
+      "routed_mechanism": "MCP",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "node_count": 3,
+      "step_history": [
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "02_researcher",
+            "03_coder",
+            "08_reporter"
+          ],
+          "step": "route"
+        },
+        "02_researcher": {
+          "research": [
+            {
+              "path": "/Users/apple/.mavis/agents/mavis/memory/mavis-orchestration.md",
+              "content": "│"
+            }
+          ],
+          "raw_output": "\\n=== mavis recall v2 (AgentFrame) ===\n查询: mavis MCP 6 server 怎么注册\n模式: hybrid (semantic + keyword + time_decay)\ntop_k: 3, max_age_days: 30\n\n[1/4 装载] 读取 58 个文档\n[2/4 切分] 生成 11795 个 chunk (chunk_size=1024, overlap=20)\n[3/4 向量化] 11795 个 embedding (384-d, 模拟)\n[4/4 存储] 索引已保存: /Users/apple/.mavis/.mavis-cache/chroma/mavis-memory-index.json\n\\n[Stage 1: 多路召回]\n  语义检索: Top 100\n  关键词检索: Top 50 (智能分词, 22 kw)\n  时间衰减: Top 30 (max_age_days=30)\n\\n[Stage 2: 合并去重]\n[Stage 3: Cross-Encoder rerank]\n\\n=== Recall 结果 (Top 3) ===\n\\n[1] Score: 18.0000\n    Path: /Users/apple/.mavis/agents/mavis/memory/book-learning-workflow.md\n    Chunk: 638/1106\n    Content: .yaml + env vars | ✅ 已支持 |\n| @tool 装饰器 | mavis MCP server (server.py) | ✅ 6 server 注册 |\n| Hooks (Python...\n\\n[2] Score: 18.0000\n    Path: /Users/apple/.mavis/ag",
+          "source": "mavis-recall-v2 (P1.1.a 真功能)",
+          "step": "research"
+        },
+        "03_coder": {
+          "code": "根据您的需求，假设您需要通过Python脚本来与MCP（修改后的客户端）服务器进行交互，在这种场景下通常是开发一个游戏插件或是利用HTTP API来发送请求来进行某种形式的注册。不过具体如何操作依赖于服务器提供的API和文档。\n\n以最常见的例子来说，如果MCP服务器提供了一个简单的HTTP API用于用户或服务端口注册，您可以使用Python中的`requests`库来实现这一功能：\n\n```python\nimport requests\n\ndef register_with_server(api_url, payload):\n    # 发送POST请求给MCP 6 server的API\n    response = requests.post(api_url, data=payload)\n    \n    if response.status_code == 201:\n        print('注册成功')\n    else:\n        print(f'注册失败: {response.text}')\n\n# 使用您实际获取到的具体信息替换这些变量值：\napi_endpoint",
+          "written_file": null,
+          "apply_status": "P3.0-query-mode (不真写文件)",
+          "step": "code"
+        },
+        "08_reporter": {
+          "final": "要通过MCP（修改后的客户端）6 server进行注册，您需要遵循以下步骤：\n\n1. 基于服务器提供的API文档，确定用于注册的接口。\n2. 使用Python的`requests`库来发送HTTP请求到该服务端口。\n\n具体操作示例如下：\n```python\nimport requests\n\nurl = 'http://mcpserver/api/register'  # 示例URL，请替换为实际地址\ndata = {\n    \"username\": \"your_username\",       # 更换为您的用户名或所需详细信息。\n    \"password\": \"your_password\"        # 更换密码或其他参数。\n}\n\nresponse = requests.post(url, json=data)\n\nif response.status_code == 200:\n    print(\"注册成功！\")\nelse:\n    print(f\"错误：{response.content}\")\n```\n\n此代码片段仅为示范，必须根据MCP Server的实际API需求做适当调整。请参阅文档以获取更详细的信息和支持更多功能的解决方案。\n\n对于游戏插件开发相关的MCP 6 server互动方式，需要深入了解插件和服务器端的具体要求与交互流程，请查阅相关技术指南或官方说明文件。",
+          "step": "report"
+        }
+      },
+      "final_answer": "要通过MCP（修改后的客户端）6 server进行注册，您需要遵循以下步骤：\n\n1. 基于服务器提供的API文档，确定用于注册的接口。\n2. 使用Python的`requests`库来发送HTTP请求到该服务端口。\n\n具体操作示例如下：\n```python\nimport requests\n\nurl = 'http://mcpserver/api/register'  # 示例URL，请替换为实际地址\ndata = {\n    \"username\": \"your_username\",       # 更换为您的用户名或所需详细信息。\n    \"password\": \"your_password\"        # 更换密码或其他参数。\n}\n\nresponse = requests.post(url, json=data)\n\nif response.status_code == 200:\n    print(\"注册成功！\")\nelse:\n    print(f\"错误：{response.content}\")\n```\n\n此代码片段仅为示范，必须根据MCP Server的实际API需求做适当调整。请参阅文档以获取更详细的信息和支持更多功能的解决方案。\n\n对于游戏插件开发相关的MCP 6 server互动方式，需要深入了解插件和服务器端的具体要求与交互流程，请查阅相关技术指南或官方说明文件。",
+      "elapsed_s": 20.56,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 3,
+      "completed_at": "2026-07-11T05:18:13.330915",
+      "expected_mechanism": "MCP",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Headless --max-turns CI/CD 怎么跑",
+      "routed_mechanism": "Headless",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "node_count": 5,
+      "step_history": [
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "02_researcher",
+            "03_coder",
+            "04_action",
+            "05_runner",
+            "08_reporter"
+          ],
+          "step": "route"
+        },
+        "02_researcher": {
+          "research": [
+            {
+              "path": "/Users/apple/.mavis/agents/mavis/memory/book-learning-workflow.md",
+              "content": "智能体 | mavis sub-agent | 100% |"
+            }
+          ],
+          "raw_output": "\\n=== mavis recall v2 (AgentFrame) ===\n查询: mavis Headless --max-turns CI/CD 怎么跑\n模式: hybrid (semantic + keyword + time_decay)\ntop_k: 3, max_age_days: 30\n\n[1/4 装载] 读取 58 个文档\n[2/4 切分] 生成 11795 个 chunk (chunk_size=1024, overlap=20)\n[3/4 向量化] 11795 个 embedding (384-d, 模拟)\n[4/4 存储] 索引已保存: /Users/apple/.mavis/.mavis-cache/chroma/mavis-memory-index.json\n\\n[Stage 1: 多路召回]\n  语义检索: Top 100\n  关键词检索: Top 50 (智能分词, 33 kw)\n  时间衰减: Top 30 (max_age_days=30)\n\\n[Stage 2: 合并去重]\n[Stage 3: Cross-Encoder rerank]\n\\n=== Recall 结果 (Top 3) ===\n\\n[1] Score: 20.0000\n    Path: /Users/apple/.mavis/agents/mavis/memory/mavis-orchestration.md\n    Chunk: 512/651\n    Content: copilot + comfyui-installer), 3 active | 100% |\n| 6 | Headless + CI/CD | mavis cron...\n\\n[2] Score: 20.0000\n    Path: /Users/apple/.mavis/agents/mavis/",
+          "source": "mavis-recall-v2 (P1.1.a 真功能)",
+          "step": "research"
+        },
+        "03_coder": {
+          "code": "根据您的需求，如果您想要在CI/CD环境中使用mavid.Headless并设置--max-turns参数，您可以采用以下方式：\n\n1. **安装必要的Python环境和依赖**：首先，在你的项目根目录创建`requirements.txt`文件，并添加所需的包如mavis等。你可以使用一个pip命令来安装所有需要的库，例如：\n   ```\n   pip install -r requirements.txt\n   ```\n\n2. **创建脚本执行mavis Headless并传递--max-turns参数**：在一个新的Python脚本或在CI/CD服务（如GitHub Actions、GitLab CI等）中的任务配置文件中引入`argparse`包来解析命令行参数，然后调用相关的方法或函数。示例：\n   ```python\n   import argparse\n   import mavis\n\n   def run_mavis():\n       parser = argparse.ArgumentParser()\n       parser.add_argument(\"--ma",
+          "written_file": null,
+          "apply_status": "P3.0-query-mode (不真写文件)",
+          "step": "code"
+        },
+        "04_action": {
+          "action": "decision",
+          "step": "action"
+        },
+        "05_runner": {
+          "command": "whoami",
+          "exit_code": 0,
+          "stdout": "apple\n",
+          "stderr": "",
+          "step": "run",
+          "sandbox": "P1.1.a 真 subprocess (白名单)"
+        },
+        "08_reporter": {
+          "final": "要在CI/CD环境中使用mavis.Headless并设置--max-turns参数，您可以按照以下步骤操作：\n\n1. 在项目的根目录下创建一个`requirements.txt`文件，并添加所需的Python包如mavis等。\n2. 使用pip安装这些依赖项：\n   ```\n   pip install -r requirements.txt\n   ```\n3. 编写您的自动化脚本或配置代码来调用mavis.Headless，并设置参数。例如在命令行中，您可以通过以下方式运行它：\n   ```\n   mavis Headless --max-turns N YourScriptOrConfigFile\n   ```\n以上N为最大轮次的最大值，根据具体需求自定义。\n\n确保您的CI/CD环境已正确配置Python和必要的库以便顺利执行。如果涉及特定的自动化代码或命令，请提供更多细节以便我们给出更详细的建议。",
+          "step": "report"
+        }
+      },
+      "final_answer": "要在CI/CD环境中使用mavis.Headless并设置--max-turns参数，您可以按照以下步骤操作：\n\n1. 在项目的根目录下创建一个`requirements.txt`文件，并添加所需的Python包如mavis等。\n2. 使用pip安装这些依赖项：\n   ```\n   pip install -r requirements.txt\n   ```\n3. 编写您的自动化脚本或配置代码来调用mavis.Headless，并设置参数。例如在命令行中，您可以通过以下方式运行它：\n   ```\n   mavis Headless --max-turns N YourScriptOrConfigFile\n   ```\n以上N为最大轮次的最大值，根据具体需求自定义。\n\n确保您的CI/CD环境已正确配置Python和必要的库以便顺利执行。如果涉及特定的自动化代码或命令，请提供更多细节以便我们给出更详细的建议。",
+      "elapsed_s": 29.21,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 5,
+      "completed_at": "2026-07-11T05:18:44.245847",
+      "expected_mechanism": "Headless",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Agent SDK @tool 装饰器 怎么定义",
+      "routed_mechanism": "Agent SDK",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "node_count": 4,
+      "step_history": [
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "02_researcher",
+            "03_coder",
+            "08_reporter"
+          ],
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "1. 查阅 Mavis Agent SDK 文档和资源，确认装饰器的具体使用方法和技术要求。\n2. 根据文档指导，在开发环境中导入 @tool 装饰器，并将其应用于需要的功能或模块中。\n3. 测试已应用装饰器的代码，验证功能是否按预期工作，并解决可能出现的问题。",
+          "step": "plan",
+          "turn": 1
+        },
+        "02_researcher": {
+          "research": [
+            {
+              "path": "/Users/apple/.mavis/agents/mavis/memory/mavis-orchestration.md",
+              "content": "| system / assistant / user / result | mavis protocol 内部消息 (内部 protocol 而非 SDK 公开 API) | 🟡 内部 |"
+            }
+          ],
+          "raw_output": "\\n=== mavis recall v2 (AgentFrame) ===\n查询: mavis Agent SDK @tool 装饰器 怎么定义\n模式: hybrid (semantic + keyword + time_decay)\ntop_k: 3, max_age_days: 30\n\n[1/4 装载] 读取 58 个文档\n[2/4 切分] 生成 11795 个 chunk (chunk_size=1024, overlap=20)\n[3/4 向量化] 11795 个 embedding (384-d, 模拟)\n[4/4 存储] 索引已保存: /Users/apple/.mavis/.mavis-cache/chroma/mavis-memory-index.json\n\\n[Stage 1: 多路召回]\n  语义检索: Top 100\n  关键词检索: Top 50 (智能分词, 30 kw)\n  时间衰减: Top 30 (max_age_days=30)\n\\n[Stage 2: 合并去重]\n[Stage 3: Cross-Encoder rerank]\n\\n=== Recall 结果 (Top 3) ===\n\\n[1] Score: 18.9490\n    Path: /Users/apple/.mavis/agents/mavis/memory/book-learning-workflow.md\n    Chunk: 479/1106\n    Content: tStart / SubagentStop)\n```\n\n#### 概念 4: `@tool` 装饰器 (进程内 MCP)\n\n```python...\n\\n[2] Score: 18.0000\n    Path: /Users/apple/.mavis/agents/mavis/memory/book-le",
+          "source": "mavis-recall-v2 (P1.1.a 真功能)",
+          "step": "research"
+        },
+        "03_coder": {
+          "code": "根据计划和 Mavis Agent SDK 的文档指导，生成以下 Python 代码示例：\n\n首先确保已经安装了正确的 Mavis Agent SDK 库。如果尚未安装，请使用 pip 安装它：\n```bash\npip install mavis-agent-sdk\n```\n\n然后在你的 Python 文件中编写如下代码来定义一个工具函数，并应用 `@tool` 装饰器：\n```python\nfrom mavis.agent import tool\n\n# 使用 @tool 装饰器标注你的功能函数\n@tool()\ndef 加法运算(a: int, b: int) -> int:\n    \"\"\"执行两个整数的加法操作。\"\"\"\n    return a + b\n\nif __name__ == \"__main__\":\n    result = 加法运算(3, 4)\n    print(result)\n```\n\n根据上述代码，请确保修改为实际的功能，并进行测试，以验证功能与预期的一致性及解决任何潜在问题。",
+          "written_file": null,
+          "apply_status": "P3.0-query-mode (不真写文件)",
+          "step": "code"
+        },
+        "08_reporter": {
+          "final": "要使用 Mavis Agent SDK 的 `@tool` 装饰器，你需要按照以下步骤进行操作：\n\n1. 安装 Mavis Agent SDK：\n   ```bash\n   pip install mavis-agent-sdk\n   ```\n2. 导入并使用装饰器定义工具函数。下面是一个简单的示例代码：\n   ```python\n   from mavis_agent_sdk import tool\n\n   @tool\n   def example_function(param1, param2):\n       # 这里是你的函数逻辑，可以访问参数并通过上下文进行交互。\n       result = f\"Result with param1={param1} and param2={param2}\"\n       return {\"result\": result}\n   ```\n\n请确保按照 Mavis Agent SDK 官方文档和资源来应用装饰器，并测试相关代码以保证其按预期工作。",
+          "step": "report"
+        }
+      },
+      "final_answer": "要使用 Mavis Agent SDK 的 `@tool` 装饰器，你需要按照以下步骤进行操作：\n\n1. 安装 Mavis Agent SDK：\n   ```bash\n   pip install mavis-agent-sdk\n   ```\n2. 导入并使用装饰器定义工具函数。下面是一个简单的示例代码：\n   ```python\n   from mavis_agent_sdk import tool\n\n   @tool\n   def example_function(param1, param2):\n       # 这里是你的函数逻辑，可以访问参数并通过上下文进行交互。\n       result = f\"Result with param1={param1} and param2={param2}\"\n       return {\"result\": result}\n   ```\n\n请确保按照 Mavis Agent SDK 官方文档和资源来应用装饰器，并测试相关代码以保证其按预期工作。",
+      "elapsed_s": 18.18,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 4,
+      "completed_at": "2026-07-11T05:19:03.859983",
+      "expected_mechanism": "Agent SDK",
+      "routing_correct": true
+    },
+    {
+      "query": "mavis Plugins plugin.json install CLI",
+      "routed_mechanism": "Plugins",
+      "routing_method": "关键词",
+      "00_router_decision": [
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "nodes_run": [
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "node_count": 4,
+      "step_history": [
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "08_reporter"
+      ],
+      "intermediate_outputs": {
+        "00_router": {
+          "selected_nodes": [
+            "01_planner",
+            "02_researcher",
+            "03_coder",
+            "08_reporter"
+          ],
+          "step": "route"
+        },
+        "01_planner": {
+          "plan": "- 检查系统环境：确认已安装Node.js和npm（或yarn），并确保满足plugin.json文件中指定的依赖项。\n- 获取插件源码：使用git clone或其他CLI命令获取mavis Plugins仓库，找到并切换到存储有需要安装的\"plugin.json\"配置文件的具体插件目录下。\n- 执行安装操作：在已定位至包含\"plugin.json\"配置文件的插件代码所在的目录中运行npm install或yarn install命令，根据\"plugin.json\"中的规定完成必要的package加载和安装。\n\n这三步子计划确保了用户能够顺利地通过CLI（命令行界面）来安装与mavis Plugins兼容的相关插件。",
+          "step": "plan",
+          "turn": 1
+        },
+        "02_researcher": {
+          "research": [
+            {
+              "path": "/Users/apple/.mavis/agents/mavis/memory/mavis-2-roadmap.md",
+              "content": "install / list / remove` CLI | Chapter 9 §9.3.2 | ⭐⭐⭐⭐ | #6 | 2-4 周 |"
+            }
+          ],
+          "raw_output": "\\n=== mavis recall v2 (AgentFrame) ===\n查询: mavis Plugins plugin.json install CLI\n模式: hybrid (semantic + keyword + time_decay)\ntop_k: 3, max_age_days: 30\n\n[1/4 装载] 读取 58 个文档\n[2/4 切分] 生成 11795 个 chunk (chunk_size=1024, overlap=20)\n[3/4 向量化] 11795 个 embedding (384-d, 模拟)\n[4/4 存储] 索引已保存: /Users/apple/.mavis/.mavis-cache/chroma/mavis-memory-index.json\n\\n[Stage 1: 多路召回]\n  语义检索: Top 100\n  关键词检索: Top 50 (智能分词, 5 kw)\n  时间衰减: Top 30 (max_age_days=30)\n\\n[Stage 2: 合并去重]\n[Stage 3: Cross-Encoder rerank]\n\\n=== Recall 结果 (Top 3) ===\n\\n[1] Score: 4.8784\n    Path: /Users/apple/.mavis/agents/mavis/memory/mavis-2-roadmap.md\n    Chunk: 21/105\n    Content: install`** | §9.3.2 | 基于已有 `~/.mavis/.mavis-plugin...\n\\n[2] Score: 3.7961\n    Path: /Users/apple/.mavis/agents/mavis/memory/MEMORY.md\n    Chunk: 21/173\n    C",
+          "source": "mavis-recall-v2 (P1.1.a 真功能)",
+          "step": "research"
+        },
+        "03_coder": {
+          "code": "为了按照用户的计划安装Mavis Plugins插件，您可以遵循以下步骤：\n\n1. **检查系统环境**\n   确保Node.js和npm或者yarn已正确安装:\n   ```bash\n   node -v\n   npm -v # 或者 yarn -v 如果你使用yarn\n   ```\n   \n2. **获取插件源码** \n   使用git克隆仓库：\n   ```bash\n   git clone https://github.com/mavisplugins/your-plugin-repository.git\n   cd your-plugin-repository\n   ```\n\n3. **执行安装操作**\n   安装依赖项，根据\"plugin.json\":\n   ```bash\n   npm install # 或者使用 yarn install 如果你在使用yarn\n   ```\n   \n通过以上命令可以确保正确设置开发环境并完成所需插件的安装。",
+          "written_file": null,
+          "apply_status": "P3.0-query-mode (不真写文件)",
+          "step": "code"
+        },
+        "08_reporter": {
+          "final": "要通过CLI安装Mavis Plugins插件，您需要遵循以下步骤：\n\n1. 检查系统环境：\n确保已经安装了Node.js和npm或者yarn。\n```\nnode -v\nnpm -v # 或者 yarn -v 如果你使用yarn\n```\n\n2. 获取插件源码：\n使用git克隆仓库：请先找到具体的插件仓库地址，然后使用以下命令进行克隆。切换到存放\"plugin.json\"配置文件的目录。\n\n```bash\ngit clone <repo-url> # 将<repo-url>替换为实际的代码库URL。\ncd path/to/plugin-folder-with-plugin.json\n```\n\n3. 执行安装操作：\n在包含\"plugin.json\"配置文件的插件目录执行npm或yarn命令。\n```bash\nnpm install # 或者 yarn 如果你使用yarn\n```\n\n以上步骤完成后，您的mavis应用将能够使用新添加的插件。如有任何问题，请进一步指示具体需求以便提供更详细指导。",
+          "step": "report"
+        }
+      },
+      "final_answer": "要通过CLI安装Mavis Plugins插件，您需要遵循以下步骤：\n\n1. 检查系统环境：\n确保已经安装了Node.js和npm或者yarn。\n```\nnode -v\nnpm -v # 或者 yarn -v 如果你使用yarn\n```\n\n2. 获取插件源码：\n使用git克隆仓库：请先找到具体的插件仓库地址，然后使用以下命令进行克隆。切换到存放\"plugin.json\"配置文件的目录。\n\n```bash\ngit clone <repo-url> # 将<repo-url>替换为实际的代码库URL。\ncd path/to/plugin-folder-with-plugin.json\n```\n\n3. 执行安装操作：\n在包含\"plugin.json\"配置文件的插件目录执行npm或yarn命令。\n```bash\nnpm install # 或者 yarn 如果你使用yarn\n```\n\n以上步骤完成后，您的mavis应用将能够使用新添加的插件。如有任何问题，请进一步指示具体需求以便提供更详细指导。",
+      "elapsed_s": 21.21,
+      "all_10_nodes": [
+        "00_router",
+        "01_planner",
+        "02_researcher",
+        "03_coder",
+        "04_action",
+        "05_runner",
+        "06_feature",
+        "07_patcher",
+        "08_reporter",
+        "09_decision"
+      ],
+      "max_turns": 3,
+      "current_turn": 4,
+      "completed_at": "2026-07-11T05:19:26.423359",
+      "expected_mechanism": "Plugins",
+      "routing_correct": true
+    }
+  ]
+}
