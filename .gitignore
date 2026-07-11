@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+
+# ML models (per git-ops.md §3)
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.gguf
+models/
+checkpoints/
+lora/
+
+# Databases / cache
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+.cache/
+storage/
+embeddings/
+
+# Test artifacts
+test_files/sample_*.py
+test_files/cycle-report.json
+test_results/
+.mavis_state/
+cycle-report.json
+plan_*.yaml
+
+# mavis framework artifacts
+tmp/
+*.tmp
+*.bak
+*.backup
+*_modified_*.py
+
+# mavis internal
+.claude/
+.mavis/
+.mavis_state/
+session_logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Large logs
+*.log
+logs/
+
+# Archive
+archive/
+hooks-templates/.bak
