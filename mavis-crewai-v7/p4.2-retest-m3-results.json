@@ -1,13 +1,13 @@
 {
-  "test_at": "2026-07-11T22:59:46.295908",
+  "test_at": "2026-07-11T23:01:01.852202",
   "test_name": "P4.2 retest with M3 (永久 invariant #52)",
   "provider": "MiniMax-M3 via mavis_m3_provider",
   "test_count": 9,
   "file_changed": 6,
   "linter_passed": 6,
   "length_check_passed": 6,
-  "avg_elapsed_s": 9.74,
-  "total_elapsed_s": 187.85,
+  "avg_elapsed_s": 12.89,
+  "total_elapsed_s": 207.58,
   "previous_p4.2_local_14b": {
     "file_changed": 7,
     "test_count": 9,
@@ -41,92 +41,92 @@
       "test": 3,
       "file": "mavis-team-plan-v2/team_plan_v2.py",
       "change_type": "comments",
-      "original_size": 7969,
-      "new_size": 14285,
-      "ratio": 1.7926,
+      "original_size": 14285,
+      "new_size": 20098,
+      "ratio": 1.4069,
       "threshold": 0.7,
       "length_check": "passed",
       "linter": "passed",
       "file_changed": true,
-      "elapsed_s": 34.17
+      "elapsed_s": 54.35
     },
     {
       "test": 4,
       "file": "mavis-8mech-router-v2/router.py",
       "change_type": "docstring",
       "original_size": 7356,
-      "new_size": 1202,
-      "ratio": 0.1634,
+      "new_size": 1602,
+      "ratio": 0.2178,
       "threshold": 0.7,
       "length_check": "FAILED",
       "linter": "rolled_back",
       "file_changed": false,
-      "error": "length ratio 16.34% < 70%"
+      "error": "length ratio 21.78% < 70%"
     },
     {
       "test": 5,
       "file": "mavis-crewai-v4/test_files/sample1.py",
       "change_type": "type_hints",
       "original_size": 863,
-      "new_size": 900,
-      "ratio": 1.0429,
+      "new_size": 941,
+      "ratio": 1.0904,
       "threshold": 0.7,
       "length_check": "passed",
       "linter": "passed",
       "file_changed": true,
-      "elapsed_s": 4.49
+      "elapsed_s": 3.74
     },
     {
       "test": 6,
       "file": "mavis-crewai-v4/test_files/sample4.py",
       "change_type": "comments",
       "original_size": 891,
-      "new_size": 1333,
-      "ratio": 1.4961,
+      "new_size": 1221,
+      "ratio": 1.3704,
       "threshold": 0.7,
       "length_check": "passed",
       "linter": "passed",
       "file_changed": true,
-      "elapsed_s": 4.9
+      "elapsed_s": 5.6
     },
     {
       "test": 7,
       "file": "mavis-crewai-v4/test_files/sample3.py",
       "change_type": "docstring",
       "original_size": 736,
-      "new_size": 1235,
-      "ratio": 1.678,
+      "new_size": 1241,
+      "ratio": 1.6861,
       "threshold": 0.7,
       "length_check": "passed",
       "linter": "passed",
       "file_changed": true,
-      "elapsed_s": 4.09
+      "elapsed_s": 4.42
     },
     {
       "test": 8,
       "file": "mavis-crewai-v4/test_files/sample5.py",
       "change_type": "type_hints",
       "original_size": 736,
-      "new_size": 770,
-      "ratio": 1.0462,
+      "new_size": 797,
+      "ratio": 1.0829,
       "threshold": 0.7,
       "length_check": "passed",
       "linter": "passed",
       "file_changed": true,
-      "elapsed_s": 4.27
+      "elapsed_s": 2.58
     },
     {
       "test": 9,
       "file": "mavis-crewai-v4/test_files/sample2.py",
       "change_type": "comments",
       "original_size": 713,
-      "new_size": 1466,
-      "ratio": 2.0561,
+      "new_size": 1560,
+      "ratio": 2.1879,
       "threshold": 0.7,
       "length_check": "passed",
       "linter": "passed",
       "file_changed": true,
-      "elapsed_s": 6.5
+      "elapsed_s": 6.66
     }
   ]
 }
