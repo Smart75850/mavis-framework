@@ -23,6 +23,12 @@ CACHEDIR.TAG
 models/
 checkpoints/
 lora/
+qwen-*-lora/
+qwen-*-merged/
+qwen-*-lora-merged/
+football-lora*/
+qwen-edit-*/
+qwen-*/
 
 # Databases / cache
 *.db

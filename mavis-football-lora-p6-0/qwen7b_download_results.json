@@ -1,0 +1,8 @@
+{
+  "test_at": "2026-07-12T06:38:03.120935",
+  "test_name": "P6.6 Qwen-7B-Instruct ModelScope 下载",
+  "model_dir": "/tmp/ms_cache/models/qwen--Qwen2-7B-Instruct/snapshots/master",
+  "elapsed_s": 120.3,
+  "total_size_gb": 14.2,
+  "files_count": 15
+}
