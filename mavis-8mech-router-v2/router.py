@@ -25,6 +25,14 @@ os.environ['https_proxy'] = ''
 sys.path.insert(0, str(Path(__file__).parent.parent / "mavis-llamaindex-v2"))
 from build_index import load_or_build_index, HttpxOllamaEmbedding, OLLAMA_BASE, LLM_MODEL
 
+# 永久 invariant #51: M3 Provider 接入 (用云端 LLM, 唔用本地大模型)
+sys.path.insert(0, str(Path(__file__).parent.parent / "mavis-crewai-v7"))
+try:
+    from mavis_m3_provider import call_llm_m3, M3Provider
+    USE_M3 = True
+except ImportError:
+    USE_M3 = False
+
 # 全局参数定义
 EIGHT_MECHANISMS = [
     {
@@ -113,15 +121,24 @@ def call_llm_router(query: str, mechanisms: List[Tuple[str, Dict]]) -> Optional[
     user_query = f"以下是可用的八个机制:\n{mech_summaries}\n\n问题是：\n'{query}'"
 
     try:
-        response_content = httpx.post(
-            OLLAMA_BASE + '/chat/completions',
-            json={
-                "model": LLM_MODEL,
-                "messages": [{"role": "system", "content": system_message}, {"role": "user", "content": user_query}]
-            },
-            timeout=30
-        ).json()['choices'][0]['message']['content'].strip()
-        
+        # 永久 invariant #51: 默认用 M3 API, 失败 fallback 到本地 14B
+        if USE_M3:
+            response_content = call_llm_m3(
+                system=system_message,
+                user=user_query,
+                max_tokens=50,
+                temperature=0.3,
+                use_fallback=True,  # M3 失败自动 fallback
+            ).strip()
+        else:
+            response_content = httpx.post(
+                OLLAMA_BASE + '/chat/completions',
+                json={
+                    "model": LLM_MODEL,
+                    "messages": [{"role": "system", "content": system_message}, {"role": "user", "content": user_query}]
+                },
+                timeout=30
+            ).json()['choices'][0]['message']['content'].strip()
         return response_content
 
     except Exception as e:

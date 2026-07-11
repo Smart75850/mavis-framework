@@ -152,8 +152,33 @@ class Crew:
 
 
 # === LLM 工具 ===
+# 永久 invariant #51: M3 Provider 接入 (用云端 LLM, 唔用本地大模型)
+import sys as _sys
+_sys.path.insert(0, str(Path.home() / "workspace" / "mavis-framework" / "mavis-crewai-v7"))
+try:
+    from mavis_m3_provider import call_llm_m3
+    USE_M3 = True
+except ImportError:
+    USE_M3 = False
+
 
 def call_llm_14b(system: str, user: str, timeout: int = 60) -> str:
+    """调 LLM: 优先 M3, fallback 到本地 14B (永久 invariant #51)"""
+    if USE_M3:
+        for attempt in range(2):
+            try:
+                return call_llm_m3(
+                    system=system,
+                    user=user,
+                    max_tokens=2048,
+                    temperature=0.7,
+                    use_fallback=True,  # M3 失败自动 fallback 到本地 14B
+                ).strip()
+            except Exception as e:
+                if attempt == 1:
+                    return f"[LLM_ERROR] {e}"
+                time.sleep(2)
+    # 无 M3 时, 用本地 ollama
     for attempt in range(2):
         try:
             r = httpx.post(

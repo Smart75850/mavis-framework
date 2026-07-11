@@ -28,8 +28,73 @@ from llama_index.core import (
 )
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.base.embeddings.base import BaseEmbedding
-from llama_index.llms.ollama import Ollama
-import llama_index.core
+from llama_index.core.llms import LLM, CompletionResponse, LLMMetadata
+
+# 永久 invariant #51: M3 Provider 接入
+import sys as _sys
+_sys.path.insert(0, str(Path.home() / "workspace" / "mavis-framework" / "mavis-crewai-v7"))
+try:
+    from mavis_m3_provider import call_llm_m3, M3Provider
+    USE_M3 = True
+except ImportError:
+    USE_M3 = False
+
+# Ollama lib 仅作为 fallback 才 import (永久 invariant: ollama lib 启动 Client 会 raise)
+def _get_ollama_llm():
+    from llama_index.llms.ollama import Ollama
+    return Ollama(model=LLM_MODEL, base_url="http://127.0.0.1:11434", request_timeout=60.0)
+
+
+
+class M3LLM(LLM):
+    """LlamaIndex 兼容嘅 M3 LLM (永久 invariant #51)"""
+    model: str = "MiniMax-M3"
+
+    @property
+    def metadata(self) -> LLMMetadata:
+        return LLMMetadata(
+            context_window=200000,
+            num_output=4096,
+            model_name=self.model,
+        )
+
+    def complete(self, prompt: str, **kwargs) -> CompletionResponse:
+        text = call_llm_m3(
+            system="你是一个有用嘅助手, 用中文回答。",
+            user=prompt,
+            max_tokens=kwargs.get("max_tokens", 1024),
+            temperature=kwargs.get("temperature", 0.7),
+            use_fallback=True,
+        )
+        return CompletionResponse(text=text)
+
+    def chat(self, messages, **kwargs) -> CompletionResponse:
+        # 合并 messages 嘅 user content
+        prompt = "\n".join([m.content if hasattr(m, "content") else str(m) for m in messages if str(m).strip()])
+        return self.complete(prompt, **kwargs)
+
+    def stream_complete(self, prompt: str, **kwargs):
+        text = self.complete(prompt, **kwargs).text
+        yield CompletionResponse(text=text, delta=text)
+
+    # 异步方法: 直接调 sync 版本
+    async def acomplete(self, prompt: str, **kwargs) -> CompletionResponse:
+        return self.complete(prompt, **kwargs)
+
+    async def achat(self, messages, **kwargs) -> CompletionResponse:
+        return self.chat(messages, **kwargs)
+
+    async def astream_complete(self, prompt: str, **kwargs):
+        async for r in self.stream_complete(prompt, **kwargs):
+            yield r
+
+    async def astream_chat(self, messages, **kwargs):
+        async for r in self.stream_chat(messages, **kwargs):
+            yield r
+
+    def stream_chat(self, messages, **kwargs):
+        r = self.chat(messages, **kwargs)
+        yield CompletionResponse(text=r.text, delta=r.text)
 
 
 # === 路径配置 ===
@@ -134,7 +199,8 @@ def step2_index(docs: List, embed_model: HttpxOllamaEmbedding) -> VectorStoreInd
 
     # 全局配置
     Settings.embed_model = embed_model
-    Settings.llm = Ollama(model=LLM_MODEL, base_url="http://127.0.0.1:11434", request_timeout=60.0)
+    # 永久 invariant #51: 默认用 M3 LLM, 唔用本地 ollama
+    Settings.llm = M3LLM() if USE_M3 else _get_ollama_llm()
     Settings.node_parser = SentenceSplitter(chunk_size=512, chunk_overlap=50)
     Settings.chunk_size = 512
     Settings.chunk_overlap = 50
@@ -240,7 +306,8 @@ def load_or_build_index(memory_dir: Path = MAVIS_MEMORY_DIR, storage_dir: Path =
         print(f"📂 加载已存在索引: {storage_dir}")
         embed_model = HttpxOllamaEmbedding(model_name=EMBED_MODEL)
         Settings.embed_model = embed_model
-        Settings.llm = Ollama(model=LLM_MODEL, base_url="http://127.0.0.1:11434", request_timeout=60.0)
+        # 永久 invariant #51: M3 LLM 优先
+        Settings.llm = M3LLM() if USE_M3 else _get_ollama_llm()
         storage_context = StorageContext.from_defaults(persist_dir=str(storage_dir))
         index = load_index_from_storage(storage_context)
         print("   加载成功")

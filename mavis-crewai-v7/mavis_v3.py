@@ -35,6 +35,14 @@ os.environ['HTTPS_PROXY'] = ''
 os.environ['http_proxy'] = ''
 os.environ['https_proxy'] = ''
 
+# 永久 invariant #51: M3 Provider 接入 (默认用云端 M3 LLM, 唔用本地大模型)
+sys.path.insert(0, str(Path(__file__).parent))
+try:
+    from mavis_m3_provider import M3Provider, M3_BASE, M3_MODEL
+    _M3_OK = True
+except ImportError:
+    _M3_OK = False
+
 
 # === 永久 invariant #50: mavis v3 1 主入口 facade ===
 
@@ -70,6 +78,11 @@ def mavis_v3_status():
     print()
     print(f"📍 mavis home: {P40_HOME}")
     print(f"📚 mavis memory: {MAVIS_MEMORY}")
+    # 永久 invariant #51: M3 Provider 状态
+    if _M3_OK:
+        print(f"☁️  M3 Provider: ✅ (model={M3_MODEL}, base={M3_BASE})")
+    else:
+        print(f"☁️  M3 Provider: ❌ (fallback 到本地 14B)")
     print()
     print(f"📦 15 P 队列项目状态 (整合 P3.6 + P4.0):")
     for p, (project, desc) in P_PROJECTS_V3.items():
@@ -104,10 +117,10 @@ def mavis_v3_status():
 def mavis_v3_query(query: str):
     """永久 invariant #50: 8 机制 query 路由 (delegate P3.6)"""
     print(f"🔍 mavis_v3 query: {query}")
-    # T2 修: mavis_v2.py main 入口 `mavis_query(sys.argv[1])` 直接接受 query string
-    # 唔加 "query" 子命令, 否则 else 分支会把 "query" 字面当 query string 处理
+    # 永久 invariant #51: 改调 monorepo 内部 mavis_v2 (已用 M3 provider, 唔用本地大模型)
+    mavis_v2_path = Path(__file__).parent.parent / "mavis-crewai-v6" / "mavis_v2.py"
     result = subprocess.run(
-        ["python3", str(P40_HOME / "mavis-crewai-v6" / "mavis_v2.py"), query],
+        ["/Users/apple/workspace/mavis-llamaindex-v2/.venv/bin/python", str(mavis_v2_path), query],
         capture_output=True, text=True, env={**os.environ, "HTTP_PROXY": "", "HTTPS_PROXY": ""},
     )
     print(result.stdout)
