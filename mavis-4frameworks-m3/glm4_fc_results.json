@@ -1,0 +1,63 @@
+{
+  "test_at": "2026-07-12T00:25:47.108782",
+  "test_name": "P3.0 GLM-4 Function-calling 真接入",
+  "provider": "MiniMax-M3 模拟 GLM-4 (永久 invariant #51 #53)",
+  "tools": [
+    "solve_equation",
+    "multiply_big_numbers",
+    "compare_decimals"
+  ],
+  "test_count": 3,
+  "passed_count": 3,
+  "total_elapsed_s": 9.3,
+  "results": [
+    {
+      "passed": true,
+      "tool": "compare_decimals",
+      "args": {
+        "a": 9.11,
+        "b": 9.9
+      },
+      "tool_result": {
+        "result": "9.11 < 9.9",
+        "larger": 9.9
+      },
+      "summary": "9.11 < 9.9，所以 **9.9 比较大**。",
+      "elapsed_s": 2.48,
+      "expected_tool": "compare_decimals"
+    },
+    {
+      "passed": true,
+      "tool": "solve_equation",
+      "args": {
+        "a": 2,
+        "b": 3,
+        "c": -5,
+        "variable": "x"
+      },
+      "tool_result": {
+        "solutions": [
+          "1.0",
+          "-2.5"
+        ]
+      },
+      "summary": "方程 2x² + 3x - 5 = 0 的解为 x = 1.0 和 x = -2.5。",
+      "elapsed_s": 2.74,
+      "expected_tool": "solve_equation"
+    },
+    {
+      "passed": true,
+      "tool": "multiply_big_numbers",
+      "args": {
+        "a": 2024,
+        "b": 2025
+      },
+      "tool_result": {
+        "product": 4098600
+      },
+      "summary": "2024 × 2025 = 4,098,600\n\n仲未计算 2023 × 2024，等我帮手再计多次。",
+      "elapsed_s": 4.09,
+      "expected_tool": "multiply_big_numbers"
+    }
+  ]
+}
