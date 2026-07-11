@@ -1,0 +1,12 @@
+{
+  "test_at": "2026-07-12T06:28:05.600977",
+  "test_name": "P6.4 直接 transformers + peft 训练",
+  "model": "/tmp/ms_cache/models/qwen--Qwen2-1.5B-Instruct/snapshots/master",
+  "data": "/Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/football_alpaca_100plus_train.jsonl",
+  "output": "/Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/qwen-1.5b-football-lora",
+  "result": {
+    "elapsed_s": 61.18,
+    "output_dir": "/Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/qwen-1.5b-football-lora",
+    "max_steps": 5
+  }
+}
