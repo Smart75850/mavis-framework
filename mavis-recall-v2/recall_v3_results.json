@@ -1,0 +1,120 @@
+{
+  "test_at": "2026-07-12T00:18:45.794073",
+  "test_name": "P2.0 改进 mavis recall v3 (永久 invariant #63)",
+  "test_count": 5,
+  "passed_count": 4,
+  "total_elapsed_s": 34.98,
+  "previous_p2x": "3/5 PASS (60%, 永久 invariant #58)",
+  "results": [
+    {
+      "query": "永久 invariant #30 系乜? 边个 P 队列?",
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        }
+      ],
+      "summary": "根据 context，永久 invariant #30 嘅具体内容**冇喺 context 里面明确列出**。context 只提到：\n\n## 永久 invariant #30 嘅所属\n- 属于 **variant #21–#46 嘅关系**\n- **#21–#44: 13 P 队列全部永久 in**\n\n## 边个 P 队列？\nContext 列出嘅 **13 P 队列**包括（综合可见信息）：\n- **P1.4** — 智能 query 复用 EightMechRouter（永久 in）\n- **P3.4** — 改文件任务（被 P3.6 整合）\n- **P3.5** — 修复（被 P3.6 整合）\n- **P3.6** — 整合所有（12.5 秒 auto rebuild 索引、新增 status 14 P 队列列表）\n\n## 永久教训（#30 可能相关嘅）\n- **mavis_v2.py** 是 **1 主入口**，唔允许 14 项目分散\n- **auto rebuild 索引 12.5 秒** 必须保留（P3.6 新增）\n- 智能 query 复用 EightMechRouter（P1.4 永久 in）\n\n⚠️ **注意**：context 冇明确写出 #30 嘅完整文字描述，只能提供所属范围（#21–#44，13 P 队列永久 in）及相关 P 队列名单。如果要 #30 嘅精确文字，需要再查原文档。",
+      "elapsed_s": 5.39,
+      "keyword_matches": 2,
+      "keyword_total": 3,
+      "passed": true
+    },
+    {
+      "query": "mavis 8 机制协奏有边 8 个?",
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        },
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.0
+        },
+        {
+          "file": "book-learning-workflow.md",
+          "score": 0.0
+        }
+      ],
+      "summary": "根据 context, mavis 框架嘅 **8 机制协奏** 嘅 8 个机制如下（按文件 `book-learning-workflow.md` 中嘅表格顺序）:\n\n| # | 机制 | mavis 实现 | 得分 |\n|---|---|---|---|\n| 1 | **CLAUDE.md** | 13+ 个项目 AGENTS.md | 100% |\n| 2 | **子智能体** | mavis sub-agen... (文件截断) | — |\n| 3 | **Hook** | 3 个 hook（block-dangerous A1 修复版 + protect-files + audit-log）| — |\n| 4–8 | （未完整列出, 文件被截断） | — | — |\n\n**已知信息汇总**:\n- **8 机制协奏总体得分**: 89.0% → **89.5%** (+0.5%)\n- **相关项目**: `~/workspace/comfyui-package/`\n- **相关日志**: `.claude/logs/practice/A3-create-project-CLAUDE-md-2026-07-09.md`\n- **配套规则**: mavis 9 节点 LangGraph 必须根据 8 机制 query 路由动态选节点子集, 不允许跑全节点 (浪费 50%+ LLM 调用)\n- **对照章节**: §10.8\n\n**注意**: context 中表格第 2 行被截断（\"mavis sub-agen...\" 后面嘅内容缺失）, 第 4–8 个机制嘅具体名称未能喺提供嘅 context 中搵到。如需完整 8 个机制列表, 建议查阅原文件 `book-learning-workflow.md` 完整内容或 §10.8 章节。",
+      "elapsed_s": 5.21,
+      "keyword_matches": 2,
+      "keyword_total": 8,
+      "passed": true
+    },
+    {
+      "query": "block-dangerous 拦截 28 种黑名单具体系边 28 种?",
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        }
+      ],
+      "summary": "根据 context 资料，文件入面**冇列出** block-dangerous 拦截嘅 28 种黑名单具体内容。Context 只系多次提及「28 黑名单」呢个数字（例如 P4.0 hooks 集成、28 黑名单），但**冇详细列出**每一项黑名单系咩。\n\n**已知相关关键词**：\n- block-dangerous\n- 28 黑名单\n- 17/17 PASS\n- P4.0 hooks 集成\n- hooks-templates\n- mavis v2 / mavis framework\n\n如果你想知道具体 28 种黑名单内容，建议睇：\n1. `hooks-templates` 文件入面嘅 blacklist 配置\n2. block-dangerous hook 嘅源代码\n3. mavis framework 自己嘅 `.py` 文件入面嘅相关定义\n\n需要我帮你从其他途径揾到呢份具体名单吗？",
+      "elapsed_s": 5.68,
+      "keyword_matches": 0,
+      "keyword_total": 4,
+      "passed": false
+    },
+    {
+      "query": "CrewAI 4 组件系乜?",
+      "sources": [
+        {
+          "file": "MEMORY.md",
+          "score": 0.0
+        },
+        {
+          "file": "MEMORY.md",
+          "score": 0.0
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        }
+      ],
+      "summary": "根据 context，CrewAI 4 组件嘅相关内容比较零碎，我可以总结到以下几点：\n\n## CrewAI 4 组件相关资讯\n\n**文件来源**:\n- `MEMORY.md`\n- `agent-dev-book-2026-07-10.md`\n\n**关键内容**:\n\n1. **#24: CrewAI 4 组件 = mavis team plan**\n   - 来自 `agent-dev-book-2026-07-10.md`\n   - 提到同 \"overlap 设计\" 有关\n\n2. **文件实现细节** (`_v2.py`):\n   - line 6 涉及 CrewAI 4 组件\n   - 实际 line 5 系 `#35` 永久（内容被截断）\n   - 文件名为 `_v2.py`\n\n**注意**: 由于 context 内容被截断（多处以\"实际 lin\"同\"永久 in\"结尾），无法提供更完整嘅描述。如果你需要更详细嘅答案，建议提供完整嘅 context 内容。",
+      "elapsed_s": 3.2,
+      "keyword_matches": 2,
+      "keyword_total": 4,
+      "passed": true
+    },
+    {
+      "query": "P3.5 修复嘅 2 大 bug 系乜?",
+      "sources": [
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        },
+        {
+          "file": "agent-dev-book-2026-07-10.md",
+          "score": 0.0
+        }
+      ],
+      "summary": "## P3.5 修复嘅 2 大 bug\n\n根据 context 记载，P3.4 喺真实项目改写（mavis framework 嘅 README / HANDOFF / .py 文件）嗰阵暴露咗 2 大 bug，P3.5 嘅核心任务就系修复呢两个 bug。先讲背景：**真实项目改写跑通率只有 33%**，远低于隔离测试嘅 100%，证明边缘 case 必须喺真实环境验证，唔可以净係测 `test_files/`。\n\n**2 大 bug 如下：**\n\n1. **70% 长度检查对小改动太严** — 长度校验门槛对小修改嚟讲过于苛刻，搞到正常嘅小幅改动都被误判，P3.5 必须放宽或者改用更合理嘅阈值。\n2. **Patcher 14B 中文标点问题** — 用嚟打 patch 嘅 14B 模型喺处理中文标点嘅时候出乱子（syn 后面跟住语法 / 同步相关嘅错误），呢个直接影响到 patch 嘅可用性。\n\n**P3.5 嘅实战验证结果：** Test 3 + Test 4 嘅大文件经过 3 次重试都失败，但係冇改坏文件（fail-safe 生效）。\n\n**永久教训：** 唔允许只测隔离嘅 `test_files/`，真实项目改写先能暴露边缘 case。",
+      "elapsed_s": 4.25,
+      "keyword_matches": 2,
+      "keyword_total": 3,
+      "passed": true
+    }
+  ]
+}
