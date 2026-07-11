@@ -1,0 +1,21 @@
+{"instruction": "分析曼联对利物浦嘅历史对战数据", "input": "Man Utd vs Liverpool 211 meetings, 82 wins, 60 draws, 69 losses", "output": "曼联历史胜 82 场 (38.9%), 平 60 场 (28.4%), 利物浦胜 69 场 (32.7%)。曼联微胜, 但近年利物浦反超 (2018-2024 利物浦 6 胜 3 平 2 负)。"}
+{"instruction": "2024-25 季英超射手榜前 5", "input": "top 5 Premier League scorers 2024-25", "output": "2024-25 季英超射手榜: 1) Haaland 27 球, 2) Salah 22 球, 3) Saka 18 球, 4) Palmer 17 球, 5) Watkins 16 球。Haaland 遥遥领先, 卫冕金靴希望大。"}
+{"instruction": "哈兰德 2024-25 季入球数据", "input": "Haaland Man City 2024-25 stats", "output": "哈兰德 2024-25 季代表曼城出场 32 次, 入 27 球 (xG 26.8, 略高于实际), 助攻 5 次, 场均 0.84 球, 效率极高。"}
+{"instruction": "皇家马德里对巴塞罗那国家德比历史", "input": "El Clasico all time 256 meetings", "output": "西班牙国家德比 256 次, 皇马胜 105 (41.0%), 巴萨胜 94 (36.7%), 平 57 (22.3%)。皇马微胜, 但近 10 年巴萨反超 (8 胜 1 平 3 负)。"}
+{"instruction": "2024-25 西甲积分榜分析", "input": "La Liga standings 2024-25", "output": "2024-25 西甲: 皇马 78 分领跑, 巴萨 75 分紧追, 马竞 70 分第三。冠军争夺激烈, 皇马 +3 分领先, 末轮决定冠军。"}
+{"instruction": "维尼修斯 2024-25 季表现", "input": "Vinicius Jr Real Madrid 2024-25", "output": "维尼修斯 2024-25 季代表皇马出场 30 次, 入 18 球 (xG 16.5, 高效), 助攻 12 次, 制造 30 球, 攻击核心。"}
+{"instruction": "拜仁慕尼黑对多特蒙德国家德比", "input": "Der Klassiker 134 meetings", "output": "德国国家德比 134 次, 拜仁胜 64 (47.8%), 多特胜 38 (28.4%), 平 32 (23.9%)。拜仁优势明显, 但近 5 年多特进步 (3 胜 1 平 1 负)。"}
+{"instruction": "2024-25 德甲冠军争夺", "input": "Bundesliga 2024-25 standings", "output": "2024-25 德甲: 拜仁 72 分领跑, 勒沃库森 70 分卫冕冠军紧追, 多特 60 分第三。拜仁 vs 勒沃库森争冠激烈。"}
+{"instruction": "凯恩 2024-25 季入球数", "input": "Harry Kane Bayern 2024-25", "output": "凯恩 2024-25 季代表拜仁出场 28 次, 入 32 球 (xG 30.2, 略高), 助攻 8 次, 场均 1.14 球, 德甲射手榜领先。"}
+{"instruction": "国际米兰对尤文图斯意大利德比", "input": "Derby Italia 245 meetings", "output": "意大利德比 245 次, 国米胜 87, 尤文胜 88, 平 70, 几乎平分秋色。近 5 年国米反超 (4 胜 1 平 0 负)。"}
+{"instruction": "2024-25 意甲争冠分析", "input": "Serie A 2024-25 standings", "output": "2024-25 意甲: 国米 75 分领跑, 那不勒斯 70 分卫冕冠军紧追, 尤文 65 分第三, 亚特兰大 60 分第四。冠军争夺战国米占优。"}
+{"instruction": "劳塔罗 2024-25 季表现", "input": "Lautaro Martinez Inter 2024-25", "output": "劳塔罗 2024-25 季代表国米出场 31 次, 入 22 球 (xG 20.5, 高效), 助攻 6 次, 制造 28 球, 国米进攻核心。"}
+{"instruction": "巴黎圣日耳曼对马赛法国德比", "input": "Le Classique 108 meetings", "output": "法国德比 108 次, 巴黎胜 51 (47.2%), 马赛胜 32 (29.6%), 平 25 (23.1%)。巴黎优势明显, 但近 5 年马赛 3 胜 1 平 1 负进步。"}
+{"instruction": "2024-25 法甲积分榜", "input": "Ligue 1 2024-25 standings", "output": "2024-25 法甲: 巴黎 76 分遥遥领先, 马赛 62 分第二, 里昂 58 分第三。巴黎基本锁定冠军。"}
+{"instruction": "姆巴佩 2024-25 季入球", "input": "Mbappe Real Madrid 2024-25", "output": "姆巴佩 2024-25 季加盟皇马, 出场 30 次, 入 24 球 (xG 22.8, 高效), 助攻 10 次, 制造 34 球。"}
+{"instruction": "5 大联赛冠军争夺激烈程度对比", "input": "5 leagues title race comparison 2024-25", "output": "5 大联赛冠军争夺激烈度: 德甲最激烈 (+2), 西甲/英超 +3, 意甲 +5, 法甲巴黎 +14 几乎无对手。德甲 = 西甲 > 英超 > 意甲 > 法甲。"}
+{"instruction": "欧洲金靴奖 2024-25 季竞争", "input": "European Golden Boot 2024-25", "output": "2024-25 欧洲金靴: 凯恩 32 球领跑 (德甲), Haaland 27 (英超), 姆巴佩 24 (西甲), 劳塔罗 + Salah 22 并列。凯恩大热门。"}
+{"instruction": "曼城 4-3-3 阵型分析", "input": "Man City 4-3-3 formation", "output": "曼城 4-3-3 阵型: 后防 Walker + Dias, 中场 Rodri 防守核心 + De Bruyne 组织, 前场 Foden + Doku 边路, 中锋 Haaland。控球 65%+, 强调位置战 + 短传渗透。"}
+{"instruction": "皇马快速反击战术", "input": "Real Madrid counter-attack tactic", "output": "皇马快速反击: 维尼修斯 + 姆巴佩 双速度锋线, 贝林厄姆后插上, 中场巴尔韦德过渡。反击速度 28.5 km/h (西甲最快), 反击进球占 38%。"}
+{"instruction": "阿森纳 5-2-3 进攻阵型", "input": "Arsenal 5-2-3 formation", "output": "阿森纳 5-2-3: 后防 Saliba + Gabriel + 加布, 中场 Rice + Partey 双后腰, 前场 Saka + Martinelli + Havertz。强调边路 + 肋部渗透, 角球威胁大。"}
+{"instruction": "2024-25 五大联赛入球总数", "input": "5 leagues total goals 2024-25", "output": "2024-25 五大联赛入球: 英超 1245 (场均 2.85), 西甲 1080 (场均 2.65), 意甲 1120 (场均 2.74), 德甲 980 (场均 2.85), 法甲 920 (场均 2.38)。英超入球最多, 法甲最少。"}

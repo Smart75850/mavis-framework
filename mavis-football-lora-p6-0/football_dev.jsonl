@@ -1,0 +1,10 @@
+{"instruction": "2024-25 季球员助攻榜", "input": "2024-25 assist leaders", "output": "2024-25 助攻榜: De Bruyne 18 次领跑 (曼城), 维尼修斯 + Saka 12 次并列, Salah 11 次。德布劳内大热门。"}
+{"instruction": "守门员扑救成功率排名", "input": "2024-25 GK save percentage", "output": "2024-25 门将扑救率: Donnarumma 78.5% (曼城) 领先, Pope 76.2% (纽卡), Oblak 75.8% (马竞), Neuer 74.5% (拜仁)。Donnarumma 世界级。"}
+{"instruction": "2024-25 冬窗转会标王", "input": "Winter 2025 top transfers", "output": "2024-25 冬窗标王: Kvaratskhelia 7000 万欧 (那不勒斯 → 巴黎), Marmoush 6500 万 (法兰克福 → 曼城), Diaz 5500 万 (利物浦 → 拜仁)。巴黎 + 曼城 + 拜仁三豪门主导。"}
+{"instruction": "欧洲俱乐部财务排名", "input": "European club revenue 2024", "output": "欧洲俱乐部营收 Top 5: 皇马 9.8 亿欧, 曼城 9.2 亿, 巴黎 8.7 亿, 巴萨 8.5 亿, 曼联 8.0 亿。皇马 5 年连续第 1, 曼城 + PSG 紧追。"}
+{"instruction": "瓜迪奥拉战术体系演化", "input": "Pep Guardiola tactics evolution", "output": "瓜迪奥拉战术演化: 巴萨 tiki-taka (传控) → 拜仁 位置战 → 曼城 4-3-3 控球 → 2024 调整 (Rodri 核心 + 边路快攻)。保持控球哲学, 战术微调。"}
+{"instruction": "安切洛蒂欧冠战术", "input": "Carlo Ancelotti CL tactic", "output": "安切洛蒂 5 届欧冠冠军: 4-4-2 阵型, 强调反击效率 + 球员状态管理 + 经验决胜。1-0 主义, 决赛尤其强。"}
+{"instruction": "英超球迷文化对比", "input": "Premier League fan culture", "output": "英超球迷文化: 利物浦 YNWA + Kop 看台 (最感人), 曼联 GG MU + Stretford End, 阿森纳 NLF + Clock End。红军氛围最浓, 枪手最忠诚。"}
+{"instruction": "足球数据源选择", "input": "Football data source options", "output": "足球数据源: Opta 95% 准确 (商业, 高成本), StatsBomb 92% (高级 xG), FBref 88% (免费), Sofascore 90% (中等)。实战建议 StatsBomb + FBref 组合。"}
+{"instruction": "姆巴佩国家德比首秀", "input": "Mbappe first El Clasico 2024", "output": "姆巴佩 2024-10-26 国家德比首秀, 攻入 1 球, 皇马 0-4 巴萨, 表现一般, 仍需适应西甲节奏。"}
+{"instruction": "哈兰德欧冠 2024-25 表现", "input": "Haaland UCL 2024-25", "output": "哈兰德 2024-25 欧冠: 8 场入 9 球, 场均 1.13 球, 射手榜第 2 (仅次于拜仁凯恩 10 球)。效率惊人, 曼城晋级 16 强。"}
