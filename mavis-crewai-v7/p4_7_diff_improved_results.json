@@ -1,0 +1,78 @@
+{
+  "test_at": "2026-07-12T00:04:48.758441",
+  "test_name": "P4.7 智能 transform + Aider retry 8 改进",
+  "test_count": 6,
+  "results": [
+    {
+      "transform": "add_module_docstring",
+      "file": "mavis-recall-v2/recall.py",
+      "original_size": 9150,
+      "new_size": 9221,
+      "ratio": 1.0078,
+      "linter": "passed",
+      "passed": true,
+      "elapsed_s": 0.02
+    },
+    {
+      "path": "B",
+      "file": "mavis-recall-v2/recall.py",
+      "original_size": 9150,
+      "new_size": 9211,
+      "ratio": 1.0067,
+      "linter": "passed",
+      "applied_blocks": 1,
+      "retry_count": 0,
+      "passed": true,
+      "elapsed_s": 4.01
+    },
+    {
+      "transform": "add_module_docstring",
+      "file": "mavis-8mech-router-v2/router.py",
+      "original_size": 7356,
+      "new_size": 7421,
+      "ratio": 1.0088,
+      "linter": "passed",
+      "passed": true,
+      "elapsed_s": 0.01
+    },
+    {
+      "path": "B",
+      "file": "mavis-8mech-router-v2/router.py",
+      "passed": false,
+      "linter": "rolled_back",
+      "elapsed_s": 43.3,
+      "error": "all 8 retries failed"
+    },
+    {
+      "transform": "add_module_docstring",
+      "file": "mavis-crewai-v7/mavis_m3_provider.py",
+      "original_size": 7471,
+      "new_size": 7537,
+      "ratio": 1.0088,
+      "linter": "passed",
+      "passed": true,
+      "elapsed_s": 0.01
+    },
+    {
+      "path": "B",
+      "file": "mavis-crewai-v7/mavis_m3_provider.py",
+      "original_size": 7471,
+      "new_size": 7468,
+      "ratio": 0.9996,
+      "linter": "passed",
+      "applied_blocks": 1,
+      "retry_count": 0,
+      "passed": true,
+      "elapsed_s": 2.1
+    }
+  ],
+  "summary": {
+    "smart_transform": "3/3",
+    "aider_retry_8": "2/3",
+    "total_elapsed_s": 49.53
+  },
+  "previous_p4_5": {
+    "path_a_libcst": "3/3",
+    "path_b_aider": "2/3"
+  }
+}
