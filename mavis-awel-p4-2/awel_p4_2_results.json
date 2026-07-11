@@ -1,5 +1,5 @@
 {
-  "test_at": "2026-07-12T01:24:46.331803",
+  "test_at": "2026-07-12T02:11:05.932164",
   "test_name": "P4.2 DB-GPT AWEL Skill 体系实战",
   "layers": {
     "L1_operator": [
@@ -12,7 +12,7 @@
   },
   "test_count": 3,
   "passed_count": 3,
-  "total_elapsed_s": 10.38,
+  "total_elapsed_s": 9.88,
   "results": [
     {
       "input": "LoRA is a parameter-efficient fine-tuning technique that uses low-rank matrices.",
@@ -20,10 +20,10 @@
         {
           "operator": "translate",
           "input": "LoRA is a parameter-efficient fine-tuning technique that uses low-rank matrices.",
-          "output": "LoRA（低秩适配）是一种参数高效微调技术，它使用低秩矩阵。"
+          "output": "LoRA 是一种参数高效微调技术，使用低秩矩阵。"
         }
       ],
-      "final": "LoRA（低秩自适应）是一种参数高效微调技术，它使用低秩矩阵。",
+      "final": "LoRA 是一种参数高效微调技术，它使用低秩矩阵。",
       "passed": true,
       "name": "Q1 算子层 - 翻译"
     },
@@ -56,11 +56,11 @@
         {
           "operator": "summarize",
           "input": "DB-GPT 的 AWEL（智能体工作流表达语言）支持 AI 智能体编排的三层架构。",
-          "output": "DB-GPT的AWEL支持智能体工作流编排的三层架构。"
+          "output": "DB-GPT AWEL支持AI智能体三层编排架构。"
         },
         {
           "operator": "classify",
-          "input": "DB-GPT的AWEL支持智能体工作流编排的三层架构。",
+          "input": "DB-GPT AWEL支持AI智能体三层编排架构。",
           "output": "技术"
         }
       ],

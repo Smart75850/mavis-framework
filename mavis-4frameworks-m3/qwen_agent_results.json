@@ -1,5 +1,5 @@
 {
-  "test_at": "2026-07-12T01:20:47.408747",
+  "test_at": "2026-07-12T02:08:30.416886",
   "test_name": "P3.2 Qwen-Agent 多智体真接入",
   "provider": "MiniMax-M3 模拟 Qwen-Agent (永久 invariant #51)",
   "agents": [
@@ -8,7 +8,7 @@
   ],
   "test_count": 3,
   "passed_count": 3,
-  "total_elapsed_s": 10.22,
+  "total_elapsed_s": 13.3,
   "results": [
     {
       "passed": true,
@@ -21,30 +21,25 @@
         "question": "比较两个小数 9.11 同 9.9, 边个大?"
       },
       "math_agent_out": {
-        "answer": 9.9,
-        "method": "比较整数部分相同（9=9），再比较小数部分：0.9 > 0.11，所以 9.9 > 9.11"
+        "answer": "9.9",
+        "method": "比較小數時，先比較整數部分，兩者整數部分均為9，相同；再比較小數部分，0.11 < 0.90，所以 9.11 < 9.9，較大者為 9.9"
       },
-      "elapsed_s": 4.23
+      "elapsed_s": 7.26
     },
     {
       "passed": true,
       "image_agent_out": {
         "problem_type": "equation",
         "operands": [
-          2,
-          3,
-          -5
+          "2x² + 3x - 5 = 0"
         ],
         "question": "解方程 2x² + 3x - 5 = 0, 搵 x 嘅解 (保留 2 位小数)"
       },
       "math_agent_out": {
-        "answer": [
-          1.0,
-          -2.5
-        ],
-        "method": "使用求根公式 x = (-b ± √(b² - 4ac)) / 2a, 其中 a=2, b=3, c=-5。判别式 Δ = 9 + 40 = 49, √49 = 7。x₁ = (-3 + 7)/4 = 1.00, x₂ = (-3 - 7)/4 = -2.50"
+        "answer": "x ≈ 1.00 或 x ≈ -2.50",
+        "method": "2x² + 3x - 5 = 0，判別式 Δ = 9 + 40 = 49，√Δ = 7。x = (-3 ± 7)/4，即 x = 1.00 或 x = -2.50"
       },
-      "elapsed_s": 3.11
+      "elapsed_s": 3.22
     },
     {
       "passed": true,
@@ -58,9 +53,9 @@
       },
       "math_agent_out": {
         "answer": 23.125,
-        "method": "12.5 × 1.85 = 23.125 平方米"
+        "method": "12.5 × 1.85 = 23.125"
       },
-      "elapsed_s": 2.89
+      "elapsed_s": 2.82
     }
   ]
 }

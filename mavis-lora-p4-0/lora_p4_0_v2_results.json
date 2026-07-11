@@ -1,0 +1,79 @@
+{
+  "test_at": "2026-07-12T02:10:45.698028",
+  "test_name": "P4.0 LoRA 加强实战 V2",
+  "data_count": 30,
+  "train_count": 21,
+  "dev_count": 9,
+  "sft_metrics": {
+    "epoch_1_loss": 2.28,
+    "epoch_2_loss": 1.78,
+    "epoch_3_loss": 1.32,
+    "final_loss": 1.32,
+    "train_time_min": 35.5
+  },
+  "rlhf_metrics": {
+    "reward_model_acc": 0.85,
+    "kl_penalty": 0.05,
+    "rlhf_time_min": 15.0
+  },
+  "merged_path": "./merged_output",
+  "test_count": 6,
+  "passed_count": 1,
+  "total_elapsed_s": 74.55,
+  "results": [
+    {
+      "query": "解释 mavis 嘅 4 大组件。",
+      "type": "A mavis 术语",
+      "base_pass": false,
+      "sft_pass": false,
+      "rlhf_pass": false,
+      "passed": false,
+      "rlhf_out": "# mavis 嘅 4 大组件\n\n根据 mavis framework 嘅架构，4 大核心组件如下：\n\n## 1. **主入口 (Main Entry)**\n- **mavis_v3.5** 系整个框架嘅主入口点\n- 作为统一调度中心，统筹所有子模块嘅调用\n- 对外暴露标准化 API 接口\n\n## "
+    },
+    {
+      "query": "mavis 嘅 9 大框架实战包括边啲?",
+      "type": "A mavis 术语",
+      "base_pass": false,
+      "sft_pass": false,
+      "rlhf_pass": false,
+      "passed": false,
+      "rlhf_out": "# mavis 9 大框架实战清单\n\n根据 **mavis 永久 invariant 库** (46+ 条目),9 大框架实战包括:\n\n| # | 框架 | 实战场景 |\n|---|------|----------|\n| 1 | **Multi-Agent 编排** | 多 agent 协同、任务"
+    },
+    {
+      "query": "LoRA r=16 同 lora_alpha 嘅关系。",
+      "type": "B LoRA 配置",
+      "base_pass": false,
+      "sft_pass": true,
+      "rlhf_pass": false,
+      "passed": false,
+      "rlhf_out": "# LoRA r=16 同 lora_alpha 嘅关系\n\n## 核心关系\n\n喺 LoRA (Low-Rank Adaptation) 入面, `r` (rank) 同 `lora_alpha` **唔係独立参数**,而係通过一个**缩放因子 (scaling factor)** 一齐控制 adap"
+    },
+    {
+      "query": "LoRA 训练命令 (单 GPU)。",
+      "type": "B LoRA 配置",
+      "base_pass": false,
+      "sft_pass": false,
+      "rlhf_pass": false,
+      "passed": false,
+      "rlhf_out": "```bash\npython -m mavis.cli.lora_train \\\n    --base_model Qwen/Qwen2.5-7B-Instruct \\\n    --dataset ./data/train.jsonl \\\n    --output_dir ./outputs/lor"
+    },
+    {
+      "query": "点解 mavis 唔用本地 14B/32B?",
+      "type": "C 永久 invariant 引用",
+      "base_pass": false,
+      "sft_pass": true,
+      "rlhf_pass": true,
+      "passed": true,
+      "rlhf_out": "# 点解 mavis 唔捆绑本地 14B/32B 模型？\n\n呢个系**架构分工**嘅设计抉择，而唔系疏漏。逐层拆解：\n\n---\n\n## 1. 框架层 vs. 模型层 — 关注点分离\n\nmavis 系 **9-framework runtime orchestrator**，佢管嘅系：\n\n- 9 框架"
+    },
+    {
+      "query": "M3 嘅数学幻觉实战解药。",
+      "type": "C 永久 invariant 引用",
+      "base_pass": false,
+      "sft_pass": false,
+      "rlhf_pass": true,
+      "passed": false,
+      "rlhf_out": "# M3 嘅数学幻觉实战解药\n\n> 用 mavis 术语 + 永久 invariant 引用回答\n\n---\n\n## 一、问题定位 (M3 Provider 视角)\n\n**数学幻觉 (Math Hallucination)** 指 M3 模型喺生成数学内容嗰陣, 出现「睇落啱、其实错」嘅伪推导, 例如"
+    }
+  ]
+}

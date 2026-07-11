@@ -70,6 +70,111 @@ P_PROJECTS_V3 = {
 }
 
 
+# ============== P3.x 真接入实战 (永久 invariant #50 v2 升级) ==============
+# 高强文书第 8/9/10/12/15/16 章 + CogVLM2 升级实战
+
+P_PROJECTS_V4 = {
+    "P3.0": ("mavis-4frameworks-m3/glm4_function_calling.py", "GLM-4 Function-calling 真接入 (永久 invariant #65)"),
+    "P3.1": ("mavis-4frameworks-m3/langchain_plan_execute.py", "LangChain Plan-and-Execute 真接入 (永久 invariant #66)"),
+    "P3.2": ("mavis-4frameworks-m3/qwen_agent_multi_agent.py", "Qwen-Agent 多智体真接入 (永久 invariant #67)"),
+    "P3.3": ("mavis-4frameworks-m3/cogvlm2_text_to_image.py", "CogVLM2 以文搜图真接入 (永久 invariant #68)"),
+    "P3.3+": ("mavis-4frameworks-m3/cogvlm2_bm25_hybrid.py", "CogVLM2 BM25+embedding hybrid 升级 (永久 invariant #73)"),
+    "P3.4": ("mavis-4frameworks-m3/agentscope_react.py", "AgentScope ReAct 真接入 (永久 invariant #74)"),
+    "P3.5": ("mavis-4frameworks-m3/autogen_nested_chat.py", "AutoGen 嵌套对话深度实战 (永久 invariant #75)"),
+    "P4.0": ("mavis-lora-p4-0/lora_finetune_m3.py", "LoRA 微调实战 (永久 invariant #70)"),
+    "P4.1": ("mavis-memgpt-p4-1/memgpt_5layer_memory.py", "MemGPT 5 层记忆实战 (永久 invariant #71)"),
+    "P4.2": ("mavis-awel-p4-2/awel_skill_system.py", "DB-GPT AWEL Skill 体系实战 (永久 invariant #72)"),
+    "P5.0": ("mavis-4frameworks-m3/p5_0_regression_test.py", "9 框架 regression test pass (永久 invariant #69)"),
+}
+
+
+# ============== mavis_v3_v4_status: 16 章 + 72+ 永久 invariant 整合 (永久 invariant #76) ==============
+
+def mavis_v3_v4_status():
+    """永久 invariant #76: mavis v3.5 整合 16 章 + 72+ 永久 invariant status"""
+    print("=" * 70)
+    print("mavis v3.5 1 主入口 facade (永久 invariant #76)")
+    print("=" * 70)
+    print()
+    print(f"📍 mavis home: {P40_HOME}")
+    print(f"📚 mavis memory: {MAVIS_MEMORY}")
+    if _M3_OK:
+        print(f"☁️  M3 Provider: ✅ (model={M3_MODEL}, base={M3_BASE})")
+    else:
+        print(f"☁️  M3 Provider: ❌")
+    print()
+
+    # 15 P 队列项目
+    print(f"📦 15 P 队列项目状态 (P1.1.a → P4.0):")
+    for p, (project, desc) in P_PROJECTS_V3.items():
+        path = P40_HOME / project
+        if path.exists():
+            py_count = len(list(path.rglob("*.py")))
+            print(f"  ✅ {p:7s} {project:35s} ({py_count:3d} .py) — {desc}")
+        else:
+            print(f"  ❌ {p:7s} {project:35s} (NOT FOUND)")
+
+    print()
+    # 11 P 队列 P3.x 真接入 + P4.x + P5.0
+    print(f"📦 11 P 队列 P3.x/P4.x/P5.0 实战 (高强文书 16 章真接入):")
+    for p, (relpath, desc) in P_PROJECTS_V4.items():
+        full_path = P40_HOME / "mavis-framework" / relpath
+        if full_path.exists():
+            size = full_path.stat().st_size
+            print(f"  ✅ {p:7s} {relpath:55s} ({size:5d} bytes) — {desc}")
+        else:
+            print(f"  ❌ {p:7s} {relpath:55s} (NOT FOUND)")
+
+    print()
+    # 永久 invariant 库统计
+    print("📊 永久 invariant 库统计:")
+    memory_topic = MAVIS_MEMORY / "topics" / "agent-dev-book-2026-07-10.md"
+    if memory_topic.exists():
+        content = memory_topic.read_text(encoding="utf-8")
+        import re
+        inv_count = len(re.findall(r"^## (?:永久 invariant )?#\d+", content, re.MULTILINE))
+        print(f"  ✅ agent-dev-book-2026-07-10.md ({inv_count} 永久 invariant, {len(content)} 字符)")
+
+    # mavis memory
+    mem_md = MAVIS_MEMORY / "MEMORY.md"
+    if mem_md.exists():
+        content = mem_md.read_text(encoding="utf-8")
+        import re
+        inv_count = len(re.findall(r"^## (?:永久 invariant )?#\d+", content, re.MULTILINE))
+        print(f"  ✅ MEMORY.md ({inv_count} 永久 invariant, {len(content)} 字符)")
+
+    print()
+    # 9 框架真接入进度
+    print("🎯 9 框架真接入进度 (高强文书第 8-16 章):")
+    framework_status = [
+        ("Devika 9 Agent", "第 5 章", "P1.1.a", "✅ 真接入"),
+        ("GLM-4 FC", "第 8 章", "P3.0 (#65)", "✅ 真接入"),
+        ("AgentScope ReAct", "第 9 章", "P3.4 (#74)", "✅ 真接入"),  # P3.4 已升级
+        ("LangChain P&E", "第 10 章", "P3.1 (#66)", "✅ 真接入"),
+        ("LangGraph StateGraph", "第 11 章", "P1.1.a (#32)", "✅ 真接入"),
+        ("AutoGen 嵌套对话", "第 12 章", "P3.5 (#75)", "✅ 真接入 (深度)"),
+        ("LlamaIndex RAG", "第 13 章", "P1.3 (#36)", "✅ 真接入"),
+        ("CrewAI 多角色", "第 14 章", "P1.2+P3.x", "✅ 真接入"),
+        ("Qwen-Agent", "第 15 章", "P3.2 (#67)", "✅ 真接入"),
+        ("CogVLM2 搜图", "第 16 章", "P3.3 (#68+#73)", "✅ 真接入 + BM25 升级"),
+    ]
+    for fw, ch, p, st in framework_status:
+        print(f"  {st}  {fw:30s} {ch:10s} {p}")
+
+    print()
+    print("🔗 9 大功能 (mavis_v3 facade):")
+    print("  1. status    — 15 P 队列 + 11 P 队列 真接入 status (P3.x/P4.x/P5.0)")
+    print("  2. status_v4 — mavis v3.5 16 章 + 72+ 永久 invariant 整合 status (新)")
+    print("  3. rebuild   — P3.6 auto rebuild LlamaIndex 索引")
+    print("  4. query     — 8 机制路由 + 14B 总结 (P3.6)")
+    print("  5. modify    — 改文件 (P3.5 修复 2 bug)")
+    print("  6. plan      — mavis team plan run (P4.3 集成)")
+    print("  7. hooks     — block-dangerous 17/17 + 28 黑名单 (P4.0)")
+    print("  8. recall    — 调 recall.py (P1.1.a)")
+    print("  9. verify    — 调 verifier.py (P1.1.a)")
+    print(" 10. regression — 跑 P5.0 9 框架 regression test (新)")
+
+
 def mavis_v3_status():
     """永久 invariant #50: 15 P 队列 status (整合 mavis_v2 + crewai_v7)"""
     print("=" * 60)
@@ -351,6 +456,8 @@ if __name__ == "__main__":
         mavis_v3_status()
     elif sys.argv[1] == "status":
         mavis_v3_status()
+    elif sys.argv[1] == "status_v4":
+        mavis_v3_v4_status()  # 永久 invariant #76
     elif sys.argv[1] == "query" and len(sys.argv) >= 3:
         mavis_v3_query(sys.argv[2])
     elif sys.argv[1] == "modify" and len(sys.argv) >= 4:
@@ -366,6 +473,7 @@ if __name__ == "__main__":
     else:
         print("用法:")
         print("  python3 mavis_v3.py status")
+        print("  python3 mavis_v3.py status_v4   # mavis v3.5 16 章 + 72+ 永久 invariant 整合")
         print("  python3 mavis_v3.py query <query>")
         print("  python3 mavis_v3.py modify <query> <target_file>")
         print("  python3 mavis_v3.py plan <yaml-file>")

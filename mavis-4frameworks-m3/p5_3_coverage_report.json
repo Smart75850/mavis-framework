@@ -1,0 +1,125 @@
+{
+  "test_at": "2026-07-12T02:12:21.009099",
+  "test_name": "P5.3 16 章实战 coverage 报告",
+  "chapter_count": 16,
+  "full_score_count": 13,
+  "high_score_count": 15,
+  "low_score_count": 1,
+  "total_score": 75,
+  "max_total": 80,
+  "average_score": 4.69,
+  "coverage": [
+    {
+      "chapter": 1,
+      "name": "Agent 4 组件",
+      "score": 4,
+      "status": "实战",
+      "note": "永久 invariant #9 实战 4 组件, 16 章都引用"
+    },
+    {
+      "chapter": 2,
+      "name": "LLM 服务 3 选 1",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #10 + #11 + #51 M3 Provider 实战"
+    },
+    {
+      "chapter": 3,
+      "name": "AutoGPT",
+      "score": 2,
+      "status": "实战浅",
+      "note": "永久 invariant #12 --served-model-name 实战, 缺 demo"
+    },
+    {
+      "chapter": 4,
+      "name": "MemGPT",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #13 + #71 + #78 实战 5 层记忆 + JSON 加固"
+    },
+    {
+      "chapter": 5,
+      "name": "Devika 9 Agent",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #31 + P1.1 + P1.1.a 实战 9 Agent 模板"
+    },
+    {
+      "chapter": 6,
+      "name": "DB-GPT AWEL",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #15 + #72 实战 3 层 AWEL + 3 真 query 100%"
+    },
+    {
+      "chapter": 7,
+      "name": "LoRA 微调",
+      "score": 4,
+      "status": "实战+",
+      "note": "永久 invariant #17 + #70 + #77 实战 SFT+RLHF+merge (M3 模拟)"
+    },
+    {
+      "chapter": 8,
+      "name": "Function-calling 6 步",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #18 + #65 实战 3 工具 + 3 真 query 100%"
+    },
+    {
+      "chapter": 9,
+      "name": "AgentScope ReAct",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #19 + #74 实战 ReAct 3 要素 + 3 真 query 100%"
+    },
+    {
+      "chapter": 10,
+      "name": "Plan-and-Execute 4 阶段",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #20 + #66 实战 4 阶段 + 3 真 query 100%"
+    },
+    {
+      "chapter": 11,
+      "name": "LangGraph StateGraph",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #21 + #32 实战 9 节点 LangGraph + conditional"
+    },
+    {
+      "chapter": 12,
+      "name": "AutoGen 嵌套对话",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #22 + #75 实战 3 角色 + 3 真 query 100%"
+    },
+    {
+      "chapter": 13,
+      "name": "LlamaIndex RAG",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #23 + #36 实战 4 步索引 + 17 文件 241 chunks"
+    },
+    {
+      "chapter": 14,
+      "name": "CrewAI 多角色",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #24 + #35 + #42-#46 实战 4 角色 + 200 query + 10 真实改"
+    },
+    {
+      "chapter": 15,
+      "name": "Qwen-Agent",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #25 + #67 实战 2 Agent 串行 + sympy fallback"
+    },
+    {
+      "chapter": 16,
+      "name": "CogVLM2 搜图",
+      "score": 5,
+      "status": "实战+",
+      "note": "永久 invariant #26 + #68 + #73 实战 6 张图 + BM25 hybrid 修复"
+    }
+  ]
+}

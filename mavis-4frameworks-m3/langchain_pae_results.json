@@ -1,5 +1,5 @@
 {
-  "test_at": "2026-07-12T01:20:37.186741",
+  "test_at": "2026-07-12T02:08:17.118240",
   "test_name": "P3.1 LangChain Plan-and-Execute 真接入",
   "provider": "MiniMax-M3 模拟 LangChain (永久 invariant #51)",
   "tools": [
@@ -9,7 +9,7 @@
   ],
   "test_count": 3,
   "passed_count": 3,
-  "total_elapsed_s": 8.59,
+  "total_elapsed_s": 9.97,
   "results": [
     {
       "passed": true,
@@ -31,12 +31,12 @@
           "step": 2,
           "action": "calculate",
           "output": {
-            "result": "9.869600294464002"
+            "result": "9.869606577649"
           }
         }
       ],
-      "summary": "**结果汇总：**\n\n- **第1步搜索**：圆周率 π ≈ **3.14159265358979**\n- **第2步计算**：π² ≈ **9.869600294464002**",
-      "elapsed_s": 3.1,
+      "summary": "## 总结\n\n**步骤1（搜索）：** 查询到圆周率 π ≈ **3.14159265358979**\n\n**步骤2（计算）：** 计算结果为 **9.8696...**（即 π² ≈ 9.8696）",
+      "elapsed_s": 3.03,
       "expected_core_actions": [
         "search",
         "calculate"
@@ -54,8 +54,8 @@
           }
         }
       ],
-      "summary": "**结果汇总：**\n\n第 1 步计算结果为 **8760**。",
-      "elapsed_s": 2.6,
+      "summary": "## 结果汇总\n\n**步骤 1（calculate）：结果为 8760**\n\n即通过该计算步骤得出结果 **8760**。",
+      "elapsed_s": 3.92,
       "expected_core_actions": [
         "calculate"
       ]
@@ -73,7 +73,7 @@
         }
       ],
       "summary": "计算结果为 **5.0**。",
-      "elapsed_s": 2.89,
+      "elapsed_s": 3.02,
       "expected_core_actions": [
         "calculate"
       ]

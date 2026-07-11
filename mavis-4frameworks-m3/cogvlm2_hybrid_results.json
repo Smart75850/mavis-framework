@@ -1,0 +1,200 @@
+{
+  "test_at": "2026-07-12T02:08:56.390165",
+  "test_name": "P3.3 BM25 + embedding hybrid 升级",
+  "weights": {
+    "bm25": 0.4,
+    "embedding": 0.6
+  },
+  "library_size": 6,
+  "test_count": 3,
+  "passed_count": 3,
+  "total_elapsed_s": 0.77,
+  "results": [
+    {
+      "query": "猫咪或者柴犬",
+      "top_match": {
+        "id": 2,
+        "path": "/img/dog.png",
+        "category": "动物",
+        "bm25_score": 0.98,
+        "emb_score": 1.0,
+        "hybrid_score": 0.992
+      },
+      "all_results": [
+        {
+          "id": 2,
+          "path": "/img/dog.png",
+          "category": "动物",
+          "bm25_score": 0.98,
+          "emb_score": 1.0,
+          "hybrid_score": 0.992
+        },
+        {
+          "id": 1,
+          "path": "/img/cat.png",
+          "category": "动物",
+          "bm25_score": 1.0,
+          "emb_score": 0.7403,
+          "hybrid_score": 0.8442
+        },
+        {
+          "id": 5,
+          "path": "/img/redcar.png",
+          "category": "车辆",
+          "bm25_score": 0.0,
+          "emb_score": 0.6634,
+          "hybrid_score": 0.398
+        },
+        {
+          "id": 4,
+          "path": "/img/sunset.png",
+          "category": "风景",
+          "bm25_score": 0.0,
+          "emb_score": 0.6397,
+          "hybrid_score": 0.3838
+        },
+        {
+          "id": 3,
+          "path": "/img/landscape.png",
+          "category": "风景",
+          "bm25_score": 0.0,
+          "emb_score": 0.6263,
+          "hybrid_score": 0.3758
+        },
+        {
+          "id": 6,
+          "path": "/img/bluecar.png",
+          "category": "车辆",
+          "bm25_score": 0.0,
+          "emb_score": 0.6191,
+          "hybrid_score": 0.3715
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "风景图, 有山有水嗰种",
+      "top_match": {
+        "id": 3,
+        "path": "/img/landscape.png",
+        "category": "风景",
+        "bm25_score": 1.0,
+        "emb_score": 1.0,
+        "hybrid_score": 1.0
+      },
+      "all_results": [
+        {
+          "id": 3,
+          "path": "/img/landscape.png",
+          "category": "风景",
+          "bm25_score": 1.0,
+          "emb_score": 1.0,
+          "hybrid_score": 1.0
+        },
+        {
+          "id": 1,
+          "path": "/img/cat.png",
+          "category": "动物",
+          "bm25_score": 0.4694,
+          "emb_score": 0.8025,
+          "hybrid_score": 0.6693
+        },
+        {
+          "id": 4,
+          "path": "/img/sunset.png",
+          "category": "风景",
+          "bm25_score": 0.4894,
+          "emb_score": 0.7599,
+          "hybrid_score": 0.6517
+        },
+        {
+          "id": 5,
+          "path": "/img/redcar.png",
+          "category": "车辆",
+          "bm25_score": 0.46,
+          "emb_score": 0.767,
+          "hybrid_score": 0.6442
+        },
+        {
+          "id": 2,
+          "path": "/img/dog.png",
+          "category": "动物",
+          "bm25_score": 0.46,
+          "emb_score": 0.7457,
+          "hybrid_score": 0.6314
+        },
+        {
+          "id": 6,
+          "path": "/img/bluecar.png",
+          "category": "车辆",
+          "bm25_score": 0.0,
+          "emb_score": 0.731,
+          "hybrid_score": 0.4386
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "红色跑车",
+      "top_match": {
+        "id": 5,
+        "path": "/img/redcar.png",
+        "category": "车辆",
+        "bm25_score": 1.0,
+        "emb_score": 0.9961,
+        "hybrid_score": 0.9976
+      },
+      "all_results": [
+        {
+          "id": 5,
+          "path": "/img/redcar.png",
+          "category": "车辆",
+          "bm25_score": 1.0,
+          "emb_score": 0.9961,
+          "hybrid_score": 0.9976
+        },
+        {
+          "id": 4,
+          "path": "/img/sunset.png",
+          "category": "风景",
+          "bm25_score": 0.5319,
+          "emb_score": 0.9536,
+          "hybrid_score": 0.7849
+        },
+        {
+          "id": 2,
+          "path": "/img/dog.png",
+          "category": "动物",
+          "bm25_score": 0.3333,
+          "emb_score": 1.0,
+          "hybrid_score": 0.7333
+        },
+        {
+          "id": 6,
+          "path": "/img/bluecar.png",
+          "category": "车辆",
+          "bm25_score": 0.3787,
+          "emb_score": 0.9531,
+          "hybrid_score": 0.7233
+        },
+        {
+          "id": 1,
+          "path": "/img/cat.png",
+          "category": "动物",
+          "bm25_score": 0.1701,
+          "emb_score": 0.98,
+          "hybrid_score": 0.656
+        },
+        {
+          "id": 3,
+          "path": "/img/landscape.png",
+          "category": "风景",
+          "bm25_score": 0.0,
+          "emb_score": 0.8708,
+          "hybrid_score": 0.5225
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

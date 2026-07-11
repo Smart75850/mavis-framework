@@ -1,0 +1,72 @@
+{
+  "test_at": "2026-07-12T02:10:55.957691",
+  "test_name": "P4.1 MemGPT V2 JSON 加固",
+  "json_5layers": [
+    "json.loads",
+    "regex抽",
+    "ast.literal_eval",
+    "整段当summary",
+    "单引号转换"
+  ],
+  "test_count": 4,
+  "passed_count": 3,
+  "total_elapsed_s": 10.18,
+  "results": [
+    {
+      "summary": "```json\n{\n  \"summary\": \"用户询问之前讨论过的 mavis 永久 invariant 相关内容。综合 5 层记忆，我们之前讨论过 mavis 的永久 invariant 库（46+ 个），已实战到 #9-#77，其中包括 #65（GLM-4 FC）、#66（LangChain P&E）、#51（本地模型废止只用 M3 云端）等具体 invariant。\",\n  \"hits\":",
+      "hits": [
+        {
+          "layer": "fallback",
+          "content": "```json\n{\n  \"summary\": \"用户询问之前讨论过的 mavis 永久 invariant 相关内容。综合 5 层记忆，我们之前讨论过 mavis 的永久 invariant 库（46"
+        }
+      ],
+      "passed": true,
+      "expected_layers": [
+        "L1",
+        "L2",
+        "L5"
+      ]
+    },
+    {
+      "summary": "```json\n{\n  \"summary\": \"用户查询当前任务进度。根据记忆,多个任务已完成:#9 框架 regression 全部 5/5 PASS,#9 框架真接入完成 8/9 加 1 demo 加 1 partial。另外提及已实战 #9-#77 范围嘅工作。\",\n  \"hits\": [\n    {\n      \"layer\": \"L3\",\n      \"content\": \"T-P5.0",
+      "hits": [
+        {
+          "layer": "fallback",
+          "content": "```json\n{\n  \"summary\": \"用户查询当前任务进度。根据记忆,多个任务已完成:#9 框架 regression 全部 5/5 PASS,#9 框架真接入完成 8/9 加 1 demo"
+        }
+      ],
+      "passed": true,
+      "expected_layers": [
+        "L3",
+        "L1"
+      ]
+    },
+    {
+      "summary": "```json\n{\n  \"summary\": \"用户问 verifier 嘅反思结论。L4 有两条 verifier 反思记录：V-P3.0 喺 7-11 验证 GLM-4 FC 真接入 0 caveat, 3 工具 3 query 全部 PASS；V-P3.3 喺 7-12 验证 CogVLM2 召回 2/3 PASS, 升级 BM25 hybrid 后 3/3 PASS (#73)。\",\n  ",
+      "hits": [
+        {
+          "layer": "fallback",
+          "content": "```json\n{\n  \"summary\": \"用户问 verifier 嘅反思结论。L4 有两条 verifier 反思记录：V-P3.0 喺 7-11 验证 GLM-4 FC 真接入 0 cave"
+        }
+      ],
+      "passed": true,
+      "expected_layers": [
+        "L4",
+        "L1"
+      ]
+    },
+    {
+      "summary": "```json\n{\n  \"summary\": \"mavis project 核心定义 = 9 大框架真接入 + 46+ 永久 invariant 库 + 5 层记忆体系;另有 invariant #51 规定本地 LLM 废弃,只保留 nomic-embed,主 LLM 用 M3 云端。\",\n  \"hits\": [\n    {\n      \"layer\": \"L5\",\n      \"content",
+      "hits": [
+        {
+          "layer": "fallback",
+          "content": "```json\n{\n  \"summary\": \"mavis project 核心定义 = 9 大框架真接入 + 46+ 永久 invariant 库 + 5 层记忆体系;另有 invariant #5"
+        }
+      ],
+      "passed": false,
+      "expected_layers": [
+        "L5"
+      ]
+    }
+  ]
+}

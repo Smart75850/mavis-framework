@@ -1,5 +1,5 @@
 {
-  "test_at": "2026-07-12T01:20:28.595702",
+  "test_at": "2026-07-12T02:08:07.149001",
   "test_name": "P3.0 GLM-4 Function-calling 真接入",
   "provider": "MiniMax-M3 模拟 GLM-4 (永久 invariant #51 #53)",
   "tools": [
@@ -9,7 +9,7 @@
   ],
   "test_count": 3,
   "passed_count": 3,
-  "total_elapsed_s": 10.82,
+  "total_elapsed_s": 9.5,
   "results": [
     {
       "passed": true,
@@ -22,8 +22,8 @@
         "result": "9.11 < 9.9",
         "larger": 9.9
       },
-      "summary": "9.9 大过 9.11。\n\n比较结果：9.11 < 9.9，较大的系 **9.9**。",
-      "elapsed_s": 2.5,
+      "summary": "工具计算结果：**9.9 比较大**。\n\n具体嚟讲，9.11 同 9.9 嘅整数部分都系 9，所以要比较小数部分：0.11 对 0.9，明显 0.9（即 0.90）大过 0.11，所以 9.9 > 9.11。",
+      "elapsed_s": 4.02,
       "expected_tool": "compare_decimals"
     },
     {
@@ -41,8 +41,8 @@
           "-2.5"
         ]
       },
-      "summary": "方程 2x² + 3x - 5 = 0 的解为 x = 1.0 和 x = -2.5。",
-      "elapsed_s": 5.17,
+      "summary": "方程 $2x^2 + 3x - 5 = 0$ 的两个解为 $x_1 = 1.0$，$x_2 = -2.5$。",
+      "elapsed_s": 2.86,
       "expected_tool": "solve_equation"
     },
     {
@@ -55,8 +55,8 @@
       "tool_result": {
         "product": 4098600
       },
-      "summary": "2024 × 2025 = 4,098,600\n\n由于工具暂未提供第二个乘积（2023 × 2024），我先计算这部分：\n\n2023 × 2024 = ?\n= 2024 × 2024 - 2024\n= 4,096,576 - 2024\n= 4,094,552\n\n合计：4,098,600 + 4,094,552 = **8,193,152**",
-      "elapsed_s": 3.15,
+      "summary": "第一项：2024 × 2025 = 4,098,600\n\n我先计算第二项，再相加。\n\n第二项：2023 × 2024 = 4,094,552\n\n总和：4,098,600 + 4,094,552 = **8,193,152**",
+      "elapsed_s": 2.62,
       "expected_tool": "multiply_big_numbers"
     }
   ]

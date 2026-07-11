@@ -1,10 +1,10 @@
 {
-  "test_at": "2026-07-12T01:21:28.678046",
+  "test_at": "2026-07-12T02:09:31.098007",
   "test_name": "P5.x 4 框架 demo with M3",
   "provider": "MiniMax-M3 via mavis_m3_provider",
   "framework_count": 4,
   "passed_count": 4,
-  "total_elapsed_s": 14.45,
+  "total_elapsed_s": 12.58,
   "results": [
     {
       "test": "P5.1",
@@ -21,15 +21,15 @@
       "execute_results": 2,
       "sumup_chinese": true,
       "passed": true,
-      "elapsed_s": 3.73
+      "elapsed_s": 4.0
     },
     {
       "test": "P5.3",
       "framework": "Qwen-Agent 多智体 (第 15 章)",
-      "description_agent_out": "# 图片内容解析\n\n## 题目内容\n**题目**：比较两个小数 `9.11` 和 `9.9`，要求判断哪个更大，并用 Python 的 `print` 函数输出结果。\n\n## 期望的 Python 代",
-      "math_agent_out": "## 解答\n\n### 题目分析\n比较两个小数 **9.11** 和 **9.9** 的大小。\n\n很多人会直觉地认为 `9.11 > 9.9`，因为 `11 > 9`。但这种比较方式是**错误**的——",
+      "description_agent_out": "## 图片解析结果\n\n**题目内容：**\n\n比较两个小数 `9.11` 和 `9.9` 哪个大，并用 Python `print` 输出结果。\n\n**题目要求：**\n\n1. 用 Python 比较 `",
+      "math_agent_out": "```python\n# 比较 9.11 和 9.9 的大小\na = 9.11\nb = 9.9\n\nif a > b:\n    print(f\"{a} > {b}\")\nelif a < b:\n    pr",
       "passed": true,
-      "elapsed_s": 6.91
+      "elapsed_s": 4.74
     },
     {
       "test": "P5.4",
@@ -37,7 +37,7 @@
       "image_count": 3,
       "matches": 2,
       "passed": true,
-      "elapsed_s": 2.42
+      "elapsed_s": 2.5
     }
   ]
 }
