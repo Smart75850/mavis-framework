@@ -1,0 +1,64 @@
+{
+  "test_at": "2026-07-12T00:36:38.363097",
+  "test_name": "P3.2 Qwen-Agent 多智体真接入",
+  "provider": "MiniMax-M3 模拟 Qwen-Agent (永久 invariant #51)",
+  "agents": [
+    "image_agent",
+    "math_agent"
+  ],
+  "test_count": 3,
+  "passed_count": 3,
+  "total_elapsed_s": 9.72,
+  "results": [
+    {
+      "passed": true,
+      "image_agent_out": {
+        "problem_type": "compare",
+        "operands": [
+          9.11,
+          9.9
+        ],
+        "question": "比较两个小数 9.11 同 9.9, 边个大?"
+      },
+      "math_agent_out": {
+        "answer": 9.9,
+        "method": "比较小数时，先比较整数部分（9=9），再比较小数部分：0.11 < 0.9，所以 9.9 > 9.11"
+      },
+      "elapsed_s": 3.3
+    },
+    {
+      "passed": true,
+      "image_agent_out": {
+        "problem_type": "equation",
+        "operands": [
+          "2x² + 3x - 5 = 0"
+        ],
+        "question": "解方程 2x² + 3x - 5 = 0, 搵 x 嘅解 (保留 2 位小数)"
+      },
+      "math_agent_out": {
+        "answer": [
+          "1.00",
+          "-2.50"
+        ],
+        "method": "解方程 2x² + 3x - 5 = 0\n因式分解：(2x + 5)(x - 1) = 0\n解得：x = 1 或 x = -5/2 = -2.5\n保留 2 位小数：x = 1.00 或 x = -2.50"
+      },
+      "elapsed_s": 3.36
+    },
+    {
+      "passed": true,
+      "image_agent_out": {
+        "problem_type": "area",
+        "operands": [
+          12.5,
+          1.85
+        ],
+        "question": "一条走廊 12.5 米 × 1.85 米, 面积几多平方米?"
+      },
+      "math_agent_out": {
+        "answer": 23.125,
+        "method": "12.5 × 1.85 = 23.125 平方米"
+      },
+      "elapsed_s": 3.06
+    }
+  ]
+}
