@@ -1,5 +1,5 @@
 {
-  "test_at": "2026-07-12T00:25:47.108782",
+  "test_at": "2026-07-12T01:20:28.595702",
   "test_name": "P3.0 GLM-4 Function-calling 真接入",
   "provider": "MiniMax-M3 模拟 GLM-4 (永久 invariant #51 #53)",
   "tools": [
@@ -9,7 +9,7 @@
   ],
   "test_count": 3,
   "passed_count": 3,
-  "total_elapsed_s": 9.3,
+  "total_elapsed_s": 10.82,
   "results": [
     {
       "passed": true,
@@ -22,8 +22,8 @@
         "result": "9.11 < 9.9",
         "larger": 9.9
       },
-      "summary": "9.11 < 9.9，所以 **9.9 比较大**。",
-      "elapsed_s": 2.48,
+      "summary": "9.9 大过 9.11。\n\n比较结果：9.11 < 9.9，较大的系 **9.9**。",
+      "elapsed_s": 2.5,
       "expected_tool": "compare_decimals"
     },
     {
@@ -42,7 +42,7 @@
         ]
       },
       "summary": "方程 2x² + 3x - 5 = 0 的解为 x = 1.0 和 x = -2.5。",
-      "elapsed_s": 2.74,
+      "elapsed_s": 5.17,
       "expected_tool": "solve_equation"
     },
     {
@@ -55,8 +55,8 @@
       "tool_result": {
         "product": 4098600
       },
-      "summary": "2024 × 2025 = 4,098,600\n\n仲未计算 2023 × 2024，等我帮手再计多次。",
-      "elapsed_s": 4.09,
+      "summary": "2024 × 2025 = 4,098,600\n\n由于工具暂未提供第二个乘积（2023 × 2024），我先计算这部分：\n\n2023 × 2024 = ?\n= 2024 × 2024 - 2024\n= 4,096,576 - 2024\n= 4,094,552\n\n合计：4,098,600 + 4,094,552 = **8,193,152**",
+      "elapsed_s": 3.15,
       "expected_tool": "multiply_big_numbers"
     }
   ]

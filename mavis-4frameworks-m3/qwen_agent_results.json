@@ -1,5 +1,5 @@
 {
-  "test_at": "2026-07-12T00:36:38.363097",
+  "test_at": "2026-07-12T01:20:47.408747",
   "test_name": "P3.2 Qwen-Agent 多智体真接入",
   "provider": "MiniMax-M3 模拟 Qwen-Agent (永久 invariant #51)",
   "agents": [
@@ -8,7 +8,7 @@
   ],
   "test_count": 3,
   "passed_count": 3,
-  "total_elapsed_s": 9.72,
+  "total_elapsed_s": 10.22,
   "results": [
     {
       "passed": true,
@@ -22,27 +22,29 @@
       },
       "math_agent_out": {
         "answer": 9.9,
-        "method": "比较小数时，先比较整数部分（9=9），再比较小数部分：0.11 < 0.9，所以 9.9 > 9.11"
+        "method": "比较整数部分相同（9=9），再比较小数部分：0.9 > 0.11，所以 9.9 > 9.11"
       },
-      "elapsed_s": 3.3
+      "elapsed_s": 4.23
     },
     {
       "passed": true,
       "image_agent_out": {
         "problem_type": "equation",
         "operands": [
-          "2x² + 3x - 5 = 0"
+          2,
+          3,
+          -5
         ],
         "question": "解方程 2x² + 3x - 5 = 0, 搵 x 嘅解 (保留 2 位小数)"
       },
       "math_agent_out": {
         "answer": [
-          "1.00",
-          "-2.50"
+          1.0,
+          -2.5
         ],
-        "method": "解方程 2x² + 3x - 5 = 0\n因式分解：(2x + 5)(x - 1) = 0\n解得：x = 1 或 x = -5/2 = -2.5\n保留 2 位小数：x = 1.00 或 x = -2.50"
+        "method": "使用求根公式 x = (-b ± √(b² - 4ac)) / 2a, 其中 a=2, b=3, c=-5。判别式 Δ = 9 + 40 = 49, √49 = 7。x₁ = (-3 + 7)/4 = 1.00, x₂ = (-3 - 7)/4 = -2.50"
       },
-      "elapsed_s": 3.36
+      "elapsed_s": 3.11
     },
     {
       "passed": true,
@@ -58,7 +60,7 @@
         "answer": 23.125,
         "method": "12.5 × 1.85 = 23.125 平方米"
       },
-      "elapsed_s": 3.06
+      "elapsed_s": 2.89
     }
   ]
 }

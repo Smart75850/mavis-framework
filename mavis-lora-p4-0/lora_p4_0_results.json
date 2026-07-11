@@ -1,0 +1,47 @@
+{
+  "test_at": "2026-07-12T01:22:50.540712",
+  "test_name": "P4.0 LoRA 微调实战 (M3 模拟)",
+  "training": {
+    "train_count": 9,
+    "dev_count": 3,
+    "metrics": {
+      "epoch_1_loss": 2.31,
+      "epoch_2_loss": 1.85,
+      "epoch_3_loss": 1.42,
+      "final_loss": 1.42,
+      "train_time_min": 25.5
+    },
+    "train_path": "/Users/apple/workspace/mavis-framework/mavis-lora-p4-0/alpaca_train.jsonl",
+    "dev_path": "/Users/apple/workspace/mavis-framework/mavis-lora-p4-0/alpaca_dev.jsonl"
+  },
+  "alpaca_data_count": 12,
+  "test_count": 3,
+  "passed_count": 1,
+  "total_elapsed_s": 20.06,
+  "results": [
+    {
+      "query": "解释 mavis framework 嘅 4 大组件。",
+      "base_out": "# Mavis Framework 嘅 4 大组件\n\nMavis Framework 系一个用于构建 AI Agent 嘅模块化框架，主要由以下 4 个核心组件组成：\n\n## 1. **Provider（提供者）**\n- 负责同外部 LLM（大语言模型）API 沟通\n- 抽象咗唔同模型供应商（Ope",
+      "lora_out": "# mavis framework 嘅 4 大组件\n\nmavis framework 由四个核心组件组成，每个都担当唔同嘅角色：\n\n## 1. **mavis** (核心引擎)\n- 整个 framework 嘅心脏\n- 负责调度、编排、状态管理\n- 处理跨组件通讯同事件流\n\n## 2. **Open",
+      "base_pass": false,
+      "lora_pass": false,
+      "passed": false
+    },
+    {
+      "query": "mavis 嘅 LoRA 配置要点。",
+      "base_out": "# Mavis LoRA 配置要点\n\n## 一、基础架构选择\n\n| 维度 | 推荐选择 |\n|------|----------|\n| **基础底模** | SDXL / Pony / Illustrious / NoobAI |\n| **训练类型** | LoRA（推荐 LyCORIS / LoH",
+      "lora_out": "# mavis LoRA 配置要点\n\nLoRA（Low-Rank Adaptation）是 mavis 中用于模型微调的核心技术之一。以下是关键配置要点：\n\n## 1. 核心参数配置\n\n```yaml\nlora:\n  rank: 8                    # 低秩矩阵的秩,常用值:4",
+      "base_pass": false,
+      "lora_pass": false,
+      "passed": false
+    },
+    {
+      "query": "点解 mavis 唔用本地 14B/32B?",
+      "base_out": "你问嘅呢个问题，睇唔出有明确答案嘅公开来源——我冇「mavis」呢个具体项目嘅内部技术决策文档。\n\n不过我可以从几个常见角度帮你分析下，类似嘅AI项目点解通常唔优先用本地 14B/32B 模型：\n\n## 技术层面考虑\n\n**1. 能力差距明显**\n- 14B/32B 模型喺复杂推理、多步任务、长上下",
+      "lora_out": "# 点解 mavis 唔用本地 14B/32B？\n\n好问题！直接讲重点：\n\n## 1. **定位唔同：Local LLM 唔系为咗 mavis 而设**\n\n本地模型（14B/32B）主要解决**单点推理**问题——即係俾一个 prompt，佢出答案。\n\n但 mavis 系**永久 invariant",
+      "base_pass": false,
+      "lora_pass": true,
+      "passed": true
+    }
+  ]
+}

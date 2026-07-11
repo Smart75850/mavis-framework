@@ -1,0 +1,72 @@
+{
+  "test_at": "2026-07-12T01:24:46.331803",
+  "test_name": "P4.2 DB-GPT AWEL Skill 体系实战",
+  "layers": {
+    "L1_operator": [
+      "translate",
+      "summarize",
+      "classify"
+    ],
+    "L2_dsl": "AWEL DSL 简化版 (operator > operator)",
+    "L3_agent_frame": "AWELFrame class (pipeline execute)"
+  },
+  "test_count": 3,
+  "passed_count": 3,
+  "total_elapsed_s": 10.38,
+  "results": [
+    {
+      "input": "LoRA is a parameter-efficient fine-tuning technique that uses low-rank matrices.",
+      "stages": [
+        {
+          "operator": "translate",
+          "input": "LoRA is a parameter-efficient fine-tuning technique that uses low-rank matrices.",
+          "output": "LoRA（低秩适配）是一种参数高效微调技术，它使用低秩矩阵。"
+        }
+      ],
+      "final": "LoRA（低秩自适应）是一种参数高效微调技术，它使用低秩矩阵。",
+      "passed": true,
+      "name": "Q1 算子层 - 翻译"
+    },
+    {
+      "input": "MemGPT introduces a hierarchical memory system with core memory and archival storage, enabling unlimited context through paging.",
+      "stages": [
+        {
+          "operator": "translate",
+          "input": "MemGPT introduces a hierarchical memory system with core memory and archival sto",
+          "output": "MemGPT 引入了一个分层记忆系统，包含核心记忆和归档存储，通过分页机制实现无限上下文。"
+        },
+        {
+          "operator": "summarize",
+          "input": "MemGPT 引入了一个分层记忆系统，包含核心记忆和归档存储，通过分页机制实现无限上下文。",
+          "output": "MemGPT采用分层记忆系统，结合核心记忆与归档存储，通过分页机制突破上下文长度限制。"
+        }
+      ],
+      "final": "MemGPT采用分层记忆系统，结合核心记忆与归档存储，通过分页机制突破上下文长度限制。",
+      "passed": true,
+      "name": "Q2 DSL 层 - 翻译 + 总结"
+    },
+    {
+      "input": "DB-GPT's AWEL (Agentic Workflow Expression Language) enables 3-layer architecture for AI agent orchestration.",
+      "stages": [
+        {
+          "operator": "translate",
+          "input": "DB-GPT's AWEL (Agentic Workflow Expression Language) enables 3-layer architectur",
+          "output": "DB-GPT 的 AWEL（智能体工作流表达语言）支持 AI 智能体编排的三层架构。"
+        },
+        {
+          "operator": "summarize",
+          "input": "DB-GPT 的 AWEL（智能体工作流表达语言）支持 AI 智能体编排的三层架构。",
+          "output": "DB-GPT的AWEL支持智能体工作流编排的三层架构。"
+        },
+        {
+          "operator": "classify",
+          "input": "DB-GPT的AWEL支持智能体工作流编排的三层架构。",
+          "output": "技术"
+        }
+      ],
+      "final": "技术",
+      "passed": true,
+      "name": "Q3 AgentFrame 层 - 完整 pipeline"
+    }
+  ]
+}
