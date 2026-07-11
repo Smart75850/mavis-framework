@@ -1,0 +1,38 @@
+{
+  "test_at": "2026-07-11T23:41:53.895128",
+  "test_name": "P4.4 大文件分块改写 + 真实测试 1 重跑",
+  "provider": "MiniMax-M3 (永久 invariant #51)",
+  "test_count": 3,
+  "passed_count": 0,
+  "total_elapsed_s": 94.01,
+  "previous_real_test_1": "0/3 PASS (M3 简化大文件)",
+  "results": [
+    {
+      "file": "/Users/apple/workspace/mavis-framework/mavis-recall-v2/recall.py",
+      "passed": false,
+      "linter": "failed: Sorry: IndentationError: unexpected indent (recall.py, line 54)",
+      "actual_ratio": 0.9057,
+      "chunks": 5,
+      "elapsed_s": 31.04,
+      "error": "linter failed: failed: Sorry: IndentationError: unexpected indent (recall.py, line 54)"
+    },
+    {
+      "file": "/Users/apple/workspace/mavis-framework/mavis-8mech-router-v2/router.py",
+      "passed": false,
+      "linter": "failed: Sorry: IndentationError: unexpected indent (router.py, line 144)",
+      "actual_ratio": 0.9387,
+      "chunks": 4,
+      "elapsed_s": 31.48,
+      "error": "linter failed: failed: Sorry: IndentationError: unexpected indent (router.py, line 144)"
+    },
+    {
+      "file": "/Users/apple/workspace/mavis-framework/mavis-crewai-v7/mavis_m3_provider.py",
+      "passed": false,
+      "linter": "failed:   File \"/Users/apple/workspace/mavis-framework/mavis-crewai-v7/mavis_m3_provider.py\", line 195\n    \"\"\"Embedding: 仍用本地 ollama nomic-embed (274MB)\"\"\"r = httpx.post(\n                                                    ^\nSyntaxError: invalid syntax\n",
+      "actual_ratio": 1.0812,
+      "chunks": 5,
+      "elapsed_s": 31.48,
+      "error": "linter failed: failed:   File \"/Users/apple/workspace/mavis-framework/mavis-crewai-v7/mavis_m3_provider.py\", line 195\n    \"\"\"Embedding: 仍用本地 ollama nomic-embed (274MB)\"\"\"r = httpx.post(\n                                                    ^\nSyntaxError: invalid syntax\n"
+    }
+  ]
+}
