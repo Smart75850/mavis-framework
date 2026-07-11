@@ -1,0 +1,12 @@
+{
+  "test_at": "2026-07-12T06:04:08.561749",
+  "test_name": "P6.3 LLaMA-Factory 训练脚本准备",
+  "stages": [
+    "install (10min)",
+    "prepare_data (5min)",
+    "train (1-2h)",
+    "merge (10min)",
+    "deploy_ollama (15min)"
+  ],
+  "total_setup_time_s": 2.32
+}

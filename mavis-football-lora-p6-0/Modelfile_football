@@ -1,0 +1,11 @@
+FROM /Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/qwen-7b-football-merged
+TEMPLATE """<|im_start|>system
+你是一个足球数据分析专家 (Qwen-7B + 足球 LoRA 微调后, 永久 invariant #82)。
+<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+{{ .Response }}<|im_end|>
+"""
+PARAMETER temperature 0.3
+PARAMETER top_p 0.9

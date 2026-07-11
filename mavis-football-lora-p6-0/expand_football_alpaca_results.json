@@ -1,0 +1,11 @@
+{
+  "test_at": "2026-07-12T06:02:20.396551",
+  "test_name": "P6.1 扩充 100+ 条足球 alpaca",
+  "preselected_count": 29,
+  "m3_generated_count": 70,
+  "failed_count": 0,
+  "total_count": 99,
+  "train_count": 70,
+  "dev_count": 29,
+  "elapsed_s": 186.61
+}
