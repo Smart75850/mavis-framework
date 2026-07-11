@@ -128,12 +128,66 @@ def mavis_v3_query(query: str):
         print(f"[stderr] {result.stderr[:300]}")
 
 
-def mavis_v3_modify(query: str, target_file: str):
-    """永久 invariant #61: 改文件 (P4.6 整合 P4.5 路径 A libcst AST, 100% syntax 正确)"""
-    print(f"🔧 mavis_v3 modify (P4.6 libcst AST): {query} -> {target_file}")
+def _add_type_hints_to_all_functions(tree):
+    """P1.0 新: 给所有未注解嘅 function parameters 加 Any type hint + 返回 Any"""
+    import libcst as cst
 
-    # 永久 invariant #60 路径 A: libcst AST 改写
-    # 智能识别 query 类型, 自动选 libcst transform
+    def visit_FunctionDef(node):
+        if node.returns:
+            return node
+        new_params = []
+        for param in node.params.params:
+            if param.annotation is None and param.name:
+                new_param = param.with_changes(
+                    annotation=cst.Annotation(annotation=cst.Name("Any"))
+                )
+                new_params.append(new_param)
+            else:
+                new_params.append(param)
+        new_returns = cst.Annotation(annotation=cst.Name("Any"))
+        return node.with_changes(params=node.params.with_changes(params=new_params), returns=new_returns)
+
+    return tree.visit(cst.CSTTransformer().visit_FunctionDef(visit_FunctionDef))
+
+
+def _add_function_signatures(tree):
+    """P1.0 新: 给所有未注解 function 加详细签名 docstring"""
+    import libcst as cst
+
+    def visit_FunctionDef(node):
+        if node.body and isinstance(node.body[0], cst.SimpleStatementLine) and \
+           node.body[0].body and isinstance(node.body[0].body[0], cst.Expr) and \
+           isinstance(node.body[0].body[0].value, cst.SimpleString):
+            return node
+
+        params_str = ", ".join([p.name.value for p in node.params.params if p.name])
+        func_name = node.name.value if node.name else "function"
+        sig_docstring = f'"""{func_name}({params_str}) - TODO: 添加函数说明"""'
+
+        new_docstring = cst.SimpleStatementLine(
+            body=[cst.Expr(value=cst.SimpleString(sig_docstring))],
+            leading_lines=[cst.EmptyLine()],
+        )
+        new_body = [new_docstring] + list(node.body)
+        return node.with_changes(body=new_body)
+
+    return tree.visit(cst.CSTTransformer().visit_FunctionDef(visit_FunctionDef))
+
+
+def _add_import(tree, module_name):
+    """P1.0 新: 加 import (e.g. 'import os' → SimpleStatementLine)"""
+    import libcst as cst
+    new_import = cst.SimpleStatementLine(
+        body=[cst.Import(names=[cst.ImportAlias(name=cst.Name(module_name))])]
+    )
+    new_body = [new_import] + list(tree.body)
+    return tree.with_changes(body=new_body)
+
+
+def mavis_v3_modify(query: str, target_file: str):
+    """永久 invariant #61 + #64: 改文件 (P4.6 整合 P4.5 路径 A libcst AST + P1.0 扩展 type hints / function signature)"""
+    print(f"🔧 mavis_v3 modify (P4.6 + P1.0 libcst AST): {query} -> {target_file}")
+
     import libcst as cst
     from pathlib import Path
     fp = Path(target_file)
@@ -153,24 +207,33 @@ def mavis_v3_modify(query: str, target_file: str):
     try:
         tree = cst.parse_module(original)
 
-        # 智能识别: 关键词 "docstring" / "type hints" / "import"
+        # P1.0 智能识别 (扩展到 type hints / function signature / import)
         query_lower = query.lower()
         if "docstring" in query_lower or "文档" in query:
-            # 加 module docstring
             new_docstring = cst.SimpleStatementLine(
                 body=[cst.Expr(value=cst.SimpleString(f'"""{query}"""'))]
             )
             new_body = [new_docstring] + list(tree.body)
             new_tree = tree.with_changes(body=new_body)
             change_type = "module docstring"
-        elif "type hint" in query_lower:
-            # 永久 invariant #60: 不支持复杂 type hints, 提示
-            shutil.copy2(backup, fp)
-            backup.unlink()
-            print(f"⚠️  type hints 改动需要 LLM 路径 B (Aider search/replace), 暂不支持")
-            return
+        elif "type hint" in query_lower or "类型注解" in query or "类型提示" in query:
+            new_tree = _add_type_hints_to_all_functions(tree)
+            change_type = "function type hints"
+        elif "function signature" in query_lower or "函数签名" in query:
+            new_tree = _add_function_signatures(tree)
+            change_type = "function signatures"
+        elif "import" in query_lower:
+            import_match = __import__('re').search(r"import\s+(\w+)", query)
+            if import_match:
+                module_name = import_match.group(1)
+                new_tree = _add_import(tree, module_name)
+                change_type = f"add import {module_name}"
+            else:
+                shutil.copy2(backup, fp)
+                backup.unlink()
+                print(f"⚠️  无法识别 import module name")
+                return
         else:
-            # 默认: 加 module docstring
             new_docstring = cst.SimpleStatementLine(
                 body=[cst.Expr(value=cst.SimpleString(f'"""{query}"""'))]
             )
@@ -181,7 +244,6 @@ def mavis_v3_modify(query: str, target_file: str):
         new_code = new_tree.code
         fp.write_text(new_code, encoding="utf-8")
 
-        # Linter 验证
         import py_compile
         try:
             py_compile.compile(target_file, doraise=True)
