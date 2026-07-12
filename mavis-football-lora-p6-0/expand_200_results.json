@@ -1,0 +1,13 @@
+{
+  "test_at": "2026-07-12T09:01:32.677642",
+  "test_name": "P8.1.1 扩充 99 → 200+ 条足球 alpaca",
+  "existing_count": 99,
+  "new_generated": 144,
+  "new_failed": 1,
+  "total": 243,
+  "train_count": 170,
+  "dev_count": 73,
+  "elapsed_s": 396.1,
+  "train_path": "/Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/football_alpaca_200plus_train.jsonl",
+  "dev_path": "/Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/football_alpaca_200plus_dev.jsonl"
+}
