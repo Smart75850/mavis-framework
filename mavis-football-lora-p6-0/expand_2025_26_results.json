@@ -1,0 +1,15 @@
+{
+  "test_at": "2026-07-12T12:12:02.433203",
+  "test_name": "P9.1+9.2 扩充 200 → 300+ 条 alpaca 用 2025-26 季真实数据",
+  "existing_count": 243,
+  "new_preseeded": 30,
+  "new_m3_generated": 117,
+  "new_m3_failed": 0,
+  "total": 390,
+  "train_count": 273,
+  "dev_count": 117,
+  "elapsed_s": 329.0,
+  "train_path": "/Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/football_alpaca_2025_26_train.jsonl",
+  "dev_path": "/Users/apple/workspace/mavis-framework/mavis-football-lora-p6-0/football_alpaca_2025_26_dev.jsonl",
+  "data_source": "2025-26 季 web_search 实战数据 + M3 自动生成"
+}

@@ -1,12 +1,12 @@
 {
-  "test_at": "2026-07-12T10:12:22.315921",
+  "test_at": "2026-07-12T14:18:17.617998",
   "test_name": "P6.4 直接 transformers + peft 训练",
   "model": "/tmp/ms_cache/models/qwen--Qwen2-7B-Instruct/snapshots/master",
-  "data": "football_alpaca_200plus_train.jsonl",
-  "output": "qwen-7b-football-lora-100step",
+  "data": "football_alpaca_2025_26_train.jsonl",
+  "output": "qwen-7b-football-lora-200step",
   "result": {
-    "elapsed_s": 4000.41,
-    "output_dir": "qwen-7b-football-lora-100step",
-    "max_steps": 100
+    "elapsed_s": 7388.63,
+    "output_dir": "qwen-7b-football-lora-200step",
+    "max_steps": 200
   }
 }

@@ -1,11 +1,11 @@
 {
-  "test_at": "2026-07-12T10:36:17.265421",
+  "test_at": "2026-07-12T14:55:59.335637",
   "test_name": "P8.0 Qwen-7B + LoRA merge_and_unload",
   "base_model": "/tmp/ms_cache/models/qwen--Qwen2-7B-Instruct/snapshots/master",
-  "lora": "qwen-7b-football-lora-100step",
-  "output": "qwen-7b-football-merged-100step",
+  "lora": "qwen-7b-football-lora-200step",
+  "output": "qwen-7b-football-merged-200step",
   "result": {
     "elapsed_s": 0.9,
-    "output_dir": "qwen-7b-football-merged-100step"
+    "output_dir": "qwen-7b-football-merged-200step"
   }
 }
