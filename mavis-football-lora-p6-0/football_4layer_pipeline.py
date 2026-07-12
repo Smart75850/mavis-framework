@@ -72,31 +72,35 @@ def lora_parse_query(user_query: str) -> dict:
     return {"raw": user_query}
 
 
-# ============== Layer 2: LlamaIndex RAG (永久 invariant #36) ==============
+# ============== Layer 2: RAG via subprocess (跨 venv 实战, 永久 invariant #96) ==============
+
+RAG_SUBPROCESS_PATH = str(BASE / "rag_subprocess.py")
+RAG_VENV_PYTHON = "/Users/apple/workspace/mavis-framework/mavis-llamaindex-v2/.venv/bin/python3"
 
 def rag_retrieve(query: str, top_k: int = 3) -> list:
-    """RAG 检索 (复用 P6.2)"""
+    """RAG 检索 via subprocess (mavis-llamaindex-v2 venv, 永久 invariant #96)"""
+    import subprocess
+    train_path = str(BASE / "football_alpaca_100plus_train.jsonl")
+    req = {"query": query, "top_k": top_k, "data_path": train_path}
     try:
-        from llama_index.core import VectorStoreIndex, Document, Settings
-        from build_index import HttpxOllamaEmbedding, M3LLM
-
-        Settings.embed_model = HttpxOllamaEmbedding(model_name="nomic-embed-text")
-        Settings.llm = M3LLM()
-
-        train_path = BASE / "football_alpaca_100plus_train.jsonl"
-        if not train_path.exists():
+        result = subprocess.run(
+            [RAG_VENV_PYTHON, RAG_SUBPROCESS_PATH],
+            input=json.dumps(req, ensure_ascii=False),
+            capture_output=True, text=True, timeout=120,
+        )
+        if result.returncode != 0:
+            print(f"    [RAG subprocess fail] rc={result.returncode}, stderr={result.stderr[:200]}")
             return []
-        docs = []
-        with open(train_path) as f:
-            for line in f:
-                ex = json.loads(line)
-                docs.append(Document(text=f"指令: {ex['instruction']}\n输入: {ex.get('input', '')}\n回答: {ex['output']}"))
-        index = VectorStoreIndex.from_documents(docs)
-        retriever = index.as_retriever(similarity_top_k=top_k)
-        nodes = retriever.retrieve(query)
-        return [{"text": n.node.text, "score": n.score} for n in nodes]
+        out = json.loads(result.stdout)
+        if out.get("error"):
+            print(f"    [RAG error] {out['error'][:200]}")
+            return []
+        return out.get("hits", [])
+    except subprocess.TimeoutExpired:
+        print(f"    [RAG timeout 120s]")
+        return []
     except Exception as e:
-        print(f"    [RAG 错误] {e}")
+        print(f"    [RAG exception] {str(e)[:200]}")
         return []
 
 
@@ -172,13 +176,14 @@ TEST_QUERIES = [
 
 def main():
     print("=" * 70)
-    print("P6.7 4 层混合 pipeline 实战 (永久 invariant #95)")
+    print("P7 4 层混合 pipeline 跨 venv 实战 (永久 invariant #96)")
     print("=" * 70)
     print(f"Qwen-7B model: {QWEN7B_MODEL}")
     print(f"LoRA: {LORA_PATH}")
     print(f"Queries: {len(TEST_QUERIES)}")
     print()
-    print("4 层: Qwen-7B+LoRA 解析 → RAG 检索 → Qwen-7B+LoRA 生成 → M3 评估")
+    print("4 层: Qwen-7B+LoRA 解析 → RAG (subprocess 跨 venv) → M3 综合 → M3 评估")
+    print("  跨 venv: LLaMA-Factory venv (Qwen-7B+LoRA+M3) + mavis-llamaindex-v2 venv (RAG)")
     print()
 
     start = time.time()
@@ -236,15 +241,17 @@ def main():
 
     report = {
         "test_at": datetime.now().isoformat(),
-        "test_name": "P6.7 4 层混合 pipeline (Qwen-7B + LoRA + RAG + M3)",
+        "test_name": "P7 4 层混合 pipeline 跨 venv 实战 (Qwen-7B 真 LoRA + RAG + M3)",
         "base_model": QWEN7B_MODEL,
         "lora": LORA_PATH,
+        "rag_subprocess": RAG_SUBPROCESS_PATH,
+        "rag_venv_python": RAG_VENV_PYTHON,
         "test_count": len(TEST_QUERIES),
         "passed_count": passed_count,
         "elapsed_s": round(elapsed, 1),
         "results": results,
     }
-    report_path = BASE / "football_4layer_results.json"
+    report_path = BASE / "football_p7_results.json"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"报告: {report_path}")
 
